@@ -8,6 +8,7 @@
 
 #import "ModelController.h"
 #import "DataViewController.h"
+#import "PageData.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -26,12 +27,29 @@
 
 @implementation ModelController
 
+- (NSArray *)getPageData {
+    NSMutableArray *a = [NSMutableArray array];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"PageData" ofType:@"plist"];
+    NSData *d = [NSData dataWithContentsOfFile:path];
+    NSError *e = NULL;
+    NSPropertyListFormat format;
+    if (d) {
+    NSDictionary *dict = [NSPropertyListSerialization propertyListWithData:d options:(NSPropertyListImmutable) format:&format error:&e];
+        NSArray *pagesInfo = [dict valueForKey:@"pages"];
+        for (NSDictionary *p in pagesInfo) {
+            PageData *pageData = [PageData pageDataWithDictionary:p];
+            if (pageData) [a addObject:pageData];
+        }
+    }
+    return a;
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        _pageData = [self getPageData];
     }
     return self;
 }

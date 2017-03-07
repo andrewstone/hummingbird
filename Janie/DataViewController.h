@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+#import "PageData.h"
 
-@interface DataViewController : UIViewController
+@interface DataViewController : UIViewController <AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
-@property (strong, nonatomic) id dataObject;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UITextView *englishTextView;
+@property (strong, nonatomic) IBOutlet UITextView *spanishTextView;
+@property (strong, nonatomic) PageData *dataObject;
+
+
+- (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array
+- (IBAction)pauseOrRestart:(id)sender;
 
 @end
 

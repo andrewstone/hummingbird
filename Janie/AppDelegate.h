@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class AVAudioPlayer;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic)  AVAudioPlayer *audioPlayer;
 
 
 @end

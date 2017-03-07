@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pages</key>
+	<array>
+		<dict>
+			<key>imageFullPage</key>
+			<true/>
+			<key>leaveSongRunning</key>
+			<true/>
+			<key>imageName</key>
+			<string>CoverPage</string>
+			<key>audioFileNames</key>
+			<array>
+				<string>Janie Instrumental.m4a</string>
+			</array>
+			<key>playOnLoad</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>imageName</key>
+			<string>titlePage</string>
+			<key>imageFullPage</key>
+			<true/>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>english</key>
+			<string>Has anyone heard there’s a hummingbird,  
+
+   stuck in the library? 
+
+She just came to look for this one book,  
+
+   on how to be a tooth fairy. </string>
+			<key>spanish</key>
+			<string>¿Sabían que un colibrí quedó,  
+
+   atrapado en la biblioteca?  
+
+Buscaba un libro para aprender a ser,  
+
+   un ratoncito ada. </string>
+			<key>imageName</key>
+			<string>JANIE 1</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>La paga es buena, trabaja de noche,  
+
+   y ya tiene sus propias alas. 
+
+El día entero, cantar y jugar,  
+
+   y olvidar las cosas malas. </string>
+			<key>english</key>
+			<string>The pay’s alright, and you work at night,  
+
+   and she’s already got her wings.
+ 
+And all day she would hum and play, 
+ 
+   and do all her favorite things. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 2</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Hace una hora, que desde afuera, 
+
+   volando entró.  
+
+Cuando acabó, se preocupó,  
+
+   la salida no encontró. </string>
+			<key>english</key>
+			<string>She floated in from where she’d been, 
+ 
+    about an hour ago. 
+
+When she was through, her worries grew,  
+
+   when how to leave she didn’t know. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 3</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animals.  
+
+   Y cuando llegue lo demostraré.  </string>
+			<key>english</key>
+			<string>Has anyone seen Janie?   
+
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals. 
+ 
+   And when she gets here I can show you. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 4</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Pendientes de un hilo,  
+
+   muchos primos observó. 
+
+Preguntó, “¿Cómo salir?”  
+
+   pero nadie le contestó. </string>
+			<key>english</key>
+			<string>She saw dozens of her cousins,  
+
+   each one hanging from a string. 
+
+She asked, “Where’s an open window?”  
+
+   but they didn’t say a thing. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 5</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Se sentó en la nariz de un colibrí,  
+
+   o el pico quise decir. 
+
+Allí se quedó, pese al temor,  
+
+   el tiempo dejó ir. </string>
+			<key>english</key>
+			<string>She perched her toes on a hummingbird’s nose, 
+
+   or was it a beak or bill? 
+
+Though so afraid, that’s where she stayed,  
+
+   she had some time to kill. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 6</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Qué bella escena en la biblioteca,  
+
+   esas cosas no se ven.  
+
+Los maestros vieron y exclamaron,  
+
+   “Pajarito, vas a estar bien.” </string>
+			<key>english</key>
+			<string>What a sight to see in the library,  
+
+   doesn’t happen every day. 
+
+Some teachers saw and watched in awe, saying, 
+
+   “Little bird, you’re going to be okay.” </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 7</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>¿Ha visto alguien a Juanita? 
+ 
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  </string>
+			<key>english</key>
+			<string>Has anyone seen Janie? 
+  
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals.
+  
+   And when she gets here I can show you. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 8</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>A su família extrañaría,  
+
+   si de allí no saliera.  
+
+Qué pena si de la vida,  
+
+   del ratoncito ada no aprendiera. </string>
+			<key>english</key>
+			<string>The hummingbird would miss her family,  
+
+   if she never made it out. 
+
+What a shame she’d never learn,  
+
+   what a tooth fairy’s life is all about. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 9</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Empezó a sentir hambre,  
+
+   pero no había nada de lonche. 
+
+No había cosas rojas colgando,  
+
+   con su exquisito ponche. </string>
+			<key>english</key>
+			<string>She started to get hungry,  
+
+   but there was nothing in there for lunch. 
+ 
+Didn’t see any of those hanging red things,  
+
+   with hummingbird Hawaiian Punch. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 10</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>En que lío se metió,  
+
+   pensó adolorida.  
+
+Como entró no recordó,  
+
+   no encuentra la salida. </string>
+			<key>english</key>
+			<string>How’d she get herself into this mess?  
+
+   She thought with such dismay. 
+
+Came in somehow, don’t remember now,  
+
+   can’t seem to find the way.  </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 11</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  </string>
+			<key>english</key>
+			<string>Has anyone seen Janie?
+   
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals.  
+
+   And when she gets here I can show you. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 12</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Por fin encontraron a Juanita,  
+
+   y de inmediato se presentó. 
+ 
+Todos escuchamos con atención,  
+
+   las palabras que emitió. </string>
+			<key>english</key>
+			<string>Finally, someone found Janie,  
+
+   and she got there right away. 
+
+We all listened up real closely,  
+
+   to what she had to say. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 13</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Lo primero que hay que hacer,  
+
+   es cubrir cada ventana. 
+ 
+Así que fue a cerrar,  
+
+   cada una de las persianas. </string>
+			<key>english</key>
+			<string>First thing we’ve got to do,  
+
+   is cover the windows. 
+
+Went to all the shades and blinds,  
+
+   until every one was closed. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 14</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Las luces apagó, la puerta abrió,  
+
+   un rayo de sol entró. 
+
+Hacia la luz, el ave voló,  
+
+   y de todos se despidió.  </string>
+			<key>english</key>
+			<string>Then she shut the lights, opened up the door, 
+
+   letting in the beaming sun.
+ 
+The bird took flight, right towards the light, 
+
+   Saying, “Goodbye!” to everyone. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 15</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  </string>
+			<key>english</key>
+			<string>Has anyone seen Janie?  
+ 
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals. 
+ 
+   And when she gets here I can show you. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 16</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Juanita usó su magia,  
+
+   tal como lo dije yo. 
+ 
+Dio consejos al colibrí,  
+
+   de modo que éste entendió. </string>
+			<key>english</key>
+			<string>Well now Janie worked her magic,  
+
+   just like I said she would. 
+
+Gave directions to the hummingbird,  
+
+   in a way she understood. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 17</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>A veces es mejor usar música,  
+
+   a veces las palabras son maravillosas.  
+
+Otras es mejor cambiar la luz,  
+
+   para hablar con chuparosas. </string>
+			<key>english</key>
+			<string>Sometimes best to use some music,  
+
+   sometimes best to use words. 
+
+Sometimes it’s best to change the light,  
+
+   to talk to hummingbirds. </string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 18</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>spanish</key>
+			<string>Aprendí ese día, cuando nuestra amiga, 
+
+   salió libremente.  
+
+Cada quien halla la salida,  
+
+   de un modo diferente. </string>
+			<key>english</key>
+			<string>I learned a lesson on that day,  
+
+   when our friend, she was set free. 
+
+That everyone can find their way,  
+
+   though we find it differently. </string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 19</string>
+			<key>audioFileNames</key>
+			<array/>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 20</string>
+			<key>audioFileNames</key>
+			<array>
+				<string>Janie Song-es.m4a</string>
+				<string>Janie Song-en.m4a</string>
+			</array>
+			<key>playOnLoad</key>
+			<true/>
+			<key>english</key>
+			<string>Has anyone seen Janie?   
+
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals.  
+
+   And when she gets here I can show you. 
+     And when she gets here I can show you. 
+       And when she gets here I can show you.</string>
+			<key>spanish</key>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  
+     Y cuando llegue lo demostraré.  
+       Y cuando llegue lo demostraré.</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
