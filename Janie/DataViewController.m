@@ -26,34 +26,63 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSAttributedString *)stringForText:(NSString *)s {
+    if (!s) return nil;
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    // paragraphStyle.headIndent = 15; // <--- indention if you need it
+    paragraphStyle.firstLineHeadIndent = 15;
+    
+    paragraphStyle.lineSpacing = self.dataObject.lineSpacing; // <--- magic line spacing here!
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:NSParagraphStyleAttributeName, paragraphStyle, NSFontAttributeName, self.dataObject.textFont,nil];
+    
+    return [[NSAttributedString alloc] initWithString:s attributes:dict];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.imageView.image = [self.dataObject pageImage];
-    self.dataLabel.text = [self.dataObject pageLabel];
     
-    self.englishTextView.text = [self.dataObject english];
-    self.spanishTextView.text = [self.dataObject spanish];
-    
+    if (self.dataObject.imageFullPage) {
+        [[[(UIImageView *)self.view subviews] objectAtIndex:0] setHidden:YES];
+        [(UIImageView *)self.view setContentMode:UIViewContentModeScaleAspectFit];
+        [(UIImageView *)self.view setImage:[self.dataObject pageImage]];
+        self.imageView.hidden = YES;
+        self.dataLabel.hidden = YES;
+    } else {
+        self.imageView.image = [self.dataObject pageImage];
+  //      self.dataLabel.text = [self.dataObject pageLabel];
+
+        self.englishTextView.font = [self.dataObject textFont];
+        self.spanishTextView.font = [self.dataObject textFont];
+
+        self.englishTextView.attributedText = [self stringForText:[self.dataObject english]];
+        self.spanishTextView.attributedText = [self stringForText:[self.dataObject spanish]];
+    }
     // text could be stored as a dict that might have additional information
 }
 
+
+
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+
     if (self.dataObject.playOnLoad)
         [self playNextSound:nil];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    if (self.dataObject.imageFullPage) {
-        CGRect r = self.imageView.frame;
-        CGRect vr = self.view.frame;
-        vr.origin = CGPointZero;
-        self.imageView.frame = vr;
-        [self.view bringSubviewToFront:self.imageView];
-    }
-}
+//- (void)viewDidLayoutSubviews {
+////    [super viewDidLayoutSubviews];
+////    if (self.dataObject.imageFullPage) {
+////        CGRect r = self.imageView.frame;
+////        CGRect vr = self.view.frame;
+////        vr.origin = CGPointZero;
+////        self.imageView.frame = vr;
+////        [self.view bringSubviewToFront:self.imageView];
+////    }
+//}
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

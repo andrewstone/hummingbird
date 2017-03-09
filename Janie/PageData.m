@@ -25,6 +25,7 @@
     _english = [d valueForKey:@"english"];
     _spanish = [d valueForKey:@"spanish"];
     _imageFullPage = [[d valueForKey:@"imageFullPage"] boolValue];
+    _textInItalics = [[d valueForKey:@"textInItalics"] boolValue];
     
     NSArray *a = [d valueForKey:@"audioFileNames"];
     if (a) {
@@ -39,11 +40,17 @@
     return [UIImage imageNamed:_imageName];
 }
 
-/*
-@property (nonatomic) NSString *imageName;
-@property (nonatomic) NSArray *audioFiles;
-@property (nonatomic) BOOL playOnLoad;
-@property (nonatomic) NSString *pageLabel;   // could be a number, or label like Preface etc.
-*/
+
+- (UIFont *)textFont {
+    BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+    float size = isPad ? 24.0 : 15.0;
+
+    return _textInItalics ? [UIFont fontWithName:@"HelveticaNeue-Italic" size:size] : [UIFont fontWithName:@"HelveticaNeue" size:size];
+}
+
+- (float)lineSpacing {
+    BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+    return ( isPad ? 10.0 : 4.0);
+}
 
 @end
