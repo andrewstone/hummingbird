@@ -30,12 +30,14 @@
     if (!s) return nil;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    // paragraphStyle.headIndent = 15; // <--- indention if you need it
-    paragraphStyle.firstLineHeadIndent = 15;
+    paragraphStyle.headIndent = 0; // <--- indention if you need it
+    paragraphStyle.firstLineHeadIndent = 0;
     
     paragraphStyle.lineSpacing = self.dataObject.lineSpacing; // <--- magic line spacing here!
+    paragraphStyle.paragraphSpacing = self.dataObject.lineSpacing; // <--- magic line spacing here!
+    paragraphStyle.paragraphSpacingBefore = 0; // <--- magic line spacing here!
 
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:NSParagraphStyleAttributeName, paragraphStyle, NSFontAttributeName, self.dataObject.textFont,nil];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys: paragraphStyle, NSParagraphStyleAttributeName, self.dataObject.textFont, NSFontAttributeName,nil];
     
     return [[NSAttributedString alloc] initWithString:s attributes:dict];
 }

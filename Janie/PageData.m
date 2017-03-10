@@ -43,14 +43,14 @@
 
 - (UIFont *)textFont {
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
-    float size = isPad ? 24.0 : 15.0;
+    float size = isPad ? 18.0 : 15.0;
 
-    return _textInItalics ? [UIFont fontWithName:@"HelveticaNeue-Italic" size:size] : [UIFont fontWithName:@"HelveticaNeue" size:size];
+    return _textInItalics ? [UIFont fontWithName:@"TimesNewRomanPS-ItalicMT" size:size] : [UIFont fontWithName:@"TimesNewRomanPSMT" size:size];
 }
 
 - (float)lineSpacing {
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
-    return ( isPad ? 10.0 : 4.0);
+    return ( isPad ? -1.0 : -1.0);
 }
 
 @end
