@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UITextView *englishTextView;
 @property (strong, nonatomic) IBOutlet UITextView *spanishTextView;
+@property (strong, nonatomic) IBOutlet UIView *textViews;
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) PageData *dataObject;
 
 

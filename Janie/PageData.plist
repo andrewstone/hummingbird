@@ -53,6 +53,10 @@ Buscaba un libro para aprender a ser,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -79,6 +83,10 @@ And all day she would hum and play, 
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>10</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -105,6 +113,10 @@ When she was through, her worries grew,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -131,6 +143,10 @@ Janie’s a friend to all of the animals. 
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -157,6 +173,10 @@ She asked, “Where’s an open window?”  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -183,6 +203,10 @@ Though so afraid, that’s where she stayed,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -209,6 +233,10 @@ Some teachers saw and watched in awe, saying, 
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -235,6 +263,12 @@ Janie’s a friend to all of the animals.
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -261,6 +295,12 @@ What a shame she’d never learn,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -287,6 +327,12 @@ Didn’t see any of those hanging red things,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -313,6 +359,12 @@ Came in somehow, don’t remember now,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -339,6 +391,12 @@ Janie’s a friend to all of the animals.  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -365,6 +423,12 @@ We all listened up real closely,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -391,6 +455,12 @@ Went to all the shades and blinds,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -417,6 +487,12 @@ The bird took flight, right towards the light, 
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -443,6 +519,12 @@ Janie’s a friend to all of the animals. 
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -469,6 +551,12 @@ Gave directions to the hummingbird,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -495,6 +583,12 @@ Sometimes it’s best to change the light,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
@@ -521,6 +615,12 @@ That everyone can find their way,  
 			<array/>
 			<key>playOnLoad</key>
 			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>pageLabel</key>
@@ -554,6 +654,12 @@ Janie’s a friend to all of the animals.  
    Y cuando llegue lo demostraré.  
      Y cuando llegue lo demostraré.  
        Y cuando llegue lo demostraré.</string>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>0</integer>
+			<key>tweakTextViewHeight</key>
+			<integer>50</integer>
 		</dict>
 	</array>
 	<key>version</key>

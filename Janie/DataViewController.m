@@ -26,7 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSAttributedString *)stringForText:(NSString *)s {
+- (NSAttributedString *)stringForText:(NSString *)s isSpanish:(BOOL)isSpanish {
     if (!s) return nil;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -36,7 +36,7 @@
     paragraphStyle.lineSpacing = self.dataObject.lineSpacing; // <--- magic line spacing here!
     paragraphStyle.paragraphSpacing = self.dataObject.lineSpacing; // <--- magic line spacing here!
     paragraphStyle.paragraphSpacingBefore = 0; // <--- magic line spacing here!
-
+    paragraphStyle.alignment = isSpanish ? NSTextAlignmentLeft : NSTextAlignmentRight;
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys: paragraphStyle, NSParagraphStyleAttributeName, self.dataObject.textFont, NSFontAttributeName,nil];
     
     return [[NSAttributedString alloc] initWithString:s attributes:dict];
@@ -59,8 +59,8 @@
         self.englishTextView.font = [self.dataObject textFont];
         self.spanishTextView.font = [self.dataObject textFont];
 
-        self.englishTextView.attributedText = [self stringForText:[self.dataObject english]];
-        self.spanishTextView.attributedText = [self stringForText:[self.dataObject spanish]];
+        self.englishTextView.attributedText = [self stringForText:self.dataObject.english isSpanish:NO];
+        self.spanishTextView.attributedText = [self stringForText:self.dataObject.spanish isSpanish:YES];
     }
     // text could be stored as a dict that might have additional information
 }
@@ -75,16 +75,66 @@
         [self playNextSound:nil];
 }
 
-//- (void)viewDidLayoutSubviews {
-////    [super viewDidLayoutSubviews];
-////    if (self.dataObject.imageFullPage) {
-////        CGRect r = self.imageView.frame;
-////        CGRect vr = self.view.frame;
-////        vr.origin = CGPointZero;
-////        self.imageView.frame = vr;
-////        [self.view bringSubviewToFront:self.imageView];
-////    }
-//}
+
+#define dDeviceOrientation [[UIDevice currentDevice] orientation]
+#define isPortrait  UIDeviceOrientationIsPortrait(dDeviceOrientation)
+#define isLandscape UIDeviceOrientationIsLandscape(dDeviceOrientation)
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+
+
+//    CGRect screen = [[UIScreen mainScreen] bounds];
+//    float height = screen.size.height;
+//    float width = screen.size.width;
+//    float screenRatio = width/height;
+    
+    CGRect vRect = self.containerView.bounds;
+    CGRect iRect = self.imageView.frame;
+    CGRect cRect = self.textViews.frame;
+    
+    CGFloat tweakTextViewHeight  = self.dataObject.tweakTextViewHeight;
+    CGFloat tweakTextViewCenter = self.dataObject.tweakTextViewCenter;
+    
+    iRect.size.width = vRect.size.width;
+    cRect.size.width = vRect.size.width;
+    
+#define IPAD_RATIO_W_H    0.75
+#define IPHONE_RATIO_W_H   0.75
+#define TOP_TEXT_MARGIN  5.0
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        // we are always laying out in portrait because in landscape, we show two pages at once!
+        
+        iRect.size.height = floor(vRect.size.height * IPAD_RATIO_W_H) - tweakTextViewHeight;
+        cRect.origin.y = iRect.size.height + TOP_TEXT_MARGIN;
+        cRect.size.height = vRect.size.height - (iRect.size.height + TOP_TEXT_MARGIN);
+    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        // No Landscape support because it won't fit on iPhone
+        iRect.size.height = floor(vRect.size.height * IPHONE_RATIO_W_H) - tweakTextViewHeight;
+        cRect.origin.y = iRect.size.height;
+        cRect.size.height = vRect.size.height - iRect.size.height;
+    } else {
+        // No WATCH or TV support! ;-)
+    }
+#define LEFT_SPANISH_MARGIN  4.0
+#define RIGHT_ENGLISH_MARGIN 4.0
+    
+    self.imageView.frame = iRect;
+    self.textViews.frame = cRect;   // see if the items inside are right though!
+    CGRect eT = _englishTextView.frame;
+    CGRect sT = _spanishTextView.frame;
+    eT.size.height = cRect.size.height;
+    eT.size.width = floor(cRect.size.width/2.0) + tweakTextViewCenter;
+    eT.origin = CGPointMake(cRect.size.width - eT.size.width - RIGHT_ENGLISH_MARGIN, 0);
+    sT.size.height = cRect.size.height;
+    sT.size.width = cRect.size.width/2.0 - tweakTextViewCenter;
+    sT.origin = CGPointMake(LEFT_SPANISH_MARGIN,0.0);
+    self.englishTextView.frame = eT;
+    self.spanishTextView.frame = sT;
+    
+}
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

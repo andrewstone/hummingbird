@@ -26,6 +26,9 @@
     _spanish = [d valueForKey:@"spanish"];
     _imageFullPage = [[d valueForKey:@"imageFullPage"] boolValue];
     _textInItalics = [[d valueForKey:@"textInItalics"] boolValue];
+    _tweakFontSizeAmount = [[d valueForKey:@"tweakFontSizeAmount"] floatValue];
+    _tweakTextViewHeight = [[d valueForKey:@"tweakTextViewHeight"] floatValue];
+    _tweakTextViewCenter = [[d valueForKey:@"tweakTextViewCenter"] floatValue];
     
     NSArray *a = [d valueForKey:@"audioFileNames"];
     if (a) {
@@ -40,17 +43,24 @@
     return [UIImage imageNamed:_imageName];
 }
 
+#define dDeviceOrientation [[UIDevice currentDevice] orientation]
+#define isPortrait  UIDeviceOrientationIsPortrait(dDeviceOrientation)
+
 
 - (UIFont *)textFont {
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
-    float size = isPad ? 18.0 : 15.0;
+    float size = isPad ? (isPortrait ? 18.0 : 16.0) : 15.0;
 
+    // on iPad we tweak to fill:
+    if (isPad || self.tweakFontSizeAmount < 0)
+        size += self.tweakFontSizeAmount;
+    
     return _textInItalics ? [UIFont fontWithName:@"TimesNewRomanPS-ItalicMT" size:size] : [UIFont fontWithName:@"TimesNewRomanPSMT" size:size];
 }
 
 - (float)lineSpacing {
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
-    return ( isPad ? -1.0 : -1.0);
+    return ( isPad ? -3.0 : -1.0);
 }
 
 @end

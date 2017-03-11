@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF0B31BC1E6A685C00F7D5A7 /* Janie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Janie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0B31BC1E6A685C00F7D5A7 /* Hummingbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hummingbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0B31C01E6A685C00F7D5A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF0B31C21E6A685C00F7D5A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF0B31C31E6A685C00F7D5A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		BF0B31BD1E6A685C00F7D5A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF0B31BC1E6A685C00F7D5A7 /* Janie.app */,
+				BF0B31BC1E6A685C00F7D5A7 /* Hummingbird.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			);
 			name = Janie;
 			productName = Janie;
-			productReference = BF0B31BC1E6A685C00F7D5A7 /* Janie.app */;
+			productReference = BF0B31BC1E6A685C00F7D5A7 /* Hummingbird.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -323,8 +323,8 @@
 				INFOPLIST_FILE = Janie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stone.Janie;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stone.Hummingbird;
+				PRODUCT_NAME = Hummingbird;
 			};
 			name = Debug;
 		};
@@ -336,8 +336,8 @@
 				INFOPLIST_FILE = Janie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stone.Janie;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stone.Hummingbird;
+				PRODUCT_NAME = Hummingbird;
 			};
 			name = Release;
 		};

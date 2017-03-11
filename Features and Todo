@@ -1,9 +1,8 @@
 Janie things to implement:
 
-* Learn about pegging objects to top and sides, and then flowing things around that
-
-* balance size of text fields
-* adjust font weight and size and italic
-
+* Design an action object
+ - selector
+- target
+- rect in percentages of size - these must be reset and live in ImageView which must have user interaction turned on.
 
 

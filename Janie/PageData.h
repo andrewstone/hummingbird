@@ -20,6 +20,9 @@
 @property (nonatomic) NSString *spanish;
 
 @property (nonatomic) NSArray *audioFiles;
+@property (nonatomic) CGFloat tweakFontSizeAmount;
+@property (nonatomic) CGFloat tweakTextViewHeight;
+@property (nonatomic) CGFloat tweakTextViewCenter;
 @property (nonatomic) BOOL playOnLoad;
 @property (nonatomic) BOOL leaveSongRunning;
 

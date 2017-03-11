@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF0B31BB1E6A685B00F7D5A7"
-               BuildableName = "Janie.app"
+               BuildableName = "Hummingbird.app"
                BlueprintName = "Janie"
                ReferencedContainer = "container:Janie.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF0B31BB1E6A685B00F7D5A7"
-            BuildableName = "Janie.app"
+            BuildableName = "Hummingbird.app"
             BlueprintName = "Janie"
             ReferencedContainer = "container:Janie.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF0B31BB1E6A685B00F7D5A7"
-            BuildableName = "Janie.app"
+            BuildableName = "Hummingbird.app"
             BlueprintName = "Janie"
             ReferencedContainer = "container:Janie.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BF0B31BB1E6A685B00F7D5A7"
-            BuildableName = "Janie.app"
+            BuildableName = "Hummingbird.app"
             BlueprintName = "Janie"
             ReferencedContainer = "container:Janie.xcodeproj">
          </BuildableReference>
