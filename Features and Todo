@@ -6,3 +6,6 @@ Janie things to implement:
 - rect in percentages of size - these must be reset and live in ImageView which must have user interaction turned on.
 
 
+* Either or both english or Spanish
+* pinch to zoom image
+* play correct audio if we're in Spanish'

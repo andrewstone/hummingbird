@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PageData.h"
 
-@interface DataViewController : UIViewController <AVAudioPlayerDelegate>
+@interface DataViewController : UIViewController <AVAudioPlayerDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -24,6 +24,7 @@
 
 - (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array
 - (IBAction)pauseOrRestart:(id)sender;
+- (IBAction)swapLanguages:(id)sender;
 
 @end
 

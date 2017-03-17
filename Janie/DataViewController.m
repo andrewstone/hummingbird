@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotTap:)];
+    tap.numberOfTapsRequired = 1;
+    tap.delegate = self;
+    [self.spanishTextView addGestureRecognizer:tap];
 }
 
 
@@ -37,6 +41,10 @@
     paragraphStyle.paragraphSpacing = self.dataObject.lineSpacing; // <--- magic line spacing here!
     paragraphStyle.paragraphSpacingBefore = 0; // <--- magic line spacing here!
     paragraphStyle.alignment = isSpanish ? NSTextAlignmentLeft : NSTextAlignmentRight;
+    
+    if ([[NSUserDefaults standardUserDefaults]integerForKey:@"WhichLanguage"] > 0)
+        paragraphStyle.alignment = NSTextAlignmentCenter;
+
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys: paragraphStyle, NSParagraphStyleAttributeName, self.dataObject.textFont, NSFontAttributeName,nil];
     
     return [[NSAttributedString alloc] initWithString:s attributes:dict];
@@ -59,8 +67,14 @@
         self.englishTextView.font = [self.dataObject textFont];
         self.spanishTextView.font = [self.dataObject textFont];
 
+        int which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+        if (which == 0) {
         self.englishTextView.attributedText = [self stringForText:self.dataObject.english isSpanish:NO];
         self.spanishTextView.attributedText = [self stringForText:self.dataObject.spanish isSpanish:YES];
+        } else {
+            NSString *text = which == 1 ? self.dataObject.spanish :  self.dataObject.english;
+            self.spanishTextView.attributedText = [self stringForText:text isSpanish:which == 1];
+        }
     }
     // text could be stored as a dict that might have additional information
 }
@@ -123,13 +137,21 @@
     
     self.imageView.frame = iRect;
     self.textViews.frame = cRect;   // see if the items inside are right though!
+// if only English or Spanish, then resize the Spanish to full size...
+    int which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    
     CGRect eT = _englishTextView.frame;
     CGRect sT = _spanishTextView.frame;
+    
     eT.size.height = cRect.size.height;
-    eT.size.width = floor(cRect.size.width/2.0) + tweakTextViewCenter;
-    eT.origin = CGPointMake(cRect.size.width - eT.size.width - RIGHT_ENGLISH_MARGIN, 0);
     sT.size.height = cRect.size.height;
-    sT.size.width = cRect.size.width/2.0 - tweakTextViewCenter;
+    if (which == 0) {
+        eT.size.width = floor(cRect.size.width/2.0) + tweakTextViewCenter;
+        eT.origin = CGPointMake(cRect.size.width - eT.size.width - RIGHT_ENGLISH_MARGIN, 0.0);
+        sT.size.width = cRect.size.width/2.0 - tweakTextViewCenter;
+    } else {
+        sT.size.width = cRect.size.width;
+    }
     sT.origin = CGPointMake(LEFT_SPANISH_MARGIN,0.0);
     self.englishTextView.frame = eT;
     self.spanishTextView.frame = sT;
@@ -154,6 +176,12 @@
         whichSound = 0; // reset to first
         return sounds[whichSound];
     } else whichSound++;
+    
+    if (sounds.count == 2) {
+        if ([[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"] == 1)
+            soundFile = sounds[0];
+        else soundFile = sounds[1];
+    }
     return soundFile;
 
 }
@@ -185,4 +213,36 @@
     else [player play];
 }
 
+- (IBAction)swapLanguages:(id)sender {
+    int which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    which = which == 1 ? 2 : 1;
+    [[NSUserDefaults standardUserDefaults] setInteger:which forKey:@"WhichLanguage"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSString *text = which == 1 ? self.dataObject.spanish :  self.dataObject.english;
+    self.spanishTextView.attributedText = [self stringForText:text isSpanish:which == 1];
+}
+
+- (void)gotTap:(UITapGestureRecognizer *)tap {
+//    CGPoint pt = [tap locationInView:self.view];
+//    float ratio = pt.x/self.view.size.width;
+//    if (ratio < .2 || ratio > .8) {
+//        // we fail it
+//        
+//    }
+
+    if (tap.state == UIGestureRecognizerStateBegan) {
+        
+    }
+    if (tap.state == UIGestureRecognizerStateEnded) {
+        [self swapLanguages:self];
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    CGPoint pt = [gestureRecognizer locationInView:self.view];
+    float ratio = pt.x/self.view.frame.size.width;
+    BOOL dontDoIt =   (ratio < .2 || ratio > .8);
+    return !dontDoIt;
+}
 @end

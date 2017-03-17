@@ -48,6 +48,7 @@
 
 
 - (UIFont *)textFont {
+    BOOL oneLanguage = ([[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"] > 0);
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
     float size = isPad ? (isPortrait ? 18.0 : 16.0) : 15.0;
 
@@ -55,6 +56,10 @@
     if (isPad || self.tweakFontSizeAmount < 0)
         size += self.tweakFontSizeAmount;
     
+
+    if (oneLanguage) size += 5.0;
+
+
     return _textInItalics ? [UIFont fontWithName:@"TimesNewRomanPS-ItalicMT" size:size] : [UIFont fontWithName:@"TimesNewRomanPSMT" size:size];
 }
 

@@ -116,7 +116,7 @@ When she was through, her worries grew,  
 			<key>tweakFontSizeAmount</key>
 			<integer>0</integer>
 			<key>tweakTextViewCenter</key>
-			<integer>0</integer>
+			<integer>40</integer>
 		</dict>
 		<dict>
 			<key>spanish</key>
