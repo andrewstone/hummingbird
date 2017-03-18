@@ -221,6 +221,7 @@
     
     NSString *text = which == 1 ? self.dataObject.spanish :  self.dataObject.english;
     self.spanishTextView.attributedText = [self stringForText:text isSpanish:which == 1];
+    [self playNextSound:self];
 }
 
 - (void)gotTap:(UITapGestureRecognizer *)tap {

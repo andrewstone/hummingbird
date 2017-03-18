@@ -57,10 +57,10 @@
         size += self.tweakFontSizeAmount;
     
 
-    if (oneLanguage) size += 5.0;
+    if (oneLanguage) size += 6.0;
 
 
-    return _textInItalics ? [UIFont fontWithName:@"TimesNewRomanPS-ItalicMT" size:size] : [UIFont fontWithName:@"TimesNewRomanPSMT" size:size];
+    return _textInItalics ? [UIFont fontWithName:@"TimesNewRomanPS-BoldItalicMT" size:size] : [UIFont fontWithName:@"TimesNewRomanPS-BoldMT" size:size];
 }
 
 - (float)lineSpacing {
