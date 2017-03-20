@@ -18,7 +18,7 @@
 @property (nonatomic) NSString *pageLabel;   // could be a number, or label like Preface etc.
 @property (nonatomic) NSString *english;
 @property (nonatomic) NSString *spanish;
-
+@property (nonatomic) SEL initialAction;
 @property (nonatomic) NSArray *audioFiles;
 @property (nonatomic) CGFloat tweakFontSizeAmount;
 @property (nonatomic) CGFloat tweakTextViewHeight;

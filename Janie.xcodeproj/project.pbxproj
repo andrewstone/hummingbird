@@ -21,6 +21,9 @@
 		BF0B31EA1E6DE27500F7D5A7 /* Janie Instrumental.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */; };
 		BF0B31EB1E6DE27500F7D5A7 /* Janie Song-en.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0B31E81E6DE27500F7D5A7 /* Janie Song-en.m4a */; };
 		BF0B31EC1E6DE27500F7D5A7 /* Janie Song-es.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0B31E91E6DE27500F7D5A7 /* Janie Song-es.m4a */; };
+		BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */; };
+		BF48CE2A1E7F62C4006D3FDC /* BookReadingOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */; };
+		BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,10 @@
 		BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Janie Instrumental.m4a"; path = "audio/Janie Instrumental.m4a"; sourceTree = "<group>"; };
 		BF0B31E81E6DE27500F7D5A7 /* Janie Song-en.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Janie Song-en.m4a"; path = "audio/Janie Song-en.m4a"; sourceTree = "<group>"; };
 		BF0B31E91E6DE27500F7D5A7 /* Janie Song-es.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Janie Song-es.m4a"; path = "audio/Janie Song-es.m4a"; sourceTree = "<group>"; };
+		BF48CE261E7F62C4006D3FDC /* BookReadingOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReadingOptionsViewController.h; sourceTree = "<group>"; };
+		BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReadingOptionsViewController.m; sourceTree = "<group>"; };
+		BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookReadingOptionsViewController.xib; sourceTree = "<group>"; };
+		BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BookReadingOptionsViewController~ipad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,10 @@
 				BF0B31C61E6A685C00F7D5A7 /* RootViewController.m */,
 				BF0B31C81E6A685C00F7D5A7 /* DataViewController.h */,
 				BF0B31C91E6A685C00F7D5A7 /* DataViewController.m */,
+				BF48CE261E7F62C4006D3FDC /* BookReadingOptionsViewController.h */,
+				BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */,
+				BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */,
+				BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */,
 				BF0B31DF1E6C746B00F7D5A7 /* PageData.h */,
 				BF0B31E01E6C746B00F7D5A7 /* PageData.m */,
 				BF0B31CB1E6A685C00F7D5A7 /* ModelController.h */,
@@ -180,10 +191,12 @@
 				BF0B31D21E6A685C00F7D5A7 /* Assets.xcassets in Resources */,
 				BF0B31D01E6A685C00F7D5A7 /* Main.storyboard in Resources */,
 				BF0B31EA1E6DE27500F7D5A7 /* Janie Instrumental.m4a in Resources */,
+				BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */,
 				BF0B31EC1E6DE27500F7D5A7 /* Janie Song-es.m4a in Resources */,
 				BF0B31E31E6C755D00F7D5A7 /* PageData.plist in Resources */,
 				BF0B31E51E6DDC6B00F7D5A7 /* Features and Todo in Resources */,
 				BF0B31EB1E6DE27500F7D5A7 /* Janie Song-en.m4a in Resources */,
+				BF48CE2A1E7F62C4006D3FDC /* BookReadingOptionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +212,7 @@
 				BF0B31CD1E6A685C00F7D5A7 /* ModelController.m in Sources */,
 				BF0B31C11E6A685C00F7D5A7 /* main.m in Sources */,
 				BF0B31E11E6C746B00F7D5A7 /* PageData.m in Sources */,
+				BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */,
 				BF0B31C71E6A685C00F7D5A7 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import "PageData.h"
+#import "BookReadingOptionsViewController.h"
+
 
 @interface DataViewController : UIViewController <AVAudioPlayerDelegate, UIGestureRecognizerDelegate>
 
@@ -20,7 +22,7 @@
 @property (strong, nonatomic) IBOutlet UIView *textViews;
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) PageData *dataObject;
-
+@property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
 
 - (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array
 - (IBAction)pauseOrRestart:(id)sender;

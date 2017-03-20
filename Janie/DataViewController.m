@@ -22,6 +22,8 @@
     tap.numberOfTapsRequired = 1;
     tap.delegate = self;
     [self.spanishTextView addGestureRecognizer:tap];
+    if (self.dataObject.initialAction)
+        [self performSelector:self.dataObject.initialAction withObject:self.dataObject];
 }
 
 
@@ -245,5 +247,17 @@
     float ratio = pt.x/self.view.frame.size.width;
     BOOL dontDoIt =   (ratio < .2 || ratio > .8);
     return !dontDoIt;
+}
+
+- (IBAction)runOptions:(id)sender {
+    if (!self.optionsController) {
+        self.optionsController = [[BookReadingOptionsViewController alloc] initWithNibName:nil bundle:nil];
+    }
+    CGRect r = self.view.bounds;
+    CGRect or = self.optionsController.view.frame;
+    or.origin.x = (r.size.width - or.size.width)/2.0;
+    or.origin.y = r.size.height - or.size.height;
+    self.optionsController.view.frame = or;
+    [self.view addSubview:self.optionsController.view];
 }
 @end

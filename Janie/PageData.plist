@@ -19,6 +19,8 @@
 			<true/>
 		</dict>
 		<dict>
+			<key>InitialAction</key>
+			<string>runOptions:</string>
 			<key>imageName</key>
 			<string>titlePage</string>
 			<key>imageFullPage</key>

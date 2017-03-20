@@ -30,6 +30,9 @@
     _tweakTextViewHeight = [[d valueForKey:@"tweakTextViewHeight"] floatValue];
     _tweakTextViewCenter = [[d valueForKey:@"tweakTextViewCenter"] floatValue];
     
+    NSString *actionName = [d valueForKey:@"InitialAction"];
+    if (actionName) self.initialAction = NSSelectorFromString(actionName);
+    
     NSArray *a = [d valueForKey:@"audioFileNames"];
     if (a) {
         _audioFiles = [[NSMutableArray alloc] initWithArray:a];
