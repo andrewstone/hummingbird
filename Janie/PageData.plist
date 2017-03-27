@@ -8,12 +8,13 @@
 			<key>imageFullPage</key>
 			<true/>
 			<key>leaveSongRunning</key>
-			<true/>
+			<false/>
 			<key>imageName</key>
 			<string>CoverPage</string>
 			<key>audioFileNames</key>
 			<array>
-				<string>Janie Instrumental.m4a</string>
+				<string>AUDIO JANE SPANISH TITLE PAGE.m4a</string>
+				<string>AUDIO JANE ENGLISH TITLE PAGE.m4a</string>
 			</array>
 			<key>playOnLoad</key>
 			<true/>
@@ -26,7 +27,10 @@
 			<key>imageFullPage</key>
 			<true/>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH DEDICATION PAGE.m4a</string>
+				<string>AUDIO JANIE ENGLISH DEDICATION PAGE.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 		</dict>
@@ -52,7 +56,10 @@ Buscaba un libro para aprender a ser,  
 			<key>imageName</key>
 			<string>JANIE 1</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 1.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 1.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -82,7 +89,10 @@ And all day she would hum and play, 
 			<key>imageName</key>
 			<string>JANIE 2</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 2.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 2.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -112,7 +122,10 @@ When she was through, her worries grew,  
 			<key>imageName</key>
 			<string>JANIE 3</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 3.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 3.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -142,7 +155,10 @@ Janie’s a friend to all of the animals. 
 			<key>imageName</key>
 			<string>JANIE 4</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 4.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 4.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -172,7 +188,10 @@ She asked, “Where’s an open window?”  
 			<key>imageName</key>
 			<string>JANIE 5</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 5.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 5.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -202,7 +221,10 @@ Though so afraid, that’s where she stayed,  
 			<key>imageName</key>
 			<string>JANIE 6</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 6.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 6.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -232,7 +254,10 @@ Some teachers saw and watched in awe, saying, 
 			<key>imageName</key>
 			<string>JANIE 7</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 7.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 7.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -262,7 +287,10 @@ Janie’s a friend to all of the animals.
 			<key>imageName</key>
 			<string>JANIE 8</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 8.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 8.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -294,7 +322,10 @@ What a shame she’d never learn,  
 			<key>imageName</key>
 			<string>JANIE 9</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 9.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 9.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -326,7 +357,10 @@ Didn’t see any of those hanging red things,  
 			<key>imageName</key>
 			<string>JANIE 10</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 10.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 10.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -359,6 +393,10 @@ Came in somehow, don’t remember now,  
 			<string>JANIE 11</string>
 			<key>audioFileNames</key>
 			<array/>
+			<key>New item</key>
+			<string>AUDIO JANIE SPANISH PAGE 11.m4a</string>
+			<key>New item - 2</key>
+			<string>AUDIO JANIE ENGLISH PAGE 11.m4a</string>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -390,7 +428,10 @@ Janie’s a friend to all of the animals.  
 			<key>imageName</key>
 			<string>JANIE 12</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 12.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 12.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -422,7 +463,10 @@ We all listened up real closely,  
 			<key>imageName</key>
 			<string>JANIE 13</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 13.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 13.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -454,7 +498,10 @@ Went to all the shades and blinds,  
 			<key>imageName</key>
 			<string>JANIE 14</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 14.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 14.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -486,7 +533,10 @@ The bird took flight, right towards the light, 
 			<key>imageName</key>
 			<string>JANIE 15</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 15.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 15.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -518,7 +568,10 @@ Janie’s a friend to all of the animals. 
 			<key>imageName</key>
 			<string>JANIE 16</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 16.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 16.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -550,7 +603,10 @@ Gave directions to the hummingbird,  
 			<key>imageName</key>
 			<string>JANIE 17</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 17.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 17.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -582,7 +638,10 @@ Sometimes it’s best to change the light,  
 			<key>imageName</key>
 			<string>JANIE 18</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 18.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 18.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -614,9 +673,14 @@ That everyone can find their way,  
 			<key>imageName</key>
 			<string>JANIE 19</string>
 			<key>audioFileNames</key>
-			<array/>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 19.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 19.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
+			<key>New item</key>
+			<string></string>
 			<key>tweakFontSizeAmount</key>
 			<integer>0</integer>
 			<key>tweakTextViewCenter</key>

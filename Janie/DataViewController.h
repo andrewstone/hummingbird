@@ -23,10 +23,11 @@
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) PageData *dataObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
+@property (nonatomic) BOOL fullScreen;
 
 - (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array
 - (IBAction)pauseOrRestart:(id)sender;
 - (IBAction)swapLanguages:(id)sender;
-
+- (IBAction)imageViewTapped:(id)sender;
 @end
 

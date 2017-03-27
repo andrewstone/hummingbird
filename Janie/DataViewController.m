@@ -13,19 +13,69 @@
 
 @end
 
-@implementation DataViewController 
+@implementation DataViewController {
+    // here is where the class can declare private ivars which are not visible to consumers of this class
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(autoPlayNotification:) name:@"AutoPlay" object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playMusicNotification:) name:@"PlayMusic" object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(whichLanguageNotification:) name:@"WhichLanguage" object:nil];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotTap:)];
     tap.numberOfTapsRequired = 1;
     tap.delegate = self;
     [self.spanishTextView addGestureRecognizer:tap];
-    if (self.dataObject.initialAction)
+    
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
+    tap.numberOfTapsRequired = 2;
+    tap.delegate = self;
+    [self.view addGestureRecognizer:tap];
+
+    if (self.dataObject.initialAction) {
+        // this causes a warning: may cause a leak
+        // it doesn't though because these methods return void
         [self performSelector:self.dataObject.initialAction withObject:self.dataObject];
+        
+    }
 }
 
+// NSNotificationCenter lets objects that know nothing about
+// each other to talk to each other - these are posted from
+// the BookOptionsViewController
+
+- (void)autoPlayNotification:(NSNotification *)note {
+    [self startOrStopAutoPlay:[[NSUserDefaults standardUserDefaults] boolForKey:@"AutoPlay"]];
+}
+
+- (void)startOrStopAutoPlay:(BOOL)start {
+#pragma warning Implement autoPlay
+}
+
+
+- (void)whichLanguageNotification:(NSNotification *)note {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    
+    if (which == 0) {
+        
+    } else if (which == 1) {
+        
+    } else {
+        
+    }
+
+    [self coreSetupText];
+    [self playNextSound:nil];
+
+}
+
+- (void)playMusicNotification:(NSNotification *)note {
+    [self playNextSound:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -52,6 +102,19 @@
     return [[NSAttributedString alloc] initWithString:s attributes:dict];
 }
 
+- (void)coreSetupText {
+    self.englishTextView.font = [self.dataObject textFont];
+    self.spanishTextView.font = [self.dataObject textFont];
+    
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    if (which == 0) {
+        self.englishTextView.attributedText = [self stringForText:self.dataObject.english isSpanish:NO];
+        self.spanishTextView.attributedText = [self stringForText:self.dataObject.spanish isSpanish:YES];
+    } else {
+        NSString *text = which == 1 ? self.dataObject.spanish :  self.dataObject.english;
+        self.spanishTextView.attributedText = [self stringForText:text isSpanish:which == 1];
+    }
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -64,21 +127,9 @@
         self.dataLabel.hidden = YES;
     } else {
         self.imageView.image = [self.dataObject pageImage];
-  //      self.dataLabel.text = [self.dataObject pageLabel];
 
-        self.englishTextView.font = [self.dataObject textFont];
-        self.spanishTextView.font = [self.dataObject textFont];
-
-        int which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
-        if (which == 0) {
-        self.englishTextView.attributedText = [self stringForText:self.dataObject.english isSpanish:NO];
-        self.spanishTextView.attributedText = [self stringForText:self.dataObject.spanish isSpanish:YES];
-        } else {
-            NSString *text = which == 1 ? self.dataObject.spanish :  self.dataObject.english;
-            self.spanishTextView.attributedText = [self stringForText:text isSpanish:which == 1];
-        }
+        [self coreSetupText];
     }
-    // text could be stored as a dict that might have additional information
 }
 
 
@@ -87,8 +138,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    if (self.dataObject.playOnLoad)
-        [self playNextSound:nil];
+    [self playNextSound:nil];
 }
 
 
@@ -140,7 +190,7 @@
     self.imageView.frame = iRect;
     self.textViews.frame = cRect;   // see if the items inside are right though!
 // if only English or Spanish, then resize the Spanish to full size...
-    int which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
     
     CGRect eT = _englishTextView.frame;
     CGRect sT = _spanishTextView.frame;
@@ -170,14 +220,8 @@
     }
 }
 - (NSString *)nextSound {
-    static int whichSound = 0;
     NSArray *sounds = [self.dataObject audioFiles];
-    NSString * soundFile = sounds.count > whichSound ? sounds[whichSound] : nil;
-    
-    if (soundFile == nil && sounds.count == 1) {
-        whichSound = 0; // reset to first
-        return sounds[whichSound];
-    } else whichSound++;
+    NSString * soundFile = nil;
     
     if (sounds.count == 2) {
         if ([[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"] == 1)
@@ -189,6 +233,11 @@
 }
 
 - (IBAction)playNextSound:(id)sender {
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"PlayMusic"]
+        || self.dataObject.playOnLoad)
+    {
+        
     NSString *nextSound = [self nextSound];
     if (nextSound) {
         NSString *soundFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:nextSound];
@@ -206,7 +255,10 @@
         
         [player play];
     }
-
+    } else {
+        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+        [player stop];
+    }
 }
 
 - (IBAction)pauseOrRestart:(id)sender {
@@ -216,7 +268,7 @@
 }
 
 - (IBAction)swapLanguages:(id)sender {
-    int which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
     which = which == 1 ? 2 : 1;
     [[NSUserDefaults standardUserDefaults] setInteger:which forKey:@"WhichLanguage"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -259,5 +311,25 @@
     or.origin.y = r.size.height - or.size.height;
     self.optionsController.view.frame = or;
     [self.view addSubview:self.optionsController.view];
+}
+
+- (IBAction)imageViewTapped:(id)sender {
+    // we are either in the bigly state or the regular state
+    CGRect vr = self.view.bounds;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.4];
+    [UIView setAnimationDelay:0.1];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+
+    if (self.fullScreen) {
+        [(UIImageView *)self.view setImage:nil];
+        self.containerView.alpha = 1.0;
+    } else {
+        [(UIImageView *)self.view setImage:[self.imageView.image copy]];
+        self.containerView.alpha = 0.0;
+    }
+    self.fullScreen = !self.fullScreen;
+    [UIView commitAnimations];
+
 }
 @end

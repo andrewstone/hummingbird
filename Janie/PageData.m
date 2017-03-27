@@ -53,22 +53,29 @@
 - (UIFont *)textFont {
     BOOL oneLanguage = ([[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"] > 0);
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
-    float size = isPad ? (isPortrait ? 18.0 : 16.0) : 15.0;
+    float size = isPad ? (isPortrait ? 18.0 : 16.0) : 14.0;
 
     // on iPad we tweak to fill:
     if (isPad || self.tweakFontSizeAmount < 0)
         size += self.tweakFontSizeAmount;
     
 
-    if (oneLanguage) size += 6.0;
+    if (oneLanguage) size += (isPad ? 6.0 : 2.0);
 
-
-    return _textInItalics ? [UIFont fontWithName:@"TimesNewRomanPS-BoldItalicMT" size:size] : [UIFont fontWithName:@"TimesNewRomanPS-BoldMT" size:size];
+//#define FONT_NAME_STD   @"TimesNewRomanPS-BoldItalicMT"
+//#define FONT_NAME_ITALICS   @"TimesNewRomanPS-BoldMT"
+    
+#define FONT_NAME_STD   @"Baskerville"
+#define FONT_NAME_ITALICS   @"Baskerville-Italic"
+    
+    
+    
+    return _textInItalics ? [UIFont fontWithName:FONT_NAME_ITALICS size:size] : [UIFont fontWithName:FONT_NAME_STD size:size];
 }
 
 - (float)lineSpacing {
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
-    return ( isPad ? -3.0 : -1.0);
+    return ( isPad ? -3.0 : -3.0);
 }
 
 @end

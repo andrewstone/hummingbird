@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    self.autoPlaySwitch.on = [ud boolForKey:@"AutoPlay"];
+    self.languageController.selectedSegmentIndex = [ud integerForKey:@"WhichLanguage"];
+    self.playAudioSwitch.on = [ud boolForKey:@"PlayMusic"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +51,7 @@
 
 - (IBAction)changeAutoPlayAction:(UISwitch *)sender {
     [[NSUserDefaults standardUserDefaults] setBool:sender.isOn forKey:@"AutoPlay"];
-    [[NSUserDefaults standardUserDefaults] synchronize];    [[NSNotificationCenter defaultCenter] postNotificationName:@"AutoPlay" object:self];
+    [[NSUserDefaults standardUserDefaults] synchronize];    [[NSNotificationCenter defaultCenter] postNotificationName:@"AutoPlay" object:sender];
 
 }
 @end

@@ -17,8 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
-    [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"WhichLanguage"];
+    if (![ud boolForKey:@"firstTime"]) {
+        [ud setBool:YES forKey:@"firstTime"];
+        [ud setBool:YES forKey:@"AutoPlay"];
+        [ud setInteger:1 forKey:@"WhichLanguage"];
+        
+    }
     
     return YES;
 }
