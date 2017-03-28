@@ -11,6 +11,7 @@
 @class DataViewController;
 
 @interface ModelController : NSObject <UIPageViewControllerDataSource>
++ (ModelController *)sharedModelController;
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController;

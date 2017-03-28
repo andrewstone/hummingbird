@@ -17,5 +17,7 @@ What we did between classes:
 * use of ~ipad nib to fit ipad better
 
 We need to add:
-* audio range per page
+* audio end callback for autoplay
+* autoplay of pages
+
 

@@ -26,6 +26,12 @@
 @end
 
 @implementation ModelController
+static ModelController *sharedModel = nil;
+
++ (ModelController *)sharedModelController {
+    if (!sharedModel) sharedModel = [[ModelController alloc] init];
+    return sharedModel;
+}
 
 - (NSArray *)getPageData {
     NSMutableArray *a = [NSMutableArray array];

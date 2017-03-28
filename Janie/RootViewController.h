@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DataViewController;
 
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
+- (void)turnPageFrom:(DataViewController *)dvc;
 @end
 

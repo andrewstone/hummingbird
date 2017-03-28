@@ -45,6 +45,15 @@
     [self.pageViewController didMoveToParentViewController:self];
 }
 
+- (void)turnPageFrom:(DataViewController *)dvc; {
+    ModelController *model = [ModelController sharedModelController];
+    DataViewController *nextDVC = (DataViewController *)[model pageViewController:self.pageViewController viewControllerAfterViewController:dvc];
+    if (nextDVC) {
+        [self.pageViewController setViewControllers:@[nextDVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    }
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -56,7 +65,7 @@
     // Return the model controller object, creating it if necessary.
     // In more complex implementations, the model controller may be passed to the view controller.
     if (!_modelController) {
-        _modelController = [[ModelController alloc] init];
+        _modelController = [ModelController sharedModelController];
     }
     return _modelController;
 }

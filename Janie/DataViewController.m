@@ -8,6 +8,8 @@
 #import "DataViewController.h"
 #import "PageData.h"
 #import "AppDelegate.h"
+#import "ModelController.h"
+#import "RootViewController.h"
 
 @interface DataViewController ()
 
@@ -35,13 +37,17 @@
     tap.numberOfTapsRequired = 2;
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
-
-    if (self.dataObject.initialAction) {
+    SEL example = NSSelectorFromString(@"runOptions:");
+    if (self.dataObject.initialAction == example)
+        [self runOptions:self.dataObject];
+    
+    /// this is the real code if you actually use this feature for other things:
+//    if (self.dataObject.initialAction) {
         // this causes a warning: may cause a leak
         // it doesn't though because these methods return void
-        [self performSelector:self.dataObject.initialAction withObject:self.dataObject];
-        
-    }
+//        [self performSelector:self.dataObject.initialAction withObject:self.dataObject];
+    
+//    }
 }
 
 // NSNotificationCenter lets objects that know nothing about
@@ -53,7 +59,12 @@
 }
 
 - (void)startOrStopAutoPlay:(BOOL)start {
-#pragma warning Implement autoPlay
+    if (start) {
+        [self turnThePageProgrammatically:self];
+    } else {
+        
+    }
+
 }
 
 
@@ -232,6 +243,12 @@
 
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    if (flag) {
+        [self autoPlayNotification:nil];
+    }
+}
+
 - (IBAction)playNextSound:(id)sender {
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"PlayMusic"]
@@ -252,6 +269,7 @@
 
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
         [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
+        player.delegate = self;
         
         [player play];
     }
@@ -315,7 +333,6 @@
 
 - (IBAction)imageViewTapped:(id)sender {
     // we are either in the bigly state or the regular state
-    CGRect vr = self.view.bounds;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.4];
     [UIView setAnimationDelay:0.1];
@@ -331,5 +348,12 @@
     self.fullScreen = !self.fullScreen;
     [UIView commitAnimations];
 
+}
+
+- (IBAction)turnThePageProgrammatically:(id)sender {
+    RootViewController *rootController =(RootViewController*)[[(AppDelegate *)
+                                                               [[UIApplication sharedApplication]delegate] window] rootViewController];
+
+    [rootController turnPageFrom:self];
 }
 @end

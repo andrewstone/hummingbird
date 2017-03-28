@@ -29,5 +29,7 @@
 - (IBAction)pauseOrRestart:(id)sender;
 - (IBAction)swapLanguages:(id)sender;
 - (IBAction)imageViewTapped:(id)sender;
+- (IBAction)turnThePageProgrammatically:(id)sender;
+
 @end
 
