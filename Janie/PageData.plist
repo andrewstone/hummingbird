@@ -35,8 +35,57 @@
 			<false/>
 		</dict>
 		<dict>
-			<key>pageLabel</key>
-			<string>Janie y El Colibrí  – Janie and The Hummingbird</string>
+			<key>englishWordList</key>
+			<array>
+				<dict>
+					<key>start</key>
+					<integer>0</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>duration</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>4</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>duration</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>11</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>duration</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>17</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>duration</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>25</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>duration</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>27</integer>
+					<key>length</key>
+					<integer>12</integer>
+					<key>duration</key>
+					<string>1</string>
+				</dict>
+			</array>
 			<key>english</key>
 			<string>Has anyone heard there’s a hummingbird,
 

@@ -16,8 +16,16 @@ What we did between classes:
 * send notification so no back pointers
 * use of ~ipad nib to fit ipad better
 
-We need to add:
+Added:
 * audio end callback for autoplay
 * autoplay of pages
+
+Implementing word by word via NSAttributed String:
+GIVEN: for each word, the time as float seconds right before word is pronounced
+word list: each item represents a word:
+    NSRange start,length   (for quick selection)
+    NSTimeInterval startTime (duration can be calc'd by next startTime)
+
+
 
 

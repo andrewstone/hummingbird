@@ -17,6 +17,9 @@
 
 @implementation DataViewController {
     // here is where the class can declare private ivars which are not visible to consumers of this class
+    NSMutableAttributedString *originalAttributedString;
+    NSArray *bounceTimes;
+    NSInteger bouncePointer;
 }
 
 - (void)viewDidLoad {
@@ -93,7 +96,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSAttributedString *)stringForText:(NSString *)s isSpanish:(BOOL)isSpanish {
+- (NSMutableAttributedString *)stringForText:(NSString *)s isSpanish:(BOOL)isSpanish {
     if (!s) return nil;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -110,9 +113,61 @@
 
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys: paragraphStyle, NSParagraphStyleAttributeName, self.dataObject.textFont, NSFontAttributeName,nil];
     
-    return [[NSAttributedString alloc] initWithString:s attributes:dict];
+    return [[NSMutableAttributedString alloc] initWithString:s attributes:dict];
 }
 
+
+- (void)timerNextLoop:(NSTimer *)timer {
+    [self nextLoop:[timer userInfo]];
+}
+
+- (void)nextLoop:(UITextView *)textView {
+    bouncePointer++;
+    if (bouncePointer < bounceTimes.count) {
+        NSDictionary *info = bounceTimes[bouncePointer];
+        NSTimeInterval duration = [[info valueForKey:@"duration"] doubleValue];
+        NSRange range = NSMakeRange([(NSNumber *)[info valueForKey:@"start"] integerValue],
+                                                  [(NSNumber *)[info valueForKey:@"length"] integerValue]);
+        NSMutableAttributedString *newString = [[NSMutableAttributedString  alloc] initWithAttributedString:originalAttributedString];
+        
+        // now add whatever attributes you like to our range:
+        [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithBool:YES] range:range];
+        [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
+        [newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.2)] range:range];
+        
+        textView.attributedText = newString;
+        
+        // now make a callback at then end of our time:
+        [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:textView repeats:NO];
+                                                  
+    }
+}
+
+- (void)bounceText {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    UITextView *textView = nil;
+    bounceTimes = nil;
+    bouncePointer = -1;
+    
+    if (which == 1) {
+        originalAttributedString = [self stringForText:self.dataObject.spanish isSpanish:YES];
+        textView = self.spanishTextView;
+        bounceTimes = self.dataObject.spanishWordList;
+    } else if (which == 2) {
+        originalAttributedString = [self stringForText:self.dataObject.english isSpanish:NO];
+        textView = self.spanishTextView;
+        bounceTimes = self.dataObject.englishWordList;
+    } else if (which == 0) {
+        originalAttributedString = [self stringForText:self.dataObject.english isSpanish:NO];
+        textView = self.englishTextView;
+        bounceTimes = self.dataObject.englishWordList;
+    }
+    // does this page have a word list for the current language?
+    if (bounceTimes.count) {
+        [self nextLoop:textView];
+    }
+
+}
 - (void)coreSetupText {
     self.englishTextView.font = [self.dataObject textFont];
     self.spanishTextView.font = [self.dataObject textFont];
@@ -272,6 +327,7 @@
         player.delegate = self;
         
         [player play];
+        [self bounceText];
     }
     } else {
         AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];

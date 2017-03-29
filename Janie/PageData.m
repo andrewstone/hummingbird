@@ -37,6 +37,10 @@
     if (a) {
         _audioFiles = [[NSMutableArray alloc] initWithArray:a];
     }
+    a = [d valueForKey:@"englishWordList"];
+    if (a) _englishWordList = [[NSMutableArray alloc] initWithArray:a];
+    a = [d valueForKey:@"spanishWordList"];
+    if (a) _spanishWordList = [[NSMutableArray alloc] initWithArray:a];
     
     // add more functionality
     return self;
