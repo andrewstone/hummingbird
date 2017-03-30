@@ -137,7 +137,7 @@
         // now add whatever attributes you like to our range:
         [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleThick] range:range];
         [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
-        [newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.2)] range:range];
+        [newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
         
         textView.attributedText = newString;
         
@@ -149,6 +149,8 @@
 }
 
 - (void)bounceText {
+    [self stopBounce];
+    
     NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
     UITextView *textView = nil;
     bounceTimes = nil;
@@ -281,7 +283,13 @@
     self.spanishTextView.frame = sT;
     
 }
-
+- (void)stopBounce {
+    if (bounceTimes) {
+        [bounceTimer invalidate];
+        bounceTimer = nil;
+        bounceTimes = nil;
+    }
+}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
@@ -290,11 +298,7 @@
         [player stop];
         player = nil;
     }
-    if (bounceTimes) {
-        [bounceTimer invalidate];
-        bounceTimer = nil;
-        bounceTimes = nil;
-    }
+    [self stopBounce];
 }
 - (NSString *)nextSound {
     NSArray *sounds = [self.dataObject audioFiles];
