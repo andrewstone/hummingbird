@@ -20,6 +20,8 @@
     NSMutableAttributedString *originalAttributedString;
     NSArray *bounceTimes;
     NSInteger bouncePointer;
+    NSTimeInterval bounceStartTime;
+    NSTimer *bounceTimer;
 }
 
 - (void)viewDidLoad {
@@ -125,22 +127,25 @@
     bouncePointer++;
     if (bouncePointer < bounceTimes.count) {
         NSDictionary *info = bounceTimes[bouncePointer];
-        NSTimeInterval duration = [[info valueForKey:@"duration"] doubleValue];
+        NSTimeInterval endTime = [[info valueForKey:@"endTime"] doubleValue];
+        NSTimeInterval elapsed = CFAbsoluteTimeGetCurrent() - bounceStartTime;
+        NSTimeInterval duration = endTime - elapsed;
         NSRange range = NSMakeRange([(NSNumber *)[info valueForKey:@"start"] integerValue],
                                                   [(NSNumber *)[info valueForKey:@"length"] integerValue]);
         NSMutableAttributedString *newString = [[NSMutableAttributedString  alloc] initWithAttributedString:originalAttributedString];
         
         // now add whatever attributes you like to our range:
-        [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithBool:YES] range:range];
+        [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleThick] range:range];
         [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
         [newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.2)] range:range];
         
         textView.attributedText = newString;
         
         // now make a callback at then end of our time:
-        [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:textView repeats:NO];
+        bounceTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:textView repeats:NO];
                                                   
-    }
+    } else textView.attributedText = originalAttributedString;
+
 }
 
 - (void)bounceText {
@@ -164,6 +169,7 @@
     }
     // does this page have a word list for the current language?
     if (bounceTimes.count) {
+        bounceStartTime = CFAbsoluteTimeGetCurrent();
         [self nextLoop:textView];
     }
 
@@ -283,6 +289,11 @@
     if (player.isPlaying && shouldStop) {
         [player stop];
         player = nil;
+    }
+    if (bounceTimes) {
+        [bounceTimer invalidate];
+        bounceTimer = nil;
+        bounceTimes = nil;
     }
 }
 - (NSString *)nextSound {

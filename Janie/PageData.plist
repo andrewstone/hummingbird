@@ -42,66 +42,381 @@
 					<integer>0</integer>
 					<key>length</key>
 					<integer>3</integer>
-					<key>duration</key>
-					<string>1</string>
+					<key>endTime</key>
+					<string>0.545</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>4</integer>
 					<key>length</key>
 					<integer>6</integer>
-					<key>duration</key>
-					<string>1</string>
+					<key>endTime</key>
+					<string>1.194</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>11</integer>
 					<key>length</key>
-					<integer>6</integer>
-					<key>duration</key>
-					<string>1</string>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>1.709</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>17</integer>
 					<key>length</key>
 					<integer>7</integer>
-					<key>duration</key>
-					<string>1</string>
+					<key>endTime</key>
+					<string>1.81</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>25</integer>
 					<key>length</key>
 					<integer>1</integer>
-					<key>duration</key>
-					<string>1</string>
+					<key>endTime</key>
+					<string>1.9333</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>27</integer>
 					<key>length</key>
 					<integer>12</integer>
-					<key>duration</key>
-					<string>1</string>
+					<key>endTime</key>
+					<string>2.98</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>41</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>3.696</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>47</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>3.910</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>50</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>4.047</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>54</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>5.244</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>65</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>5.672</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>69</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>5.92</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>74</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>6.254</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>79</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>6.433</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>82</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>6.767</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>87</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>6.998</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>91</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>7.246</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>96</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>7.571</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>100</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>8.025</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>107</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>8.418</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>110</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>8.765</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>114</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>8.990</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>117</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>9.240</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>120</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>endTime</key>
+					<string>9.369</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>122</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>9.730</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>128</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>10.58</string>
+				</dict>
+			</array>
+			<key>spanishWordList</key>
+			<array>
+				<dict>
+					<key>start</key>
+					<integer>0</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>1.068</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>8</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>1.265</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>12</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>1.428</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>15</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>2.203</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>23</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>2.741</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>31</integer>
+					<key>length</key>
+					<integer>8</integer>
+					<key>endTime</key>
+					<string>3.611</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>40</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>3.754</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>43</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>3.910</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>46</integer>
+					<key>length</key>
+					<integer>11</integer>
+					<key>endTime</key>
+					<string>5.128</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>59</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>5.944</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>67</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>6.189</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>70</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>6.821</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>76</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>7.27</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>81</integer>
+					<key>length</key>
+					<integer>8</integer>
+					<key>endTime</key>
+					<string>7.902</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>90</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>endTime</key>
+					<string>8.052</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>92</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>8.922</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>98</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>9.426</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>101</integer>
+					<key>length</key>
+					<integer>9</integer>
+					<key>endTime</key>
+					<string>10.507</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>111</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>11.194</string>
 				</dict>
 			</array>
 			<key>english</key>
 			<string>Has anyone heard there’s a hummingbird,
 
-   stuck in the library? 
+stuck in the library? 
 
 She just came to look for this one book,
 
-   on how to be a tooth fairy.</string>
+on how to be a tooth fairy.</string>
 			<key>spanish</key>
-			<string>¿Sabían que un colibrí quedó,  
+			<string>¿Sabían que un colibrí quedó,
 
-   atrapado en la biblioteca?  
+atrapado en la biblioteca?
 
-Buscaba un libro para aprender a ser,  
+Buscaba un libro para aprender a ser,
 
-   un ratoncito ada. </string>
+un ratoncito ada.</string>
 			<key>imageName</key>
 			<string>JANIE 1</string>
 			<key>audioFileNames</key>
