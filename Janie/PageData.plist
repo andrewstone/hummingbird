@@ -440,79 +440,95 @@ un ratoncito ada.</string>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
-					<string>0.545</string>
+					<string>.281</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>4</integer>
 					<key>length</key>
-					<integer>6</integer>
-					<key>endTime</key>
-					<string>1.194</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>11</integer>
-					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
-					<string>1.709</string>
+					<string>.692</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>17</integer>
+					<integer>10</integer>
 					<key>length</key>
 					<integer>7</integer>
 					<key>endTime</key>
-					<string>1.81</string>
+					<string>1.492</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>25</integer>
+					<integer>19</integer>
 					<key>length</key>
-					<integer>1</integer>
+					<integer>3</integer>
 					<key>endTime</key>
-					<string>1.9333</string>
+					<string>1.860</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>23</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>2.055</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>27</integer>
 					<key>length</key>
-					<integer>12</integer>
+					<integer>4</integer>
 					<key>endTime</key>
-					<string>2.98</string>
+					<string>2.293</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>41</integer>
+					<integer>32</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>2.477</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>35</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
-					<string>3.696</string>
+					<string>2.855</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>43</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>3.904</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>47</integer>
 					<key>length</key>
-					<integer>2</integer>
+					<integer>5</integer>
 					<key>endTime</key>
-					<string>3.910</string>
+					<string>4.369</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>50</integer>
-					<key>length</key>
-					<integer>3</integer>
-					<key>endTime</key>
-					<string>4.047</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>54</integer>
+					<integer>53</integer>
 					<key>length</key>
 					<integer>7</integer>
 					<key>endTime</key>
-					<string>5.244</string>
+					<string>5.018</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>61</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>5.397</string>
 				</dict>
 				<dict>
 					<key>start</key>
@@ -520,127 +536,127 @@ un ratoncito ada.</string>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
-					<string>5.672</string>
+					<string>5.570</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>69</integer>
 					<key>length</key>
-					<integer>4</integer>
+					<integer>5</integer>
 					<key>endTime</key>
-					<string>5.92</string>
+					<string>6.186</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>74</integer>
-					<key>length</key>
-					<integer>4</integer>
-					<key>endTime</key>
-					<string>6.254</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>79</integer>
-					<key>length</key>
-					<integer>2</integer>
-					<key>endTime</key>
-					<string>6.433</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>82</integer>
-					<key>length</key>
-					<integer>4</integer>
-					<key>endTime</key>
-					<string>6.767</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>87</integer>
+					<integer>77</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
-					<string>6.998</string>
+					<string>7.062</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>91</integer>
-					<key>length</key>
-					<integer>4</integer>
-					<key>endTime</key>
-					<string>7.246</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>96</integer>
+					<integer>81</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
-					<string>7.571</string>
+					<string>7.484</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>100</integer>
+					<integer>85</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>7.927</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>89</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>8.208</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>93</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
-					<string>8.025</string>
+					<string>8.414</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>99</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>8.576</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>103</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>8.879</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>107</integer>
 					<key>length</key>
-					<integer>2</integer>
+					<integer>4</integer>
 					<key>endTime</key>
-					<string>8.418</string>
-				</dict>
-				<dict>
-					<key>start</key>
-					<integer>110</integer>
-					<key>length</key>
-					<integer>3</integer>
-					<key>endTime</key>
-					<string>8.765</string>
+					<string>9.539</string>
 				</dict>
 				<dict>
 					<key>start</key>
 					<integer>114</integer>
 					<key>length</key>
-					<integer>2</integer>
+					<integer>3</integer>
 					<key>endTime</key>
-					<string>8.990</string>
+					<string>10.339</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>117</integer>
+					<integer>118</integer>
 					<key>length</key>
 					<integer>2</integer>
 					<key>endTime</key>
-					<string>9.240</string>
+					<string>10.696</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>120</integer>
+					<integer>121</integer>
 					<key>length</key>
-					<integer>1</integer>
+					<integer>3</integer>
 					<key>endTime</key>
-					<string>9.369</string>
+					<string>11.118</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>122</integer>
+					<integer>125</integer>
 					<key>length</key>
-					<integer>5</integer>
+					<integer>3</integer>
 					<key>endTime</key>
-					<string>9.730</string>
+					<string>11.345</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>128</integer>
+					<integer>129</integer>
+					<key>length</key>
+					<integer>8</integer>
+					<key>endTime</key>
+					<string>12.026</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>138</integer>
 					<key>length</key>
 					<integer>6</integer>
 					<key>endTime</key>
-					<string>10.58</string>
+					<string>13.010</string>
 				</dict>
 			</array>
 			<key>spanishWordList</key>
@@ -719,19 +735,614 @@ un ratoncito ada.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>59</integer>
+					<integer>42</integer>
 					<key>length</key>
-					<integer>6</integer>
+					<integer>5</integer>
 					<key>endTime</key>
-					<string>6.128</string>
+					<string>6.125</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>66</integer>
+					<integer>48</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
 					<string>6.427</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>52</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>7.2</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>60</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>7.92</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>67</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>8.857</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>70</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>9.297</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>74</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>10.126</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>82</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>11.175</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>89</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>endTime</key>
+					<string>11.382</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>91</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>12.172</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>99</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>endTime</key>
+					<string>12.716</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>101</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>13.687</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>109</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>14.062</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>113</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>14.568</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>119</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>15.461</string>
+				</dict>
+			</array>
+			<key>spanish</key>
+			<string>La paga es buena, trabaja de noche,
+
+y ya tiene sus propias alas.
+
+El día entero, cantar y jugar,
+
+y olvidar las cosas malas.</string>
+			<key>english</key>
+			<string>The pay’s alright, and you work at night,
+
+and she’s already got her wings.
+
+And all day she would hum and play,
+
+and do all her favorite things.</string>
+			<key>pageLabel</key>
+			<string>Janie and The Hummingbird</string>
+			<key>imageName</key>
+			<string>JANIE 2</string>
+			<key>audioFileNames</key>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 2.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 2.m4a</string>
+			</array>
+			<key>playOnLoad</key>
+			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>10</integer>
+		</dict>
+		<dict>
+			<key>englishWordList</key>
+			<array>
+				<dict>
+					<key>start</key>
+					<integer>0</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>.350</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>4</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>.944</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>12</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>1.410</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>15</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>1.749</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>20</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>2.088</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>26</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>2.364</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>32</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>2.990</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>39</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>3.848</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>45</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>4.325</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>48</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>4.707</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>53</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>5.682</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>59</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>6.297</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>64</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>6.647</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>68</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>6.870</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>72</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>7.601</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>81</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>7.93</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>85</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>8.386</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>93</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>9.255</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>100</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>9.753</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>105</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>10.103</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>109</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>10.294</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>112</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>10.665</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>118</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>11.110</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>122</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>11.598</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>129</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>12.573</string>
+				</dict>
+			</array>
+			<key>spanishWordList</key>
+			<array>
+				<dict>
+					<key>start</key>
+					<integer>0</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>0.603</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>5</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>0.943</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>9</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>1.499</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>15</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>1.819</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>19</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>2.357</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>25</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>3.149</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>34</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>4.280</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>42</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>5.025</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>50</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>5.400</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>57</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>6.100</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>64</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>7.457</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>67</integer>
+					<key>length</key>
+					<integer>8</integer>
+					<key>endTime</key>
+					<string>8.560</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>78</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>9.088</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>81</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>9.833</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>88</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>10.219</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>91</integer>
+					<key>length</key>
+					<integer>8</integer>
+					<key>endTime</key>
+					<string>11.379</string>
+				</dict>
+			</array>
+			<key>spanish</key>
+			<string>Hace una hora, que desde afuera,
+
+volando entró.
+
+Cuando acabó, se preocupó,
+
+la salida no encontró. </string>
+			<key>english</key>
+			<string>She floated in from where she’d been,
+
+about an hour ago.
+
+When she was through, her worries grew,
+
+when how to leave she didn’t know.</string>
+			<key>pageLabel</key>
+			<string>Janie y El Colibrí </string>
+			<key>imageName</key>
+			<string>JANIE 3</string>
+			<key>audioFileNames</key>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 3.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 3.m4a</string>
+			</array>
+			<key>playOnLoad</key>
+			<false/>
+			<key>tweakFontSizeAmount</key>
+			<integer>0</integer>
+			<key>tweakTextViewCenter</key>
+			<integer>40</integer>
+		</dict>
+		<dict>
+			<key>spanishWordList</key>
+			<array>
+				<dict>
+					<key>start</key>
+					<integer>0</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>1.068</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>8</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>1.265</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>12</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>1.428</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>15</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>2.203</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>23</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>2.741</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>31</integer>
+					<key>length</key>
+					<integer>8</integer>
+					<key>endTime</key>
+					<string>3.611</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>40</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>3.754</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>43</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>3.910</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>46</integer>
+					<key>length</key>
+					<integer>11</integer>
+					<key>endTime</key>
+					<string>5.128</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>59</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>5.944</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>67</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>6.189</string>
 				</dict>
 				<dict>
 					<key>start</key>
@@ -798,75 +1409,248 @@ un ratoncito ada.</string>
 					<string>11.194</string>
 				</dict>
 			</array>
-			<key>spanish</key>
-			<string>La paga es buena, trabaja de noche,
-
-y ya tiene sus propias alas.
-
-El día entero, cantar y jugar,
-
-y olvidar las cosas malas.</string>
-			<key>english</key>
-			<string>The pay’s alright, and you work at night,
-
-and she’s already got her wings.
-
-And all day she would hum and play,
-
-and do all her favorite things.</string>
-			<key>pageLabel</key>
-			<string>Janie and The Hummingbird</string>
-			<key>imageName</key>
-			<string>JANIE 2</string>
-			<key>audioFileNames</key>
+			<key>englishWordList</key>
 			<array>
-				<string>AUDIO JANIE SPANISH PAGE 2.m4a</string>
-				<string>AUDIO JANIE ENGLISH PAGE 2.m4a</string>
+				<dict>
+					<key>start</key>
+					<integer>0</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>.435</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>4</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>1.209</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>11</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>1.664</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>16</integer>
+					<key>length</key>
+					<integer>5</integer>
+					<key>endTime</key>
+					<string>2.428</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>24</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>3.276</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>31</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>3.562</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>36</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>3.838</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>41</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>4.028</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>44</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>4.728</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>49</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>5.576</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>57</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>endTime</key>
+					<string>5.746</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>59</integer>
+					<key>length</key>
+					<integer>6</integer>
+					<key>endTime</key>
+					<string>6.276</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>66</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>6.721</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>69</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>7.283</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>73</integer>
+					<key>length</key>
+					<integer>2</integer>
+					<key>endTime</key>
+					<string>7.453</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>76</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>7.633</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>80</integer>
+					<key>length</key>
+					<integer>7</integer>
+					<key>endTime</key>
+					<string>8.386</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>90</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>9.138</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>95</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>9.711</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>100</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>10.008</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>104</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>10.336</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>109</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>10.771</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>114</integer>
+					<key>length</key>
+					<integer>1</integer>
+					<key>endTime</key>
+					<string>11.110</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>116</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>11.290</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>120</integer>
+					<key>length</key>
+					<integer>4</integer>
+					<key>endTime</key>
+					<string>11.630</string>
+				</dict>
+				<dict>
+					<key>start</key>
+					<integer>125</integer>
+					<key>length</key>
+					<integer>3</integer>
+					<key>endTime</key>
+					<string>12.149</string>
+				</dict>
 			</array>
-			<key>playOnLoad</key>
-			<false/>
-			<key>tweakFontSizeAmount</key>
-			<integer>0</integer>
-			<key>tweakTextViewCenter</key>
-			<integer>10</integer>
-		</dict>
-		<dict>
-			<key>spanish</key>
-			<string>Hace una hora, que desde afuera,
-volando entró.
-Cuando acabó, se preocupó,
-la salida no encontró.</string>
-			<key>english</key>
-			<string>She floated in from where she’d been,
-about an hour ago.
-When she was through, her worries grew,
-when how to leave she didn’t know.</string>
-			<key>pageLabel</key>
-			<string>Janie y El Colibrí </string>
-			<key>imageName</key>
-			<string>JANIE 3</string>
-			<key>audioFileNames</key>
-			<array>
-				<string>AUDIO JANIE SPANISH PAGE 3.m4a</string>
-				<string>AUDIO JANIE ENGLISH PAGE 3.m4a</string>
-			</array>
-			<key>playOnLoad</key>
-			<false/>
-			<key>tweakFontSizeAmount</key>
-			<integer>0</integer>
-			<key>tweakTextViewCenter</key>
-			<integer>40</integer>
-		</dict>
-		<dict>
 			<key>spanish</key>
 			<string>¿Ha visto alguien a Juanita?
+
 Ella sabrá que hacer.
-Es amiga de los animals.
-Y cuando llegue lo demostraré.</string>
+
+Es amiga de los animales.
+
+Y cuando llegue lo demostraré.
+   Ella sabrá que hacer.  
+
+ Es amiga de los animals.  
+
+   Y cuando llegue lo demostraré.  </string>
 			<key>english</key>
 			<string>Has anyone seen Janie?
+
 She’ll know what to do.
+
 Janie’s a friend to all of the animals.
+
+And when she gets here I can show you.
+She’ll know what to do.
+
+Janie’s a friend to all of the animals.
+ 
+Has anyone seen Janie?
+
+She’ll know what to do.
+
+Janie’s a friend to all of the animals.
+
 And when she gets here I can show you.</string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
@@ -886,15 +1670,21 @@ And when she gets here I can show you.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Pendientes de un hilo,
-muchos primos observó.
-Preguntó, “¿Cómo salir?”
-pero nadie le contestó.</string>
+			<string>Pendientes de un hilo,  
+
+   muchos primos observó. 
+
+Preguntó, “¿Cómo salir?”  
+
+   pero nadie le contestó. </string>
 			<key>english</key>
-			<string>She saw dozens of her cousins,
-each one hanging from a string.
-She asked, “Where’s an open window?”
-but they didn’t say a thing.</string>
+			<string>She saw dozens of her cousins,  
+
+   each one hanging from a string. 
+
+She asked, “Where’s an open window?”  
+
+   but they didn’t say a thing. </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -913,15 +1703,21 @@ but they didn’t say a thing.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Se sentó en la nariz de un colibrí,
-o el pico quise decir.
-Allí se quedó, pese al temor,
-el tiempo dejó ir.</string>
+			<string>Se sentó en la nariz de un colibrí,  
+
+   o el pico quise decir. 
+
+Allí se quedó, pese al temor,  
+
+   el tiempo dejó ir. </string>
 			<key>english</key>
-			<string>She perched her toes on a hummingbird’s nose,
-or was it a beak or bill?
-Though so afraid, that’s where she stayed,
-she had some time to kill.</string>
+			<string>She perched her toes on a hummingbird’s nose, 
+
+   or was it a beak or bill? 
+
+Though so afraid, that’s where she stayed,  
+
+   she had some time to kill. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -940,15 +1736,21 @@ she had some time to kill.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Qué bella escena en la biblioteca,
-esas cosas no se ven.
-Los maestros vieron y exclamaron,
-“Pajarito, vas a estar bien.”</string>
+			<string>Qué bella escena en la biblioteca,  
+
+   esas cosas no se ven.  
+
+Los maestros vieron y exclamaron,  
+
+   “Pajarito, vas a estar bien.” </string>
 			<key>english</key>
-			<string>What a sight to see in the library,
-doesn’t happen every day.
-Some teachers saw and watched in awe, saying,
-“Little bird, you’re going to be okay.”</string>
+			<string>What a sight to see in the library,  
+
+   doesn’t happen every day. 
+
+Some teachers saw and watched in awe, saying, 
+
+   “Little bird, you’re going to be okay.” </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -967,15 +1769,21 @@ Some teachers saw and watched in awe, saying,
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>¿Ha visto alguien a Juanita?
-Ella sabrá que hacer.
-Es amiga de los animales.
-Y cuando llegue lo demostraré.</string>
+			<string>¿Ha visto alguien a Juanita? 
+ 
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  </string>
 			<key>english</key>
-			<string>Has anyone seen Janie?
-She’ll know what to do.
+			<string>Has anyone seen Janie? 
+  
+   She’ll know what to do. 
+
 Janie’s a friend to all of the animals.
-And when she gets here I can show you.</string>
+  
+   And when she gets here I can show you. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -996,15 +1804,21 @@ And when she gets here I can show you.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>A su família extrañaría,
-si de allí no saliera.
-Qué pena si de la vida,
-del ratoncito ada no aprendiera.</string>
+			<string>A su família extrañaría,  
+
+   si de allí no saliera.  
+
+Qué pena si de la vida,  
+
+   del ratoncito ada no aprendiera. </string>
 			<key>english</key>
-			<string>The hummingbird would miss her family,
-if she never made it out.
-What a shame she’d never learn,
-what a tooth fairy’s life is all about.</string>
+			<string>The hummingbird would miss her family,  
+
+   if she never made it out. 
+
+What a shame she’d never learn,  
+
+   what a tooth fairy’s life is all about. </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -1025,15 +1839,21 @@ what a tooth fairy’s life is all about.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Empezó a sentir hambre,
-pero no había nada de lonche.
-No había cosas rojas colgando,
-con su exquisito ponche.</string>
+			<string>Empezó a sentir hambre,  
+
+   pero no había nada de lonche. 
+
+No había cosas rojas colgando,  
+
+   con su exquisito ponche. </string>
 			<key>english</key>
-			<string>She started to get hungry,
-but there was nothing in there for lunch.
-Didn’t see any of those hanging red things,
-with hummingbird Hawaiian Punch.</string>
+			<string>She started to get hungry,  
+
+   but there was nothing in there for lunch. 
+ 
+Didn’t see any of those hanging red things,  
+
+   with hummingbird Hawaiian Punch. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -1054,15 +1874,21 @@ with hummingbird Hawaiian Punch.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>En que lío se metió,
-pensó adolorida.
-Como entró no recordó,
-no encuentra la salida.</string>
+			<string>En que lío se metió,  
+
+   pensó adolorida.  
+
+Como entró no recordó,  
+
+   no encuentra la salida. </string>
 			<key>english</key>
-			<string>How’d she get herself into this mess?
-She thought with such dismay.
-Came in somehow, don’t remember now,
-can’t seem to find the way.</string>
+			<string>How’d she get herself into this mess?  
+
+   She thought with such dismay. 
+
+Came in somehow, don’t remember now,  
+
+   can’t seem to find the way.  </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -1084,15 +1910,21 @@ can’t seem to find the way.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>¿Ha visto alguien a Juanita?
-Ella sabrá que hacer.
-Es amiga de los animales.
-Y cuando llegue lo demostraré.</string>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  </string>
 			<key>english</key>
 			<string>Has anyone seen Janie?
-She’ll know what to do.
-Janie’s a friend to all of the animals.
-And when she gets here I can show you.</string>
+   
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals.  
+
+   And when she gets here I can show you. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -1113,15 +1945,21 @@ And when she gets here I can show you.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Por fin encontraron a Juanita,
-y de inmediato se presentó.
-Todos escuchamos con atención,
-las palabras que emitió.</string>
+			<string>Por fin encontraron a Juanita,  
+
+   y de inmediato se presentó. 
+ 
+Todos escuchamos con atención,  
+
+   las palabras que emitió. </string>
 			<key>english</key>
-			<string>Finally, someone found Janie,
-and she got there right away.
-We all listened up real closely,
-to what she had to say.</string>
+			<string>Finally, someone found Janie,  
+
+   and she got there right away. 
+
+We all listened up real closely,  
+
+   to what she had to say. </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -1142,15 +1980,21 @@ to what she had to say.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Lo primero que hay que hacer,
-es cubrir cada ventana.
-Así que fue a cerrar,
-cada una de las persianas.</string>
+			<string>Lo primero que hay que hacer,  
+
+   es cubrir cada ventana. 
+ 
+Así que fue a cerrar,  
+
+   cada una de las persianas. </string>
 			<key>english</key>
-			<string>First thing we’ve got to do,
-is cover the windows.
-Went to all the shades and blinds,
-until every one was closed.</string>
+			<string>First thing we’ve got to do,  
+
+   is cover the windows. 
+
+Went to all the shades and blinds,  
+
+   until every one was closed. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -1171,15 +2015,21 @@ until every one was closed.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Las luces apagó, la puerta abrió,
-un rayo de sol entró.
-Hacia la luz, el ave voló,
-y de todos se despidió.</string>
+			<string>Las luces apagó, la puerta abrió,  
+
+   un rayo de sol entró. 
+
+Hacia la luz, el ave voló,  
+
+   y de todos se despidió.  </string>
 			<key>english</key>
-			<string>Then she shut the lights, opened up the door,
-letting in the beaming sun.
-The bird took flight, right towards the light,
-saying, “Goodbye!” to everyone.</string>
+			<string>Then she shut the lights, opened up the door, 
+
+   letting in the beaming sun.
+ 
+The bird took flight, right towards the light, 
+
+   Saying, “Goodbye!” to everyone. </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -1200,15 +2050,21 @@ saying, “Goodbye!” to everyone.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>¿Ha visto alguien a Juanita?
-Ella sabrá que hacer.
-Es amiga de los animales.
-Y cuando llegue lo demostraré.</string>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  </string>
 			<key>english</key>
-			<string>Has anyone seen Janie?
-She’ll know what to do.
-Janie’s a friend to all of the animals.
-And when she gets here I can show you.</string>
+			<string>Has anyone seen Janie?  
+ 
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals. 
+ 
+   And when she gets here I can show you. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -1229,15 +2085,21 @@ And when she gets here I can show you.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Juanita usó su magia,
-tal como lo dije yo.
-Dio consejos al colibrí,
-de modo que éste entendió.</string>
+			<string>Juanita usó su magia,  
+
+   tal como lo dije yo. 
+ 
+Dio consejos al colibrí,  
+
+   de modo que éste entendió. </string>
 			<key>english</key>
-			<string>Well now Janie worked her magic,
-just like I said she would.
-Gave directions to the hummingbird,
-in a way she understood.</string>
+			<string>Well now Janie worked her magic,  
+
+   just like I said she would. 
+
+Gave directions to the hummingbird,  
+
+   in a way she understood. </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -1258,15 +2120,21 @@ in a way she understood.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>A veces es mejor usar música,
-a veces las palabras son maravillosas.
-Otras es mejor cambiar la luz,
-para hablar con chuparosas.</string>
+			<string>A veces es mejor usar música,  
+
+   a veces las palabras son maravillosas.  
+
+Otras es mejor cambiar la luz,  
+
+   para hablar con chuparosas. </string>
 			<key>english</key>
-			<string>Sometimes best to use some music,
-sometimes best to use words.
-Sometimes it’s best to change the light,
-to talk to hummingbirds.</string>
+			<string>Sometimes best to use some music,  
+
+   sometimes best to use words. 
+
+Sometimes it’s best to change the light,  
+
+   to talk to hummingbirds. </string>
 			<key>pageLabel</key>
 			<string>Janie and The Hummingbird</string>
 			<key>imageName</key>
@@ -1287,15 +2155,21 @@ to talk to hummingbirds.</string>
 		</dict>
 		<dict>
 			<key>spanish</key>
-			<string>Aprendí ese día, cuando nuestra amiga,
-salió libremente.
-Cada quien halla la salida,
-de un modo diferente.</string>
+			<string>Aprendí ese día, cuando nuestra amiga, 
+
+   salió libremente.  
+
+Cada quien halla la salida,  
+
+   de un modo diferente. </string>
 			<key>english</key>
-			<string>I learned a lesson on that day,
-when our friend, she was set free.
-That everyone can find their way,
-though we find it differently.</string>
+			<string>I learned a lesson on that day,  
+
+   when our friend, she was set free. 
+
+That everyone can find their way,  
+
+   though we find it differently. </string>
 			<key>pageLabel</key>
 			<string>Janie y El Colibrí </string>
 			<key>imageName</key>
@@ -1329,19 +2203,25 @@ though we find it differently.</string>
 			<key>playOnLoad</key>
 			<true/>
 			<key>english</key>
-			<string>Has anyone seen Janie?
-She’ll know what to do.
-Janie’s a friend to all of the animals.
-And when she gets here I can show you.
-And when she gets here I can show you.
-And when she gets here I can show you.</string>
+			<string>Has anyone seen Janie?   
+
+   She’ll know what to do. 
+
+Janie’s a friend to all of the animals.  
+
+   And when she gets here I can show you. 
+     And when she gets here I can show you. 
+       And when she gets here I can show you.</string>
 			<key>spanish</key>
-			<string>¿Ha visto alguien a Juanita?
-Ella sabrá que hacer.
-Es amiga de los animales.
-Y cuando llegue lo demostraré.
-Y cuando llegue lo demostraré.
-Y cuando llegue lo demostraré.</string>
+			<string>¿Ha visto alguien a Juanita?  
+
+   Ella sabrá que hacer.  
+
+ Es amiga de los animales.  
+
+   Y cuando llegue lo demostraré.  
+     Y cuando llegue lo demostraré.  
+       Y cuando llegue lo demostraré.</string>
 			<key>tweakFontSizeAmount</key>
 			<integer>0</integer>
 			<key>tweakTextViewCenter</key>
