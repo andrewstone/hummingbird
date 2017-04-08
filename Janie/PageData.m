@@ -54,27 +54,48 @@
 #define isPortrait  UIDeviceOrientationIsPortrait(dDeviceOrientation)
 
 
-- (UIFont *)textFont {
+- (CGFloat)fontSize {
     BOOL oneLanguage = ([[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"] > 0);
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
     float size = isPad ? (isPortrait ? 18.0 : 16.0) : 14.0;
-
+    
     // on iPad we tweak to fill:
     if (isPad || self.tweakFontSizeAmount < 0)
         size += self.tweakFontSizeAmount;
     
+    
+    if (oneLanguage) size += (isPad ? 7.0 : 2.0);
+    return size;
+}
 
-    if (oneLanguage) size += (isPad ? 6.0 : 2.0);
+- (UIFont *)textFont {
 
 //#define FONT_NAME_STD   @"TimesNewRomanPS-BoldItalicMT"
 //#define FONT_NAME_ITALICS   @"TimesNewRomanPS-BoldMT"
     
-#define FONT_NAME_STD   @"Baskerville"
-#define FONT_NAME_ITALICS   @"Baskerville-Italic"
+//#define FONT_NAME_STD   @"Baskerville"
+//#define FONT_NAME_ITALICS   @"Baskerville-Italic"
     
+#define FONT_NAME_STD   @"Palatino-Roman"
+#define FONT_NAME_ITALICS   @"Palatino-Italic"
     
+    CGFloat size = [self fontSize];
     
     return _textInItalics ? [UIFont fontWithName:FONT_NAME_ITALICS size:size] : [UIFont fontWithName:FONT_NAME_STD size:size];
+}
+
+//#define FONT_NAME_BOLD   @"Baskerville-Bold"
+//#define FONT_NAME_BOLDITALICS   @"Baskerville-BoldItalic"
+//#define FONT_NAME_BOLD   @"TimesNewRoman-Bold"
+//#define FONT_NAME_BOLDITALICS   @"TimesNewRoman-BoldItalic"
+#define FONT_NAME_BOLD   @"Palatino-Bold"
+#define FONT_NAME_BOLDITALICS   @"Palatino-BoldItalic"
+
+
+- (UIFont *)boldFont {
+    CGFloat size = [self fontSize];
+    
+    return _textInItalics ? [UIFont fontWithName:FONT_NAME_BOLDITALICS size:size] : [UIFont fontWithName:FONT_NAME_BOLD size:size];
 }
 
 - (float)lineSpacing {

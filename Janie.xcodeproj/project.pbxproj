@@ -59,6 +59,7 @@
 		BF2DC13A1E83682100037050 /* AUDIO JANIE SPANISH TITLE PAGE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC1161E83682100037050 /* AUDIO JANIE SPANISH TITLE PAGE.m4a */; };
 		BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */; };
 		BF48CE2A1E7F62C4006D3FDC /* BookReadingOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */; };
+		BF9BA1581E97FB6900FD8155 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */; };
 		BF9D11A91E8D4BE6006B232B /* PercentageRect.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D11A81E8D4BE6006B232B /* PercentageRect.m */; };
 		BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		BF48CE261E7F62C4006D3FDC /* BookReadingOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReadingOptionsViewController.h; sourceTree = "<group>"; };
 		BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReadingOptionsViewController.m; sourceTree = "<group>"; };
 		BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookReadingOptionsViewController.xib; sourceTree = "<group>"; };
+		BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BF9D11A71E8D4BE6006B232B /* PercentageRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageRect.h; sourceTree = "<group>"; };
 		BF9D11A81E8D4BE6006B232B /* PercentageRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageRect.m; sourceTree = "<group>"; };
 		BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BookReadingOptionsViewController~ipad.xib"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9BA1581E97FB6900FD8155 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +150,7 @@
 				BF0B31E21E6C755D00F7D5A7 /* PageData.plist */,
 				BF0B31BE1E6A685C00F7D5A7 /* Janie */,
 				BF0B31BD1E6A685C00F7D5A7 /* Products */,
+				BF9BA1561E97FB6900FD8155 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +251,14 @@
 				BF2DC1161E83682100037050 /* AUDIO JANIE SPANISH TITLE PAGE.m4a */,
 			);
 			name = pageaudio;
+			sourceTree = "<group>";
+		};
+		BF9BA1561E97FB6900FD8155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

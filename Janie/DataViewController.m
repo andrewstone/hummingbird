@@ -135,10 +135,12 @@
         NSMutableAttributedString *newString = [[NSMutableAttributedString  alloc] initWithAttributedString:originalAttributedString];
         
         // now add whatever attributes you like to our range:
-        [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleThick] range:range];
-        [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
-        [newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
+//        [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleThick] range:range];
+//        [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
         
+        //[newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
+        
+        [newString addAttribute:NSFontAttributeName value:self.dataObject.boldFont range:range];
         textView.attributedText = newString;
         
         // now make a callback at then end of our time:

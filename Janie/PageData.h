@@ -35,6 +35,6 @@
 - (UIImage *)pageImage;
 - (UIFont *)textFont;
 - (float)lineSpacing;
-
+- (UIFont *)boldFont;
 
 @end

@@ -26,6 +26,13 @@ word list: each item represents a word:
     NSRange start,length   (for quick selection)
     NSTimeInterval startTime (duration can be calc'd by next startTime)
 
+Future Ideas for Book:
+
+1. hot spot which could play audio
+
+
+Bugs:
+1. if landscape - autoplay crashes
 
 
 
