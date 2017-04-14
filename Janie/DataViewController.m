@@ -203,7 +203,8 @@
         self.dataLabel.hidden = YES;
     } else {
         self.imageView.image = [self.dataObject pageImage];
-
+        self.dataLabel.text =
+        [NSString stringWithFormat:@"%d", [[ModelController sharedModelController]indexOfViewController:self] - 1];
         [self coreSetupText];
     }
 }
@@ -236,6 +237,12 @@
     CGRect iRect = self.imageView.frame;
     CGRect cRect = self.textViews.frame;
     
+    self.dataLabel.font = [self.dataObject textFont];
+    [self.dataLabel sizeToFit];
+    CGRect lRext = self.dataLabel.frame;
+    lRext.origin = CGPointMake(8.0,vRect.size.height - lRext.size.height);
+    self.dataLabel.frame = lRext;
+
     CGFloat tweakTextViewHeight  = self.dataObject.tweakTextViewHeight;
     CGFloat tweakTextViewCenter = self.dataObject.tweakTextViewCenter;
     
