@@ -18,6 +18,6 @@
 @property (nonatomic) SEL action;
 
 - (id)initWithPercentageRect:(PercentageRect *)r action:(NSString *)act shape:(NSString *)shape;
-- (CGRect)desiredRectInView:(UIView *)parent;
+- (CGRect)desiredRectInView:(UIImageView *)parent;
 
 @end

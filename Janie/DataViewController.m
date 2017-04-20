@@ -44,12 +44,6 @@
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
     
-    // Here we add the special hot actions
-    for (HotAction *hotty in self.dataObject.hotRects) {
-        [hotty setFrame:[hotty desiredRectInView:self.imageView]];
-        [hotty setTarget:self];
-        [self.imageView addSubview:hotty];
-    }
     
     
 //    SEL example = NSSelectorFromString(@"runOptions:");
@@ -226,6 +220,14 @@
     [super viewDidAppear:animated];
 
     [self playNextSound:nil];
+    
+    // Here we add the special hot actions
+    for (HotAction *hotty in self.dataObject.hotRects) {
+        [hotty setFrame:[hotty desiredRectInView:self.imageView]];
+        [hotty setTarget:self];
+        [self.imageView addSubview:hotty];
+    }
+
 }
 
 

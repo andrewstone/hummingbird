@@ -62,7 +62,7 @@
 
 }
 
-- (CGRect)desiredRectInView:(UIView *)parent {
+- (CGRect)desiredRectInView:(UIImageView *)parent {
     return [_percentageRect rectInView:parent];
 }
 
