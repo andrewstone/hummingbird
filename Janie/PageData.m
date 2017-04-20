@@ -7,11 +7,28 @@
 //
 
 #import "PageData.h"
+#import "PercentageRect.h"
+#import "HotAction.h"
 
 @implementation PageData
 
 + (PageData *)pageDataWithDictionary:(NSDictionary *)d {
     return [[self alloc] initWithDictionary:d];
+}
+
+- (NSMutableArray *)getHotRects:(NSArray *)a {
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:a.count];
+    
+    for (NSDictionary *d in a) {
+        NSDictionary *rect = [d valueForKey:@"rect"];
+        PercentageRect *pr = [[PercentageRect alloc] initWithPercentageX:[[rect valueForKey:@"x"] doubleValue] y:[[rect valueForKey:@"y"] doubleValue] width:[[rect valueForKey:@"width"]doubleValue] height:[[rect valueForKey:@"height"]doubleValue]];
+        
+        HotAction *hot = [[HotAction alloc] initWithPercentageRect:pr action:[d valueForKey:@"action"] shape:[d valueForKey:@"shape"]];
+        if (hot)
+            [array addObject:hot];
+    }
+    return array;
+    
 }
 
 - (PageData *)initWithDictionary:(NSDictionary *)d {
@@ -42,7 +59,14 @@
     a = [d valueForKey:@"spanishWordList"];
     if (a) _spanishWordList = [[NSMutableArray alloc] initWithArray:a];
     
-    // add more functionality
+    a = [d valueForKey:@"hotRects"];
+    if (a) _hotRects = [self getHotRects:a];
+    
+    // hotRects = list of dicts where keys are:
+    // rect = dict with keys x, y, width, height in 0.0-1.0 format
+    // action = string of method to call on a tap
+    
+    
     return self;
 }
 

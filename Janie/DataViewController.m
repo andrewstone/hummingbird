@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "ModelController.h"
 #import "RootViewController.h"
+#import "HotAction.h"
 
 @interface DataViewController ()
 
@@ -42,17 +43,26 @@
     tap.numberOfTapsRequired = 2;
     tap.delegate = self;
     [self.view addGestureRecognizer:tap];
-    SEL example = NSSelectorFromString(@"runOptions:");
-    if (self.dataObject.initialAction == example)
-        [self runOptions:self.dataObject];
     
-    /// this is the real code if you actually use this feature for other things:
-//    if (self.dataObject.initialAction) {
-        // this causes a warning: may cause a leak
-        // it doesn't though because these methods return void
-//        [self performSelector:self.dataObject.initialAction withObject:self.dataObject];
+    // Here we add the special hot actions
+    for (HotAction *hotty in self.dataObject.hotRects) {
+        [hotty setFrame:[hotty desiredRectInView:self.imageView]];
+        [hotty setTarget:self];
+        [self.imageView addSubview:hotty];
+    }
     
-//    }
+    
+//    SEL example = NSSelectorFromString(@"runOptions:");
+//    if (self.dataObject.initialAction == example)
+//        [self runOptions:self.dataObject];
+    
+    if (self.dataObject.initialAction) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self performSelector:self.dataObject.initialAction withObject:self.dataObject];
+#pragma clang diagnostic pop
+    
+   }
 }
 
 // NSNotificationCenter lets objects that know nothing about
@@ -204,7 +214,7 @@
     } else {
         self.imageView.image = [self.dataObject pageImage];
         self.dataLabel.text =
-        [NSString stringWithFormat:@"%d", [[ModelController sharedModelController]indexOfViewController:self] - 1];
+        [NSString stringWithFormat:@"%lu", [[ModelController sharedModelController]indexOfViewController:self] - 1];
         [self coreSetupText];
     }
 }
@@ -271,6 +281,11 @@
 #define RIGHT_ENGLISH_MARGIN 4.0
     
     self.imageView.frame = iRect;
+    // layout hot rects:
+    for (HotAction *hotty in self.dataObject.hotRects) {
+        [hotty setFrame:[hotty desiredRectInView:self.imageView]];
+    }
+    
     self.textViews.frame = cRect;   // see if the items inside are right though!
 // if only English or Spanish, then resize the Spanish to full size...
     NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
@@ -328,6 +343,24 @@
     }
 }
 
+- (void)corePlaySound:(NSString *)nextSound {
+    NSString *soundFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:nextSound];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    NSError *e = NULL;
+    AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+    
+    if (player) {
+        [player stop];
+        player = nil;
+    }
+    
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
+    player.delegate = self;
+    
+    [player play];
+}
+
 - (IBAction)playNextSound:(id)sender {
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"PlayMusic"]
@@ -336,21 +369,7 @@
         
     NSString *nextSound = [self nextSound];
     if (nextSound) {
-        NSString *soundFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:nextSound];
-        NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-        NSError *e = NULL;
-        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
-        
-        if (player) {
-            [player stop];
-            player = nil;
-        }
-
-        player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
-        player.delegate = self;
-        
-        [player play];
+        [self corePlaySound:nextSound];
         [self bounceText];
     }
     } else {
@@ -399,6 +418,10 @@
     return !dontDoIt;
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
 - (IBAction)runOptions:(id)sender {
     if (!self.optionsController) {
         self.optionsController = [[BookReadingOptionsViewController alloc] initWithNibName:nil bundle:nil];
@@ -436,4 +459,11 @@
 
     [rootController turnPageFrom:self];
 }
+
+- (IBAction)defaultAction:(id)sender{
+    //play something
+    [self corePlaySound:@"hurray.m4a"];
+}
+
+
 @end

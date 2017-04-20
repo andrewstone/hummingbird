@@ -22,6 +22,7 @@
 @property (nonatomic) NSArray *audioFiles;
 @property (nonatomic) NSArray *englishWordList;
 @property (nonatomic) NSArray *spanishWordList;
+@property (nonatomic) NSArray *hotRects;
 @property (nonatomic) CGFloat tweakFontSizeAmount;
 @property (nonatomic) CGFloat tweakTextViewHeight;
 @property (nonatomic) CGFloat tweakTextViewCenter;

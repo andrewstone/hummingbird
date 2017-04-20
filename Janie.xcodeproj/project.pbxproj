@@ -21,6 +21,8 @@
 		BF0B31EA1E6DE27500F7D5A7 /* Janie Instrumental.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */; };
 		BF0B31EB1E6DE27500F7D5A7 /* Janie Song-en.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0B31E81E6DE27500F7D5A7 /* Janie Song-en.m4a */; };
 		BF0B31EC1E6DE27500F7D5A7 /* Janie Song-es.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0B31E91E6DE27500F7D5A7 /* Janie Song-es.m4a */; };
+		BF2B54AE1EA6B7200047DB7C /* HotAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B54AD1EA6B7200047DB7C /* HotAction.m */; };
+		BF2B54B01EA856460047DB7C /* hurray.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2B54AF1EA856460047DB7C /* hurray.m4a */; };
 		BF2DC1171E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F31E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a */; };
 		BF2DC1181E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F41E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a */; };
 		BF2DC1191E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F51E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a */; };
@@ -86,6 +88,9 @@
 		BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Janie Instrumental.m4a"; path = "audio/Janie Instrumental.m4a"; sourceTree = "<group>"; };
 		BF0B31E81E6DE27500F7D5A7 /* Janie Song-en.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Janie Song-en.m4a"; path = "audio/Janie Song-en.m4a"; sourceTree = "<group>"; };
 		BF0B31E91E6DE27500F7D5A7 /* Janie Song-es.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Janie Song-es.m4a"; path = "audio/Janie Song-es.m4a"; sourceTree = "<group>"; };
+		BF2B54AC1EA6B7200047DB7C /* HotAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotAction.h; sourceTree = "<group>"; };
+		BF2B54AD1EA6B7200047DB7C /* HotAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotAction.m; sourceTree = "<group>"; };
+		BF2B54AF1EA856460047DB7C /* hurray.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = hurray.m4a; path = audio/hurray.m4a; sourceTree = "<group>"; };
 		BF2DC0F31E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH DEDICATION PAGE.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH DEDICATION PAGE.m4a"; sourceTree = "<group>"; };
 		BF2DC0F41E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 1.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 1.m4a"; sourceTree = "<group>"; };
 		BF2DC0F51E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 2.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 2.m4a"; sourceTree = "<group>"; };
@@ -180,6 +185,8 @@
 				BF0B31E01E6C746B00F7D5A7 /* PageData.m */,
 				BF9D11A71E8D4BE6006B232B /* PercentageRect.h */,
 				BF9D11A81E8D4BE6006B232B /* PercentageRect.m */,
+				BF2B54AC1EA6B7200047DB7C /* HotAction.h */,
+				BF2B54AD1EA6B7200047DB7C /* HotAction.m */,
 				BF0B31CB1E6A685C00F7D5A7 /* ModelController.h */,
 				BF0B31CC1E6A685C00F7D5A7 /* ModelController.m */,
 				BF0B31CE1E6A685C00F7D5A7 /* Main.storyboard */,
@@ -202,6 +209,7 @@
 		BF0B31E61E6DE18A00F7D5A7 /* moreAssets */ = {
 			isa = PBXGroup;
 			children = (
+				BF2B54AF1EA856460047DB7C /* hurray.m4a */,
 				BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */,
 				BF0B31E81E6DE27500F7D5A7 /* Janie Song-en.m4a */,
 				BF0B31E91E6DE27500F7D5A7 /* Janie Song-es.m4a */,
@@ -359,6 +367,7 @@
 				BF2DC13A1E83682100037050 /* AUDIO JANIE SPANISH TITLE PAGE.m4a in Resources */,
 				BF2DC1371E83682100037050 /* AUDIO JANIE SPANISH PAGE 14.m4a in Resources */,
 				BF2DC12A1E83682100037050 /* AUDIO JANIE SPANISH PAGE 1.m4a in Resources */,
+				BF2B54B01EA856460047DB7C /* hurray.m4a in Resources */,
 				BF2DC1381E83682100037050 /* AUDIO JANIE SPANISH PAGE 15.m4a in Resources */,
 				BF2DC1201E83682100037050 /* AUDIO JANIE ENGLISH PAGE 9.m4a in Resources */,
 				BF2DC11D1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 6.m4a in Resources */,
@@ -380,6 +389,7 @@
 				BF0B31C41E6A685C00F7D5A7 /* AppDelegate.m in Sources */,
 				BF0B31CD1E6A685C00F7D5A7 /* ModelController.m in Sources */,
 				BF0B31C11E6A685C00F7D5A7 /* main.m in Sources */,
+				BF2B54AE1EA6B7200047DB7C /* HotAction.m in Sources */,
 				BF0B31E11E6C746B00F7D5A7 /* PageData.m in Sources */,
 				BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */,
 				BF0B31C71E6A685C00F7D5A7 /* RootViewController.m in Sources */,

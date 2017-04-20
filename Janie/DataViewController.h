@@ -31,5 +31,9 @@
 - (IBAction)imageViewTapped:(id)sender;
 - (IBAction)turnThePageProgrammatically:(id)sender;
 
+ // the default action of HotAction tap:
+- (IBAction)defaultAction:(id)sender;
+ // if you add more in PageData.plist, add them here too:
+
 @end
 

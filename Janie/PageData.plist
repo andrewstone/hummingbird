@@ -35,6 +35,26 @@
 			<false/>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.17718</real>
+						<key>y</key>
+						<real>0.17643</real>
+						<key>width</key>
+						<real>0.140969</real>
+						<key>height</key>
+						<real>0.12204</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>shape</key>
+					<string>round</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -1964,7 +1984,13 @@ And when she gets here I can show you.</string>
 				</dict>
 			</array>
 			<key>spanish</key>
-			<string>Pendientes de un hilo, muchos primos observó. Preguntó, “¿Cómo salir?” pero nadie le contestó.</string>
+			<string>Pendientes de un hilo, 
+
+muchos primos observó. 
+
+Preguntó, “¿Cómo salir?” 
+
+pero nadie le contestó.</string>
 			<key>english</key>
 			<string>She saw dozens of her cousins,
 
