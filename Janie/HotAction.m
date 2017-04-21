@@ -62,8 +62,8 @@
 
 }
 
-- (CGRect)desiredRectInView:(UIImageView *)parent {
-    return [_percentageRect rectInView:parent];
+- (CGRect)desiredRectInView:(UIImageView *)parent maintainsAspect:(BOOL)aspect {
+    return [_percentageRect rectInView:parent maintainsAspect:aspect];
 }
 
 @end

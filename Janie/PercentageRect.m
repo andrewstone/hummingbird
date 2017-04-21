@@ -10,30 +10,31 @@
 
 @implementation PercentageRect
 
-- (CGRect)rectInView:(UIImageView *)view {
+- (CGRect)rectInView:(UIImageView *)view maintainsAspect:(BOOL)aspect{
     CGRect r = view.bounds;
-    CGFloat viewAspectRatio = r.size.width/r.size.height;
     CGSize imageSize = view.image.size;
-    CGFloat imageAspectRatio = imageSize.width/imageSize.height;
     CGFloat xOffset = 0.0;
     CGFloat yOffset = 0.0;
     CGFloat wMultiplier = r.size.width;
     CGFloat hMultiplier = r.size.height;
     
-    // if aspect ratios are the same, then no origin offset
-    
-    if (viewAspectRatio < imageAspectRatio) {
-        // offset Y by half the difference
-        CGFloat h = 1/(imageAspectRatio / r.size.width);
-        yOffset = floor((r.size.height - h)/2.0);
-        hMultiplier = viewAspectRatio /imageAspectRatio * r.size.height;
-        
-    } else if (viewAspectRatio > imageAspectRatio) {
-        // offset x by half the difference
-        CGFloat w = imageAspectRatio * r.size.height;
-        xOffset = floor((r.size.width - w)/2.0);
-        wMultiplier = imageAspectRatio/viewAspectRatio * r.size.width;
-        
+    if (aspect) {
+        // if aspect ratios are the same, then no origin offset
+        CGFloat imageAspectRatio = imageSize.width/imageSize.height;
+        CGFloat viewAspectRatio = r.size.width/r.size.height;
+        if (viewAspectRatio < imageAspectRatio) {
+            // offset Y by half the difference
+            CGFloat h = 1/(imageAspectRatio / r.size.width);
+            yOffset = floor((r.size.height - h)/2.0);
+            hMultiplier = viewAspectRatio /imageAspectRatio * r.size.height;
+            
+        } else if (viewAspectRatio > imageAspectRatio) {
+            // offset x by half the difference
+            CGFloat w = imageAspectRatio * r.size.height;
+            xOffset = floor((r.size.width - w)/2.0);
+            wMultiplier = imageAspectRatio/viewAspectRatio * r.size.width;
+            
+        }
     }
     
     return CGRectMake(_percentages.origin.x * wMultiplier + xOffset, _percentages.origin.y * hMultiplier + yOffset, _percentages.size.width * wMultiplier, _percentages.size.height * hMultiplier);

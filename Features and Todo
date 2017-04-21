@@ -1,3 +1,80 @@
+Friday April 21 2017 iOS WorkShop Class Agenda
+
+1. Hello & what's or who is new?
+
+2. Updates since April 7:
+    - visit changes at https://github.com/andrewstone/hummingbird
+
+a. page numbers, demonstrating sizeToFit
+
+b. architecture for easter eggs:
+
+- overview: you can have as many hot regions on a page as you want, and you can have tapping it do whatever you want. Just add the method to DataViewController, defaultAction: is provided:
+
+- HotActions via PageData.plist created at page item level as a dictionary:
+    rect = dictionary of floats, x, y, width, height as percentages
+    shape = string, @"round" is supported
+    action = string, selector name for use in NSSelectorFromString()
+// sound might be a parameter, etc...
+
+- go over creation
+
+- PercentageRect handles the mapping between a place on the image to a place on the screen
+
+3. 
+
+
+
+Example HotAction:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<dict>
+<key>rect</key>
+<dict>
+<key>x</key>
+<real>0.1671806167400881</real>
+<key>y</key>
+<real>0.17643</real>
+<key>width</key>
+<real>0.140969</real>
+<key>height</key>
+<real>0.12204</real>
+</dict>
+<key>action</key>
+<string>defaultAction:</string>
+<key>shape</key>
+<string>round</string>
+</dict>
+</array>
+</plist>
+
+
+
+HotAction: UIView
+PercentageRect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OLD NOTES:
 Janie things to implement:
 
 * Design an action object

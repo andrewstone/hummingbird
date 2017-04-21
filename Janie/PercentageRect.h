@@ -11,7 +11,7 @@
 
 @interface PercentageRect : NSObject
 @property (nonatomic) CGRect percentages;
-- (CGRect)rectInView:(UIView *)view;
+- (CGRect)rectInView:(UIView *)view maintainsAspect:(BOOL)aspect;
 - (id)initWithPercentageX:(CGFloat)xPercent y:(CGFloat)yPercent width:(CGFloat)widthPercent height:(CGFloat)heightPercent;
 
 @end

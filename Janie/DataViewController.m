@@ -223,7 +223,7 @@
     
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
-        [hotty setFrame:[hotty desiredRectInView:self.imageView]];
+        [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
         [hotty setTarget:self];
         [self.imageView addSubview:hotty];
     }
@@ -285,7 +285,7 @@
     self.imageView.frame = iRect;
     // layout hot rects:
     for (HotAction *hotty in self.dataObject.hotRects) {
-        [hotty setFrame:[hotty desiredRectInView:self.imageView]];
+        [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
     }
     
     self.textViews.frame = cRect;   // see if the items inside are right though!
@@ -438,21 +438,58 @@
 
 - (IBAction)imageViewTapped:(id)sender {
     // we are either in the bigly state or the regular state
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.4];
-    [UIView setAnimationDelay:0.1];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-
-    if (self.fullScreen) {
-        [(UIImageView *)self.view setImage:nil];
-        self.containerView.alpha = 1.0;
-    } else {
-        [(UIImageView *)self.view setImage:[self.imageView.image copy]];
-        self.containerView.alpha = 0.0;
+    
+    for (HotAction *hotty in self.dataObject.hotRects) {
+        [hotty removeFromSuperview];
     }
-    self.fullScreen = !self.fullScreen;
-    [UIView commitAnimations];
+    
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.4];
+//    [UIView setAnimationDelay:0.1];
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+//
+//    if (self.fullScreen) {
+//        [(UIImageView *)self.view setImage:nil];
+//        self.containerView.alpha = 1.0;
+//        for (HotAction *hotty in self.dataObject.hotRects) {
+//            [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
+//            [hotty setTarget:self];
+//            [self.imageView addSubview:hotty];
+//        }
+//
+//    } else {
+//        [(UIImageView *)self.view setImage:[self.imageView.image copy]];
+//        self.containerView.alpha = 0.0;
+//        for (HotAction *hotty in self.dataObject.hotRects) {
+//            [hotty setFrame:[hotty desiredRectInView:(UIImageView *)self.view maintainsAspect:NO]];
+//            [hotty setTarget:self];
+//            [self.view addSubview:hotty];
+//        }
+//
+//    }
+//    self.fullScreen = !self.fullScreen;
+//    [UIView commitAnimations];
 
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        if (self.fullScreen) {
+            [(UIImageView *)self.view setImage:nil];
+            self.containerView.alpha = 1.0;
+        } else {
+            [(UIImageView *)self.view setImage:[self.imageView.image copy]];
+            self.containerView.alpha = 0.0;
+        }
+    } completion:^(BOOL finished) {
+        self.fullScreen = !self.fullScreen;
+        UIImageView * which = self.fullScreen ? (UIImageView *)self.view : self.imageView;
+        
+        for (HotAction *hotty in self.dataObject.hotRects) {
+            [hotty setFrame:[hotty desiredRectInView:which maintainsAspect:!self.fullScreen]];
+            [hotty setTarget:self];
+            [which addSubview:hotty];
+        }
+
+    }];
 }
 
 - (IBAction)turnThePageProgrammatically:(id)sender {

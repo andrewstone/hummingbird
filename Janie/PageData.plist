@@ -452,6 +452,26 @@ un ratoncito ada.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.5932203389830508</real>
+						<key>y</key>
+						<real>0.6335034013605442</real>
+						<key>width</key>
+						<real>0.0745762711864407</real>
+						<key>height</key>
+						<real>0.0748299319727891</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>shape</key>
+					<string>round</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -1174,7 +1194,7 @@ and do all her favorite things.</string>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
-					<string>5.025</string>
+					<string>5.581</string>
 				</dict>
 				<dict>
 					<key>start</key>
@@ -1182,7 +1202,7 @@ and do all her favorite things.</string>
 					<key>length</key>
 					<integer>6</integer>
 					<key>endTime</key>
-					<string>5.400</string>
+					<string>6.118</string>
 				</dict>
 				<dict>
 					<key>start</key>
@@ -1190,7 +1210,7 @@ and do all her favorite things.</string>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
-					<string>6.100</string>
+					<string>7.155</string>
 				</dict>
 				<dict>
 					<key>start</key>
@@ -1633,7 +1653,7 @@ when how to leave she didn’t know.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>125</integer>
+					<integer>124</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3090,7 +3110,7 @@ Some teachers saw and watched in awe, saying,
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>125</integer>
+					<integer>124</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3740,7 +3760,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>16</integer>
+					<integer>28</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3748,7 +3768,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>30</integer>
+					<integer>32</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
@@ -3756,7 +3776,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>36</integer>
+					<integer>38</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3764,7 +3784,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>40</integer>
+					<integer>42</integer>
 					<key>length</key>
 					<integer>7</integer>
 					<key>endTime</key>
@@ -3772,7 +3792,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>48</integer>
+					<integer>50</integer>
 					<key>length</key>
 					<integer>2</integer>
 					<key>endTime</key>
@@ -3780,7 +3800,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>51</integer>
+					<integer>53</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
@@ -3788,7 +3808,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>57</integer>
+					<integer>59</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3796,7 +3816,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>61</integer>
+					<integer>63</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
@@ -3804,7 +3824,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>69</integer>
+					<integer>71</integer>
 					<key>length</key>
 					<integer>6</integer>
 					<key>endTime</key>
@@ -3812,7 +3832,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>76</integer>
+					<integer>78</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3820,7 +3840,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>80</integer>
+					<integer>82</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3828,7 +3848,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>84</integer>
+					<integer>86</integer>
 					<key>length</key>
 					<integer>2</integer>
 					<key>endTime</key>
@@ -3836,7 +3856,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>87</integer>
+					<integer>89</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
@@ -3844,7 +3864,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>93</integer>
+					<integer>95</integer>
 					<key>length</key>
 					<integer>7</integer>
 					<key>endTime</key>
@@ -3852,7 +3872,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>101</integer>
+					<integer>103</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -3860,7 +3880,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>105</integer>
+					<integer>107</integer>
 					<key>length</key>
 					<integer>6</integer>
 					<key>endTime</key>
@@ -3868,7 +3888,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>114</integer>
+					<integer>116</integer>
 					<key>length</key>
 					<integer>4</integer>
 					<key>endTime</key>
@@ -3876,7 +3896,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>119</integer>
+					<integer>121</integer>
 					<key>length</key>
 					<integer>11</integer>
 					<key>endTime</key>
@@ -3884,7 +3904,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>131</integer>
+					<integer>133</integer>
 					<key>length</key>
 					<integer>8</integer>
 					<key>endTime</key>
@@ -3892,7 +3912,7 @@ what a tooth fairy’s life is all about.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>140</integer>
+					<integer>142</integer>
 					<key>length</key>
 					<integer>5</integer>
 					<key>endTime</key>
@@ -4428,11 +4448,10 @@ can’t seem to find the way.</string>
 			<key>imageName</key>
 			<string>JANIE 11</string>
 			<key>audioFileNames</key>
-			<array/>
-			<key>New item</key>
-			<string>AUDIO JANIE SPANISH PAGE 11.m4a</string>
-			<key>New item - 2</key>
-			<string>AUDIO JANIE ENGLISH PAGE 11.m4a</string>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 11.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 11.m4a</string>
+			</array>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
@@ -4647,7 +4666,7 @@ can’t seem to find the way.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>125</integer>
+					<integer>124</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -6211,7 +6230,7 @@ Saying, “Goodbye!” to everyone.</string>
 				</dict>
 				<dict>
 					<key>start</key>
-					<integer>125</integer>
+					<integer>124</integer>
 					<key>length</key>
 					<integer>3</integer>
 					<key>endTime</key>
@@ -8136,6 +8155,11 @@ though we find it differently.</string>
 			<key>imageName</key>
 			<string>JANIE 20</string>
 			<key>audioFileNames</key>
+			<array>
+				<string>AUDIO JANIE SPANISH PAGE 20.m4a</string>
+				<string>AUDIO JANIE ENGLISH PAGE 20.m4a</string>
+			</array>
+			<key>audioFileNamesSongs</key>
 			<array>
 				<string>Janie Song-es.m4a</string>
 				<string>Janie Song-en.m4a</string>
