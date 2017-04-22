@@ -88,7 +88,7 @@
         size += self.tweakFontSizeAmount;
     
     
-    if (oneLanguage) size += (isPad ? 7.0 : 2.0);
+    if (oneLanguage) size += (isPad ? 7.0 : 4.0);
     return size;
 }
 

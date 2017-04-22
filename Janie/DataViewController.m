@@ -284,8 +284,10 @@
     
     self.imageView.frame = iRect;
     // layout hot rects:
+    UIImageView * currentImageView = self.fullScreen ? (UIImageView *)self.view : self.imageView;
+
     for (HotAction *hotty in self.dataObject.hotRects) {
-        [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
+        [hotty setFrame:[hotty desiredRectInView:currentImageView maintainsAspect:!self.fullScreen]];
     }
     
     self.textViews.frame = cRect;   // see if the items inside are right though!
@@ -443,33 +445,6 @@
         [hotty removeFromSuperview];
     }
     
-//    [UIView beginAnimations:nil context:nil];
-//    [UIView setAnimationDuration:0.4];
-//    [UIView setAnimationDelay:0.1];
-//    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
-//
-//    if (self.fullScreen) {
-//        [(UIImageView *)self.view setImage:nil];
-//        self.containerView.alpha = 1.0;
-//        for (HotAction *hotty in self.dataObject.hotRects) {
-//            [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
-//            [hotty setTarget:self];
-//            [self.imageView addSubview:hotty];
-//        }
-//
-//    } else {
-//        [(UIImageView *)self.view setImage:[self.imageView.image copy]];
-//        self.containerView.alpha = 0.0;
-//        for (HotAction *hotty in self.dataObject.hotRects) {
-//            [hotty setFrame:[hotty desiredRectInView:(UIImageView *)self.view maintainsAspect:NO]];
-//            [hotty setTarget:self];
-//            [self.view addSubview:hotty];
-//        }
-//
-//    }
-//    self.fullScreen = !self.fullScreen;
-//    [UIView commitAnimations];
-
     
     [UIView animateWithDuration:0.5 animations:^{
         if (self.fullScreen) {
@@ -484,9 +459,8 @@
         UIImageView * which = self.fullScreen ? (UIImageView *)self.view : self.imageView;
         
         for (HotAction *hotty in self.dataObject.hotRects) {
-            [hotty setFrame:[hotty desiredRectInView:which maintainsAspect:!self.fullScreen]];
-            [hotty setTarget:self];
             [which addSubview:hotty];
+            [hotty setFrame:[hotty desiredRectInView:which maintainsAspect:!self.fullScreen]];
         }
 
     }];
