@@ -21,12 +21,15 @@
 @property (strong, nonatomic) IBOutlet UITextView *spanishTextView;
 @property (strong, nonatomic) IBOutlet UIView *textViews;
 @property (strong, nonatomic) IBOutlet UIView *containerView;
+@property (strong, nonatomic) IBOutlet UIView *playContainerView;
+@property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (strong, nonatomic) PageData *dataObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
 @property (nonatomic) BOOL fullScreen;
 
 - (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array
-- (IBAction)pauseOrRestart:(id)sender;
+- (IBAction)playPause:(id)sender;
+- (IBAction)restartAudio:(id)sender;
 - (IBAction)swapLanguages:(id)sender;
 - (IBAction)imageViewTapped:(id)sender;
 - (IBAction)turnThePageProgrammatically:(id)sender;

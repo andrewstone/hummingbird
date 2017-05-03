@@ -33,6 +33,34 @@ static ModelController *sharedModel = nil;
     return sharedModel;
 }
 
+- (NSArray *)englishSongList {
+    return [_globals valueForKey:@"englishSongList"];
+}
+
+- (NSArray *)spanishSongList {
+    return [_globals valueForKey:@"spanishSongList"];
+}
+
+- (NSString *)spanishSong {
+    return [[_globals valueForKey:@"audioFileNamesSongs"] objectAtIndex:0];
+}
+
+- (NSString *)englishSong {
+    return [[_globals valueForKey:@"audioFileNamesSongs"] objectAtIndex:1];
+}
+
+- (NSString *)currentSong {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    if (which == 1) return [self spanishSong];
+    else return [self englishSong];
+}
+
+- (NSArray *)currentSongList {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    if (which == 1) return [self spanishSongList];
+    else return [self englishSongList];
+}
+
 - (NSArray *)getPageData {
     NSMutableArray *a = [NSMutableArray array];
     
@@ -43,6 +71,8 @@ static ModelController *sharedModel = nil;
     if (d) {
     NSDictionary *dict = [NSPropertyListSerialization propertyListWithData:d options:(NSPropertyListImmutable) format:&format error:&e];
         NSArray *pagesInfo = [dict valueForKey:@"pages"];
+        _globals = [dict valueForKey:@"globals"];
+        
         for (NSDictionary *p in pagesInfo) {
             PageData *pageData = [PageData pageDataWithDictionary:p];
             if (pageData) [a addObject:pageData];

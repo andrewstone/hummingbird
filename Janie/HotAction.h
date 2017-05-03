@@ -14,10 +14,12 @@
 
 @property (nonatomic, strong) PercentageRect *percentageRect;
 @property (nonatomic, strong) NSString *shape;
+@property (nonatomic) NSArray *points;
 @property (nonatomic, weak) id target;
 @property (nonatomic) SEL action;
 
-- (id)initWithPercentageRect:(PercentageRect *)r action:(NSString *)act shape:(NSString *)shape;
+- (id)initWithPercentageRect:(PercentageRect *)r action:(NSString *)act shape:(NSString *)shape path:(NSArray *)aPath;
 - (CGRect)desiredRectInView:(UIImageView *)parent maintainsAspect:(BOOL)aspect;
+
 
 @end

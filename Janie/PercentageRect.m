@@ -41,6 +41,17 @@
     return CGRectMake(_percentages.origin.x * wMultiplier + xOffset, _percentages.origin.y * hMultiplier + yOffset, _percentages.size.width * wMultiplier, _percentages.size.height * hMultiplier);
 }
 
+// this is only requested after HotAction have been sized correctly
+
+- (NSArray *)transformedPoints:(NSArray *)percentagePoints size:(CGSize)destSize {
+    NSMutableArray *a = [NSMutableArray arrayWithCapacity:percentagePoints.count];
+    for (NSDictionary *d in percentagePoints) {
+        double x = [[d valueForKey:@"x"] doubleValue] * destSize.width;
+        double y = [[d valueForKey:@"y"] doubleValue] * destSize.height;
+        [a addObject:[NSArray arrayWithObjects:[NSNumber numberWithDouble:x], [NSNumber numberWithDouble:y], nil]];
+    }
+    return a;
+}
 - (id)initWithPercentageX:(CGFloat)xPercent y:(CGFloat)yPercent width:(CGFloat)widthPercent height:(CGFloat)heightPercent {
     self = [super init];
     _percentages = CGRectMake(xPercent, yPercent, widthPercent, heightPercent);

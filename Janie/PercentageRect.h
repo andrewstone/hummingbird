@@ -13,5 +13,6 @@
 @property (nonatomic) CGRect percentages;
 - (CGRect)rectInView:(UIView *)view maintainsAspect:(BOOL)aspect;
 - (id)initWithPercentageX:(CGFloat)xPercent y:(CGFloat)yPercent width:(CGFloat)widthPercent height:(CGFloat)heightPercent;
+- (NSArray *)transformedPoints:(NSArray *)percentagePoints size:(CGSize)destSize;
 
 @end

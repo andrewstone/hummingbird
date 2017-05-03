@@ -1,3 +1,23 @@
+May Day
+
+1. add paths to hotRects
+    -- do hit testing in gesture callback
+
+2. Have defaultAction play a sound that is registered with that HotRect, "sound"
+
+3. Have a global "Song mode", it's englishSongList, spanishSongList are GLOBAL'"
+
+4. Floating UI for restart audio, pause/play,
+
+5. UI with INTRO and also HELP from dedication page to teach book's usage'
+
+Things for Seth:
+-- word audio files for hidden touches.
+-- englishSongList and spanishSongList plist entries
+
+
+
+
 Friday April 21 2017 iOS WorkShop Class Agenda
 
 1. Hello & what's or who is new?

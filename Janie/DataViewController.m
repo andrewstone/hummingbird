@@ -23,6 +23,7 @@
     NSInteger bouncePointer;
     NSTimeInterval bounceStartTime;
     NSTimer *bounceTimer;
+    BOOL overrideAudio;
 }
 
 - (void)viewDidLoad {
@@ -30,7 +31,7 @@
 
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(autoPlayNotification:) name:@"AutoPlay" object:nil];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playMusicNotification:) name:@"PlayMusic" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playMusicNotification:) name:@"ReadOrPlayMusic" object:nil];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(whichLanguageNotification:) name:@"WhichLanguage" object:nil];
     
@@ -94,7 +95,13 @@
 }
 
 - (void)playMusicNotification:(NSNotification *)note {
-    [self playNextSound:nil];
+    if (AUDIO_IS_SUNG) {
+        // do nothing until next page
+        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+            [player stop];
+            [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:nil];
+
+    } else [self playNextSound:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,6 +138,7 @@
     bouncePointer++;
     if (bouncePointer < bounceTimes.count) {
         NSDictionary *info = bounceTimes[bouncePointer];
+        BOOL turnThePage = [[info valueForKey:@"turnPage"]boolValue];
         NSTimeInterval endTime = [[info valueForKey:@"endTime"] doubleValue];
         NSTimeInterval elapsed = CFAbsoluteTimeGetCurrent() - bounceStartTime;
         NSTimeInterval duration = endTime - elapsed;
@@ -154,13 +162,23 @@
 
 }
 
+
+
 - (void)bounceText {
-    [self stopBounce];
+    [self bounceText:YES];
+}
+
+- (void)bounceText:(BOOL)stopBounce {
+        
+    if (stopBounce) [self stopBounce];
     
     NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
     UITextView *textView = nil;
-    bounceTimes = nil;
-    bouncePointer = -1;
+    
+    if (stopBounce) {
+        bounceTimes = nil;
+        bouncePointer = -1;
+    }
     
     if (which == 1) {
         originalAttributedString = [self stringForText:self.dataObject.spanish isSpanish:YES];
@@ -177,7 +195,8 @@
     }
     // does this page have a word list for the current language?
     if (bounceTimes.count) {
-        bounceStartTime = CFAbsoluteTimeGetCurrent();
+        if (stopBounce || bounceStartTime == 0)
+            bounceStartTime = CFAbsoluteTimeGetCurrent();
         [self nextLoop:textView];
     }
 
@@ -219,7 +238,9 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    [self playNextSound:nil];
+    NSUInteger pageIndex = [[ModelController sharedModelController]indexOfViewController:self];
+    if (!((pageIndex == 0||pageIndex == 1) && AUDIO_IS_SUNG))
+        [self playNextSound:nil];
     
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
@@ -248,6 +269,10 @@
     CGRect vRect = self.containerView.bounds;
     CGRect iRect = self.imageView.frame;
     CGRect cRect = self.textViews.frame;
+    CGRect pRect = self.playContainerView.frame;
+    
+    pRect.origin = CGPointMake(floor((vRect.size.width - pRect.size.width)/2.0), vRect.size.height - pRect.size.height);
+    self.playContainerView.frame = pRect;
     
     self.dataLabel.font = [self.dataObject textFont];
     [self.dataLabel sizeToFit];
@@ -322,9 +347,9 @@
     [super viewWillDisappear:animated];
     AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
     BOOL shouldStop = self.dataObject.audioFiles.count > 0 && !self.dataObject.leaveSongRunning;
-    if (player.isPlaying && shouldStop) {
+    if (player.isPlaying && shouldStop && !AUDIO_IS_SUNG) {
         [player stop];
-        player = nil;
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:nil];
     }
     [self stopBounce];
 }
@@ -342,9 +367,17 @@
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    
+    self.playPauseButton.selected = NO;
+;
     if (flag) {
         [self autoPlayNotification:nil];
     }
+}
+
+- (void)corePlay:(AVAudioPlayer *)player {
+    [player play];
+    self.playPauseButton.selected = YES;
 }
 
 - (void)corePlaySound:(NSString *)nextSound {
@@ -355,38 +388,78 @@
     
     if (player) {
         [player stop];
-        player = nil;
+        [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:nil];
     }
     
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
     player.delegate = self;
     
-    [player play];
+    [self corePlay:player];
 }
 
-- (IBAction)playNextSound:(id)sender {
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"PlayMusic"]
-        || self.dataObject.playOnLoad)
-    {
-        
+- (void)coreNextSound {
     NSString *nextSound = [self nextSound];
     if (nextSound) {
         [self corePlaySound:nextSound];
         [self bounceText];
     }
+}
+
+- (IBAction)playNextSound:(id)sender {
+    if (AUDIO_IS_SUNG) {
+        // we just leave it going if it's not there already
+        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+        
+        if (!player) {
+            NSString *song = [[ModelController sharedModelController] currentSong];
+            [self corePlaySound:song];
+            
+        } else {
+            NSLog(@"%f current time for page %lu",player.currentTime, (unsigned long)[[ModelController sharedModelController]indexOfViewController:self]);
+        }
+        [self bounceText];
+
+    } else if (AUDIO_IS_READ || self.dataObject.playOnLoad || overrideAudio)
+    {
+        [self coreNextSound];
     } else {
         AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
         [player stop];
     }
 }
 
-- (IBAction)pauseOrRestart:(id)sender {
+- (IBAction)playPause:(id)sender {
     AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
-    if (player.isPlaying) [player pause];
-    else [player play];
+    if (player.isPlaying) {
+        [player pause];
+        self.playPauseButton.selected = NO;
+        [self stopBounce];
+        
+    } else {
+        if (player) {
+            NSTimeInterval time = [player currentTime];
+            [player playAtTime:time + 0.001]; // see docs on playAtTime:
+            self.playPauseButton.selected = YES;
+            [self bounceText:NO];
+        } else [self coreNextSound];
+    }
 }
+
+
+- (IBAction)restartAudio:(id)sender {
+    AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+    if (player.isPlaying)
+        [player stop];
+    
+    if (!player)
+        [self coreNextSound];
+    else {
+        [self corePlay:player];
+    }
+    
+}
+
 
 - (IBAction)swapLanguages:(id)sender {
     NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
@@ -467,8 +540,7 @@
 }
 
 - (IBAction)turnThePageProgrammatically:(id)sender {
-    RootViewController *rootController =(RootViewController*)[[(AppDelegate *)
-                                                               [[UIApplication sharedApplication]delegate] window] rootViewController];
+    RootViewController *rootController =(RootViewController*)ROOT_VIEW_CONTROLLER;
 
     [rootController turnPageFrom:self];
 }

@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>globals</key>
+	<dict>
+		<key>audioFileNamesSongs</key>
+		<array>
+			<string>Janie Song-es.m4a</string>
+			<string>Janie Song-en.m4a</string>
+		</array>
+		<key>englishSongList</key>
+		<array>
+			<dict>
+				<key>start</key>
+				<integer>0</integer>
+				<key>length</key>
+				<integer>3</integer>
+				<key>endTime</key>
+				<string>.640</string>
+				<key>turnPage</key>
+				<false/>
+			</dict>
+		</array>
+		<key>spanishSongList</key>
+		<array/>
+	</dict>
 	<key>pages</key>
 	<array>
 		<dict>
@@ -53,6 +76,8 @@
 					<string>defaultAction:</string>
 					<key>shape</key>
 					<string>round</string>
+					<key>sound</key>
+					<string>hurray.m4a</string>
 				</dict>
 			</array>
 			<key>englishWordList</key>
