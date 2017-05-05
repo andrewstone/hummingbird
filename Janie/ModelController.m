@@ -8,6 +8,8 @@
 
 #import "ModelController.h"
 #import "DataViewController.h"
+#import "RootViewController.h"
+#import "AppDelegate.h"
 #import "PageData.h"
 
 /*
@@ -25,7 +27,15 @@
 @property (readonly, strong, nonatomic) NSArray *pageData;
 @end
 
-@implementation ModelController
+@implementation ModelController {
+    NSMutableAttributedString *originalAttributedString;
+    NSArray *bounceTimes;
+    NSInteger bouncePointer;
+    NSTimeInterval bounceStartTime;
+    NSTimer *bounceTimer;
+}
+
+
 static ModelController *sharedModel = nil;
 
 + (ModelController *)sharedModelController {
@@ -136,5 +146,90 @@ static ModelController *sharedModel = nil;
     }
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
+
+// Global song playing bounce text:
+- (void)timerNextLoop:(NSTimer *)timer {
+    [self nextLoop:[[timer userInfo] valueForKey:@"textview" ] in:
+     [[timer userInfo] valueForKey:@"dvc"]];
+    if ([[timer userInfo]valueForKey:@"turnPage"])
+        [(RootViewController *)ROOT_VIEW_CONTROLLER turnPageFrom:[[timer userInfo] valueForKey:@"dvc"]];
+}
+
+- (void)nextLoop:(UITextView *)textView in:(DataViewController *)dvc {
+    bouncePointer++;
+    if (bouncePointer < bounceTimes.count) {
+        NSDictionary *info = bounceTimes[bouncePointer];
+        NSNumber * turnThePage = [info valueForKey:@"turnPage"];
+        NSTimeInterval endTime = [[info valueForKey:@"endTime"] doubleValue];
+        NSTimeInterval elapsed = CFAbsoluteTimeGetCurrent() - bounceStartTime;
+        NSTimeInterval duration = endTime - elapsed;
+        NSRange range = NSMakeRange([(NSNumber *)[info valueForKey:@"start"] integerValue],
+                                    [(NSNumber *)[info valueForKey:@"length"] integerValue]);
+        NSMutableAttributedString *newString = [[NSMutableAttributedString  alloc] initWithAttributedString:originalAttributedString];
+        
+        // now add whatever attributes you like to our range:
+        //        [newString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleThick] range:range];
+        //        [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
+        
+        //[newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
+        
+        [newString addAttribute:NSFontAttributeName value:dvc.dataObject.boldFont range:range];
+        textView.attributedText = newString;
+        
+        // now make a callback at then end of our time:
+        bounceTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:[NSDictionary dictionaryWithObjectsAndKeys:textView,@"textview",dvc,@"dvc",turnThePage,@"turnPage", nil] repeats:NO];
+        
+    } else textView.attributedText = originalAttributedString;
+    
+}
+
+- (void)stopBounce {
+    if (bounceTimes) {
+        [bounceTimer invalidate];
+        bounceTimer = nil;
+        bounceTimes = nil;
+    }
+}
+
+
+- (void)bounceTextWithController:(DataViewController *)dvc {
+    BOOL reset = [self indexOfViewController:dvc] == 2 ? YES : NO;
+    [self bounceTextWithController:dvc stopBounce:reset];
+}
+
+- (void)bounceTextWithController:(DataViewController *)dvc stopBounce:(BOOL)stopBounce {
+    
+    if (stopBounce) [self stopBounce];
+    
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    UITextView *textView = nil;
+    
+    if (stopBounce) {
+        bounceTimes = nil;
+        bouncePointer = -1;
+    }
+    
+    if (which == 1) {
+        originalAttributedString = [dvc stringForText:dvc.dataObject.spanish isSpanish:YES];
+        textView = dvc.spanishTextView;
+        bounceTimes = [ModelController sharedModelController].spanishSongList;
+    } else if (which == 2) {
+        originalAttributedString = [dvc stringForText:dvc.dataObject.english isSpanish:NO];
+        textView = dvc.spanishTextView;
+        bounceTimes = [ModelController sharedModelController].englishSongList;
+    } else if (which == 0) {
+        originalAttributedString = [dvc stringForText:dvc.dataObject.english isSpanish:NO];
+        textView = dvc.englishTextView;
+        bounceTimes = [ModelController sharedModelController].englishSongList;
+    }
+    // does this page have a word list for the current language?
+    if (bounceTimes.count) {
+        if (stopBounce || bounceStartTime == 0)
+            bounceStartTime = CFAbsoluteTimeGetCurrent();
+        [self nextLoop:textView in:(DataViewController *)dvc];
+    }
+    
+}
+
 
 @end

@@ -26,5 +26,7 @@
 
 - (NSString *)currentSong;
 - (NSArray *)currentSongList;
+
+- (void)bounceTextWithController:(DataViewController *)dvc;
 @end
 

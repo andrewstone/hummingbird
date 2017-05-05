@@ -38,5 +38,8 @@
 - (IBAction)defaultAction:(id)sender;
  // if you add more in PageData.plist, add them here too:
 
+
+// for global access when singing:
+- (NSMutableAttributedString *)stringForText:(NSString *)s isSpanish:(BOOL)isSpanish;
 @end
 

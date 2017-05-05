@@ -242,6 +242,8 @@
     if (!((pageIndex == 0||pageIndex == 1) && AUDIO_IS_SUNG))
         [self playNextSound:nil];
     
+    NSLog(@"%lu page", (unsigned long)pageIndex);
+    
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
         [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
@@ -418,7 +420,7 @@
         } else {
             NSLog(@"%f current time for page %lu",player.currentTime, (unsigned long)[[ModelController sharedModelController]indexOfViewController:self]);
         }
-        [self bounceText];
+        [[ModelController sharedModelController] bounceTextWithController:self];
 
     } else if (AUDIO_IS_READ || self.dataObject.playOnLoad || overrideAudio)
     {
