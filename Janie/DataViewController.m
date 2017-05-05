@@ -138,7 +138,6 @@
     bouncePointer++;
     if (bouncePointer < bounceTimes.count) {
         NSDictionary *info = bounceTimes[bouncePointer];
-        BOOL turnThePage = [[info valueForKey:@"turnPage"]boolValue];
         NSTimeInterval endTime = [[info valueForKey:@"endTime"] doubleValue];
         NSTimeInterval elapsed = CFAbsoluteTimeGetCurrent() - bounceStartTime;
         NSTimeInterval duration = endTime - elapsed;
@@ -241,9 +240,7 @@
     NSUInteger pageIndex = [[ModelController sharedModelController]indexOfViewController:self];
     if (!((pageIndex == 0||pageIndex == 1) && AUDIO_IS_SUNG))
         [self playNextSound:nil];
-    
-    NSLog(@"%lu page", (unsigned long)pageIndex);
-    
+        
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
         [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
@@ -395,7 +392,7 @@
     
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
-    player.delegate = self;
+    player.delegate = (AUDIO_IS_SUNG) ? [ModelController sharedModelController] : self;
     
     [self corePlay:player];
 }
@@ -416,11 +413,11 @@
         if (!player) {
             NSString *song = [[ModelController sharedModelController] currentSong];
             [self corePlaySound:song];
-            
+            [[ModelController sharedModelController] bounceTextWithController:self];
+
         } else {
-            NSLog(@"%f current time for page %lu",player.currentTime, (unsigned long)[[ModelController sharedModelController]indexOfViewController:self]);
+           // NSLog(@"%f current time for page %lu",player.currentTime, (unsigned long)[[ModelController sharedModelController]indexOfViewController:self]);
         }
-        [[ModelController sharedModelController] bounceTextWithController:self];
 
     } else if (AUDIO_IS_READ || self.dataObject.playOnLoad || overrideAudio)
     {

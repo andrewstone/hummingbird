@@ -149,14 +149,18 @@ static ModelController *sharedModel = nil;
 
 // Global song playing bounce text:
 - (void)timerNextLoop:(NSTimer *)timer {
-    [self nextLoop:[[timer userInfo] valueForKey:@"textview" ] in:
-     [[timer userInfo] valueForKey:@"dvc"]];
-    if ([[timer userInfo]valueForKey:@"turnPage"])
-        [(RootViewController *)ROOT_VIEW_CONTROLLER turnPageFrom:[[timer userInfo] valueForKey:@"dvc"]];
+    DataViewController *next = [[timer userInfo] valueForKey:@"dvc"];
+    UITextView *textView = [[timer userInfo] valueForKey:@"textview"];
+    if ([[[timer userInfo]valueForKey:@"turnPage"] boolValue]) {
+        next = [(RootViewController *)ROOT_VIEW_CONTROLLER nextPage];
+        textView = nil;
+    }
+    [self nextLoop:textView in:next];
 }
 
 - (void)nextLoop:(UITextView *)textView in:(DataViewController *)dvc {
     bouncePointer++;
+    
     if (bouncePointer < bounceTimes.count) {
         NSDictionary *info = bounceTimes[bouncePointer];
         NSNumber * turnThePage = [info valueForKey:@"turnPage"];
@@ -177,7 +181,7 @@ static ModelController *sharedModel = nil;
         textView.attributedText = newString;
         
         // now make a callback at then end of our time:
-        bounceTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:[NSDictionary dictionaryWithObjectsAndKeys:textView,@"textview",dvc,@"dvc",turnThePage,@"turnPage", nil] repeats:NO];
+        bounceTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:[NSDictionary dictionaryWithObjectsAndKeys:dvc,@"dvc",turnThePage,@"turnPage",textView,@"textview", nil] repeats:NO];
         
     } else textView.attributedText = originalAttributedString;
     
@@ -231,5 +235,9 @@ static ModelController *sharedModel = nil;
     
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    
+    [self stopBounce];
+}
 
 @end

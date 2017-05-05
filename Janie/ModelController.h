@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class DataViewController;
 
-@interface ModelController : NSObject <UIPageViewControllerDataSource>
+@interface ModelController : NSObject <UIPageViewControllerDataSource, AVAudioPlayerDelegate>
 @property (nonatomic, strong) NSDictionary *globals;
 
 + (ModelController *)sharedModelController;

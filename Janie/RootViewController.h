@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
-- (void)turnPageFrom:(DataViewController *)dvc;
+- (DataViewController *)turnPageFrom:(DataViewController *)dvc;
+- (DataViewController *)nextPage;
+
 @end
 

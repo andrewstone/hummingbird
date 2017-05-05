@@ -45,15 +45,20 @@
     [self.pageViewController didMoveToParentViewController:self];
 }
 
-- (void)turnPageFrom:(DataViewController *)dvc; {
+- (DataViewController *)turnPageFrom:(DataViewController *)dvc; {
     ModelController *model = [ModelController sharedModelController];
     DataViewController *nextDVC = (DataViewController *)[model pageViewController:self.pageViewController viewControllerAfterViewController:dvc];
     if (nextDVC) {
         [self.pageViewController setViewControllers:@[nextDVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
+    return nextDVC;
 
 }
 
+- (DataViewController *)nextPage {
+    NSArray *vcs = self.pageViewController.viewControllers;
+    return [self turnPageFrom:[vcs lastObject]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
