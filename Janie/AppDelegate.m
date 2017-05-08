@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "ModelController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+- (void)stopAndClearSound;
+{
+    [_audioPlayer stop];
+    _audioPlayer = nil;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

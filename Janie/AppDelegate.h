@@ -15,8 +15,11 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic)  AVAudioPlayer *audioPlayer;
 
-#define ROOT_VIEW_CONTROLLER ([[(AppDelegate *)[[UIApplication sharedApplication] delegate] window] rootViewController])
+- (void)stopAndClearSound;
 
+#define APP_DELEGATE ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define ROOT_VIEW_CONTROLLER [[APP_DELEGATE window] rootViewController]
+#define AUDIO_CONTROLLER [APP_DELEGATE audioPlayer]
 
 #define NO_AUDIO ([[NSUserDefaults standardUserDefaults] integerForKey:@"ReadOrPlayMusic"] == 0)
 #define AUDIO_IS_SUNG ([[NSUserDefaults standardUserDefaults] integerForKey:@"ReadOrPlayMusic"] == 2)

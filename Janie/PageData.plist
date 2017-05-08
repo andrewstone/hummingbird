@@ -17,7 +17,39 @@
 				<key>length</key>
 				<integer>0</integer>
 				<key>endTime</key>
-				<string>13.553</string>
+				<real>3.587</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>0</integer>
+				<key>length</key>
+				<integer>39</integer>
+				<key>endTime</key>
+				<real>6.6639</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>41</integer>
+				<key>length</key>
+				<integer>20</integer>
+				<key>endTime</key>
+				<real>9.195</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>65</integer>
+				<key>length</key>
+				<integer>39</integer>
+				<key>endTime</key>
+				<real>11.381</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>106</integer>
+				<key>length</key>
+				<integer>27</integer>
+				<key>endTime</key>
+				<real>13.553</real>
 				<key>turnPage</key>
 				<true/>
 			</dict>
@@ -219,6 +251,40 @@
 				<integer>0</integer>
 				<key>length</key>
 				<integer>0</integer>
+				<key>endTime</key>
+				<real>4.427</real>
+				<key>note</key>
+				<string>This is the song intro before words</string>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>0</integer>
+				<key>length</key>
+				<integer>31</integer>
+				<key>endTime</key>
+				<real>6.317</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>32</integer>
+				<key>length</key>
+				<integer>26</integer>
+				<key>endTime</key>
+				<real>8.526</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>59</integer>
+				<key>length</key>
+				<integer>36</integer>
+				<key>endTime</key>
+				<real>10.755</real>
+			</dict>
+			<dict>
+				<key>start</key>
+				<integer>96</integer>
+				<key>length</key>
+				<integer>16</integer>
 				<key>endTime</key>
 				<string>12.878</string>
 				<key>turnPage</key>

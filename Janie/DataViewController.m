@@ -90,17 +90,13 @@
     }
 
     [self coreSetupText];
-    [self playNextSound:nil];
+    if (!AUDIO_IS_SUNG) [self playNextSound:nil];
 
 }
 
 - (void)playMusicNotification:(NSNotification *)note {
     if (AUDIO_IS_SUNG) {
-        // do nothing until next page
-        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
-            [player stop];
-            [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:nil];
-
+        [APP_DELEGATE stopAndClearSound];
     } else [self playNextSound:nil];
 }
 
@@ -202,6 +198,7 @@
     if (stopBounce) {
         bounceTimes = nil;
         bouncePointer = -1;
+        bounceStartTime = 0;
     }
     
     originalAttributedString = [d valueForKey:@"string"];
@@ -253,8 +250,13 @@
     [super viewDidAppear:animated];
 
     NSUInteger pageIndex = [[ModelController sharedModelController]indexOfViewController:self];
-    if (!((pageIndex == 0||pageIndex == 1) && AUDIO_IS_SUNG))
+    BOOL isDedicationPage = pageIndex == 1;
+    if (!((pageIndex == 0|| isDedicationPage) && AUDIO_IS_SUNG))
         [self playNextSound:nil];
+    else if (isDedicationPage) {
+        [[ModelController sharedModelController] stopBounce];
+        [APP_DELEGATE stopAndClearSound];
+    }
         
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
@@ -351,19 +353,22 @@
     
 }
 - (void)stopBounce {
-    if (bounceTimes) {
-        [bounceTimer invalidate];
-        bounceTimer = nil;
-        bounceTimes = nil;
+    if (AUDIO_IS_SUNG) {
+
+    } else {
+        if (bounceTimes) {
+            [bounceTimer invalidate];
+            bounceTimer = nil;
+            bounceTimes = nil;
+        }
     }
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+    AVAudioPlayer *player = AUDIO_CONTROLLER;
     BOOL shouldStop = self.dataObject.audioFiles.count > 0 && !self.dataObject.leaveSongRunning;
     if (player.isPlaying && shouldStop && !AUDIO_IS_SUNG) {
-        [player stop];
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:nil];
+        [APP_DELEGATE stopAndClearSound];
     }
     [self stopBounce];
 }
@@ -398,11 +403,10 @@
     NSString *soundFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:nextSound];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     NSError *e = NULL;
-    AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+    AVAudioPlayer *player = AUDIO_CONTROLLER;
     
     if (player) {
-        [player stop];
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:nil];
+        [APP_DELEGATE stopAndClearSound];
     }
     
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
@@ -423,7 +427,7 @@
 - (IBAction)playNextSound:(id)sender {
     if (AUDIO_IS_SUNG) {
         // we just leave it going if it's not there already
-        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+        AVAudioPlayer *player = AUDIO_CONTROLLER;
         
         if (!player) {
             NSString *song = [[ModelController sharedModelController] currentSong];
@@ -438,13 +442,12 @@
     {
         [self coreNextSound];
     } else {
-        AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
-        [player stop];
+        [APP_DELEGATE stopAndClearSound];
     }
 }
 
 - (IBAction)playPause:(id)sender {
-    AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+    AVAudioPlayer *player = AUDIO_CONTROLLER;
     if (player.isPlaying) {
         [player pause];
         self.playPauseButton.selected = NO;
@@ -462,7 +465,7 @@
 
 
 - (IBAction)restartAudio:(id)sender {
-    AVAudioPlayer *player = [(AppDelegate *)[[UIApplication sharedApplication] delegate]audioPlayer];
+    AVAudioPlayer *player = AUDIO_CONTROLLER;
     if (player.isPlaying)
         [player stop];
     

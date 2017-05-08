@@ -30,6 +30,6 @@
 
 - (void)bounceTextWithController:(DataViewController *)dvc;
 - (void)updateBounceTextWithController:(DataViewController *)dvc;
-
+- (void)stopBounce;
 @end
 

@@ -159,10 +159,10 @@ static ModelController *sharedModel = nil;
         textView = [d valueForKey:@"textView"];
         currentTextView = textView;
     }
-    [self nextLoop:textView in:next];
+    [self nextLoopIn:next];
 }
 
-- (void)nextLoop:(UITextView *)textView in:(DataViewController *)dvc {
+- (void)nextLoopIn:(DataViewController *)dvc {
     bouncePointer++;
     
     if (bouncePointer < bounceTimes.count) {
@@ -182,12 +182,12 @@ static ModelController *sharedModel = nil;
         //[newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
         
         [newString addAttribute:NSFontAttributeName value:dvc.dataObject.boldFont range:range];
-        textView.attributedText = newString;
+        currentTextView.attributedText = newString;
         
         // now make a callback at then end of our time:
-        bounceTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:[NSDictionary dictionaryWithObjectsAndKeys:dvc,@"dvc",turnThePage,@"turnPage",textView,@"textview", nil] repeats:NO];
+        bounceTimer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(timerNextLoop:) userInfo:[NSDictionary dictionaryWithObjectsAndKeys:dvc,@"dvc",turnThePage,@"turnPage", nil] repeats:NO];
         
-    } else textView.attributedText = originalAttributedString;
+    } else currentTextView.attributedText = originalAttributedString;
     
 }
 
@@ -212,6 +212,7 @@ static ModelController *sharedModel = nil;
     NSDictionary *d = [dvc valuesForBouncing:YES];
 
     if (stopBounce) {
+        bounceStartTime = 0;
         bounceTimes = nil;
         bouncePointer = -1;
     }
@@ -224,7 +225,7 @@ static ModelController *sharedModel = nil;
     if (bounceTimes.count) {
         if (stopBounce || bounceStartTime == 0)
             bounceStartTime = CFAbsoluteTimeGetCurrent();
-        [self nextLoop:currentTextView in:(DataViewController *)dvc];
+        [self nextLoopIn:(DataViewController *)dvc];
     }
     
 }
