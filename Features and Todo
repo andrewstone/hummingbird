@@ -1,5 +1,8 @@
 May Day
 
+0. pause/play global song - also, if user interaction, pause ?
+
+
 1. add paths to hotRects
     -- do hit testing in gesture callback
 

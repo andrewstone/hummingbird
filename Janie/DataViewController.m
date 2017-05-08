@@ -167,31 +167,46 @@
     [self bounceText:YES];
 }
 
+
+- (NSDictionary *)valuesForBouncing:(BOOL)sung {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    UITextView *textView = nil;
+    NSAttributedString *string = nil;
+    NSArray *bounces = nil;
+    
+    if (which == 1) {
+        string = [self stringForText:self.dataObject.spanish isSpanish:YES];
+        textView = self.spanishTextView;
+        bounces = sung ? [ModelController sharedModelController].spanishSongList: self.dataObject.spanishWordList;
+    } else if (which == 2) {
+        string = [self stringForText:self.dataObject.english isSpanish:NO];
+        textView = self.spanishTextView;
+        bounces = sung ? [ModelController sharedModelController].englishSongList : self.dataObject.englishWordList;
+    } else if (which == 0) {
+        string = [self stringForText:self.dataObject.english isSpanish:NO];
+        textView = self.englishTextView;
+        bounces = sung ? [ModelController sharedModelController].englishSongList : self.dataObject.englishWordList;
+    }
+    
+    return [NSDictionary dictionaryWithObjectsAndKeys:textView,@"textView", string,@"string",bounces,@"bounceTimes", nil];
+}
+
+
 - (void)bounceText:(BOOL)stopBounce {
         
     if (stopBounce) [self stopBounce];
     
-    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
-    UITextView *textView = nil;
+    NSDictionary *d = [self valuesForBouncing:NO];
+    UITextView *textView = [d valueForKey:@"textView"];
     
     if (stopBounce) {
         bounceTimes = nil;
         bouncePointer = -1;
     }
     
-    if (which == 1) {
-        originalAttributedString = [self stringForText:self.dataObject.spanish isSpanish:YES];
-        textView = self.spanishTextView;
-        bounceTimes = self.dataObject.spanishWordList;
-    } else if (which == 2) {
-        originalAttributedString = [self stringForText:self.dataObject.english isSpanish:NO];
-        textView = self.spanishTextView;
-        bounceTimes = self.dataObject.englishWordList;
-    } else if (which == 0) {
-        originalAttributedString = [self stringForText:self.dataObject.english isSpanish:NO];
-        textView = self.englishTextView;
-        bounceTimes = self.dataObject.englishWordList;
-    }
+    originalAttributedString = [d valueForKey:@"string"];
+    bounceTimes = [d valueForKey:@"bounceTimes"];
+    
     // does this page have a word list for the current language?
     if (bounceTimes.count) {
         if (stopBounce || bounceStartTime == 0)
@@ -416,7 +431,7 @@
             [[ModelController sharedModelController] bounceTextWithController:self];
 
         } else {
-           // NSLog(@"%f current time for page %lu",player.currentTime, (unsigned long)[[ModelController sharedModelController]indexOfViewController:self]);
+            [[ModelController sharedModelController] updateBounceTextWithController:self];
         }
 
     } else if (AUDIO_IS_READ || self.dataObject.playOnLoad || overrideAudio)

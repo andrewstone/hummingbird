@@ -41,5 +41,6 @@
 
 // for global access when singing:
 - (NSMutableAttributedString *)stringForText:(NSString *)s isSpanish:(BOOL)isSpanish;
+- (NSDictionary *)valuesForBouncing:(BOOL)sung;
 @end
 

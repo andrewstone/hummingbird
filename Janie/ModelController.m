@@ -33,6 +33,7 @@
     NSInteger bouncePointer;
     NSTimeInterval bounceStartTime;
     NSTimer *bounceTimer;
+    UITextView *currentTextView;
 }
 
 
@@ -153,7 +154,10 @@ static ModelController *sharedModel = nil;
     UITextView *textView = [[timer userInfo] valueForKey:@"textview"];
     if ([[[timer userInfo]valueForKey:@"turnPage"] boolValue]) {
         next = [(RootViewController *)ROOT_VIEW_CONTROLLER nextPage];
-        textView = nil;
+        NSDictionary *d = [next valuesForBouncing:YES];
+        originalAttributedString = [d valueForKey:@"string"];
+        textView = [d valueForKey:@"textView"];
+        currentTextView = textView;
     }
     [self nextLoop:textView in:next];
 }
@@ -205,34 +209,30 @@ static ModelController *sharedModel = nil;
     
     if (stopBounce) [self stopBounce];
     
-    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
-    UITextView *textView = nil;
-    
+    NSDictionary *d = [dvc valuesForBouncing:YES];
+
     if (stopBounce) {
         bounceTimes = nil;
         bouncePointer = -1;
     }
     
-    if (which == 1) {
-        originalAttributedString = [dvc stringForText:dvc.dataObject.spanish isSpanish:YES];
-        textView = dvc.spanishTextView;
-        bounceTimes = [ModelController sharedModelController].spanishSongList;
-    } else if (which == 2) {
-        originalAttributedString = [dvc stringForText:dvc.dataObject.english isSpanish:NO];
-        textView = dvc.spanishTextView;
-        bounceTimes = [ModelController sharedModelController].englishSongList;
-    } else if (which == 0) {
-        originalAttributedString = [dvc stringForText:dvc.dataObject.english isSpanish:NO];
-        textView = dvc.englishTextView;
-        bounceTimes = [ModelController sharedModelController].englishSongList;
-    }
+    currentTextView = [d valueForKey:@"textView"];
+    originalAttributedString = [d valueForKey:@"string"];
+    bounceTimes = [d valueForKey:@"bounceTimes"];
+
     // does this page have a word list for the current language?
     if (bounceTimes.count) {
         if (stopBounce || bounceStartTime == 0)
             bounceStartTime = CFAbsoluteTimeGetCurrent();
-        [self nextLoop:textView in:(DataViewController *)dvc];
+        [self nextLoop:currentTextView in:(DataViewController *)dvc];
     }
     
+}
+
+- (void)updateBounceTextWithController:(DataViewController *)dvc {
+    NSDictionary *d = [dvc valuesForBouncing:YES];
+    currentTextView = [d valueForKey:@"textView"];
+    originalAttributedString = [d valueForKey:@"string"];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
