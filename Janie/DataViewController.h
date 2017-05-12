@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PageData.h"
 #import "BookReadingOptionsViewController.h"
-
+#import "HotAction.h"
 
 @interface DataViewController : UIViewController <AVAudioPlayerDelegate, UIGestureRecognizerDelegate>
 
@@ -35,7 +35,7 @@
 - (IBAction)turnThePageProgrammatically:(id)sender;
 
  // the default action of HotAction tap:
-- (IBAction)defaultAction:(id)sender;
+- (IBAction)defaultAction:(HotAction *)sender;
  // if you add more in PageData.plist, add them here too:
 
 

@@ -30,6 +30,8 @@
 
 - (void)bounceTextWithController:(DataViewController *)dvc;
 - (void)updateBounceTextWithController:(DataViewController *)dvc;
+
+- (NSTimeInterval)startTimeForPage:(NSUInteger)page;
 - (void)stopBounce;
 @end
 

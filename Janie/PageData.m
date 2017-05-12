@@ -24,7 +24,8 @@
         PercentageRect *pr = [[PercentageRect alloc] initWithPercentageX:[[rect valueForKey:@"x"] doubleValue] y:[[rect valueForKey:@"y"] doubleValue] width:[[rect valueForKey:@"width"]doubleValue] height:[[rect valueForKey:@"height"]doubleValue]];
         
         HotAction *hot = [[HotAction alloc] initWithPercentageRect:pr action:[d valueForKey:@"action"] shape:[d valueForKey:@"shape"]
-                                                            path:[d valueForKey:@"points"]];
+                                                            path:[d valueForKey:@"points"]
+                          english:[d valueForKey:@"english"] spanish:[d valueForKey:@"spanish"]];
         if (hot)
             [array addObject:hot];
     }

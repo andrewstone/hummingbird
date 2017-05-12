@@ -256,6 +256,8 @@
     else if (isDedicationPage) {
         [[ModelController sharedModelController] stopBounce];
         [APP_DELEGATE stopAndClearSound];
+    } else if (AUDIO_IS_SUNG && [AUDIO_CONTROLLER isPlaying]) {
+        self.playPauseButton.selected = YES;
     }
         
     // Here we add the special hot actions
@@ -390,16 +392,25 @@
     self.playPauseButton.selected = NO;
 ;
     if (flag) {
-        [self autoPlayNotification:nil];
+        // we'll automatically turn the page if "AutoPlay" is On
+        // of course, we automatically turn the page if Song is singing
+        
+        if (!AUDIO_IS_SUNG)
+            [self autoPlayNotification:nil];
     }
 }
 
-- (void)corePlay:(AVAudioPlayer *)player {
-    [player play];
+- (void)corePlay:(AVAudioPlayer *)player atTime:(NSTimeInterval)start {
+    if (start > 0) [player playAtTime:start];
+    else [player play];
     self.playPauseButton.selected = YES;
 }
 
 - (void)corePlaySound:(NSString *)nextSound {
+    [self corePlaySound:nextSound atTime:0.0f];
+}
+
+- (void)corePlaySound:(NSString *)nextSound atTime:(NSTimeInterval)start {
     NSString *soundFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:nextSound];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     NSError *e = NULL;
@@ -413,7 +424,7 @@
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
     player.delegate = (AUDIO_IS_SUNG) ? [ModelController sharedModelController] : self;
     
-    [self corePlay:player];
+    [self corePlay:player atTime:start];
 }
 
 - (void)coreNextSound {
@@ -451,7 +462,9 @@
     if (player.isPlaying) {
         [player pause];
         self.playPauseButton.selected = NO;
-        [self stopBounce];
+        if (AUDIO_IS_SUNG)
+            [[ModelController sharedModelController] stopBounce];
+       else [self stopBounce];
         
     } else {
         if (player) {
@@ -466,13 +479,24 @@
 
 - (IBAction)restartAudio:(id)sender {
     AVAudioPlayer *player = AUDIO_CONTROLLER;
+    NSTimeInterval time = 0.0f;
+    
     if (player.isPlaying)
         [player stop];
     
-    if (!player)
-        [self coreNextSound];
-    else {
-        [self corePlay:player];
+    if (AUDIO_IS_SUNG) {
+        ModelController *mc = [ModelController sharedModelController];
+        NSUInteger pageIndex = [mc indexOfViewController:self];
+        time = [mc startTimeForPage:pageIndex];
+        NSLog(@"start at %f", time);
+        [self corePlaySound:[mc currentSong] atTime:time];
+    } else {
+        
+        if (!player)
+            [self coreNextSound];
+        else {
+            [self corePlay:player atTime:time];
+        }
     }
     
 }
@@ -486,6 +510,8 @@
     
     NSString *text = which == 1 ? self.dataObject.spanish :  self.dataObject.english;
     self.spanishTextView.attributedText = [self stringForText:text isSpanish:which == 1];
+    
+    
     [self playNextSound:self];
 }
 
@@ -501,7 +527,8 @@
         
     }
     if (tap.state == UIGestureRecognizerStateEnded) {
-        [self swapLanguages:self];
+        if (!AUDIO_IS_SUNG)
+            [self swapLanguages:self];
     }
 }
 
@@ -562,9 +589,11 @@
     [rootController turnPageFrom:self];
 }
 
-- (IBAction)defaultAction:(id)sender{
+- (IBAction)defaultAction:(HotAction *)sender{
     //play something
-    [self corePlaySound:@"hurray.m4a"];
+    NSString *sound = [sender soundFile];
+    
+    [self corePlaySound:sound];
 }
 
 

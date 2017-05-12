@@ -533,8 +533,48 @@
 					<string>defaultAction:</string>
 					<key>shape</key>
 					<string>round</string>
-					<key>sound</key>
-					<string>hurray.m4a</string>
+					<key>english</key>
+					<string>EN-pg1-the clock.m4a</string>
+					<key>spanish</key>
+					<string>es-pg1-el reloj.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.0698529411764706</real>
+						<key>y</key>
+						<real>0.740121580547113</real>
+						<key>width</key>
+						<real>0.145220588235294</real>
+						<key>height</key>
+						<real>0.155015197568389</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg1-the chair.m4a</string>
+					<key>spanish</key>
+					<string>es-pg1-la silla.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.2536764705882353</real>
+						<key>y</key>
+						<real>0.8632218844984803</real>
+						<key>width</key>
+						<real>0.110294117647059</real>
+						<key>height</key>
+						<real>0.0835866261398176</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg1-the flowers.m4a</string>
+					<key>spanish</key>
+					<string>es-pg1-las flores.m4a</string>
 				</dict>
 			</array>
 			<key>englishWordList</key>

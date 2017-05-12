@@ -29,6 +29,12 @@
 		BF2724681EAA82BC00045D5C /* AUDIO JANIE SPANISH PAGE 18.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF27245C1EAA7E8D00045D5C /* AUDIO JANIE SPANISH PAGE 18.m4a */; };
 		BF2724691EAA82C000045D5C /* AUDIO JANIE SPANISH PAGE 19.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF27245D1EAA7E8D00045D5C /* AUDIO JANIE SPANISH PAGE 19.m4a */; };
 		BF27246A1EAA82C400045D5C /* AUDIO JANIE SPANISH PAGE 20.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF27245E1EAA7E8D00045D5C /* AUDIO JANIE SPANISH PAGE 20.m4a */; };
+		BF27246F1EC4B0C400045D5C /* EN-pg1-the chair.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF27246C1EC4B0C400045D5C /* EN-pg1-the chair.m4a */; };
+		BF2724701EC4B0C400045D5C /* EN-pg1-the clock.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF27246D1EC4B0C400045D5C /* EN-pg1-the clock.m4a */; };
+		BF2724711EC4B0C400045D5C /* EN-pg1-the flowers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF27246E1EC4B0C400045D5C /* EN-pg1-the flowers.m4a */; };
+		BF2724731EC4B4D700045D5C /* es-pg1-el reloj.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2724721EC4B4D700045D5C /* es-pg1-el reloj.m4a */; };
+		BF2724751EC4BF7400045D5C /* es-pg1-la silla.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2724741EC4BF7400045D5C /* es-pg1-la silla.m4a */; };
+		BF2724771EC4C0C900045D5C /* es-pg1-las flores.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2724761EC4C0C900045D5C /* es-pg1-las flores.m4a */; };
 		BF2B54AE1EA6B7200047DB7C /* HotAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B54AD1EA6B7200047DB7C /* HotAction.m */; };
 		BF2B54B01EA856460047DB7C /* hurray.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2B54AF1EA856460047DB7C /* hurray.m4a */; };
 		BF2DC1171E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F31E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a */; };
@@ -104,6 +110,12 @@
 		BF2724601EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 18.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 18.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 18.m4a"; sourceTree = "<group>"; };
 		BF2724611EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 19.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 19.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 19.m4a"; sourceTree = "<group>"; };
 		BF2724621EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 20.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 20.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 20.m4a"; sourceTree = "<group>"; };
+		BF27246C1EC4B0C400045D5C /* EN-pg1-the chair.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "EN-pg1-the chair.m4a"; path = "audio/wordaudio/EN-pg1-the chair.m4a"; sourceTree = "<group>"; };
+		BF27246D1EC4B0C400045D5C /* EN-pg1-the clock.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "EN-pg1-the clock.m4a"; path = "audio/wordaudio/EN-pg1-the clock.m4a"; sourceTree = "<group>"; };
+		BF27246E1EC4B0C400045D5C /* EN-pg1-the flowers.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "EN-pg1-the flowers.m4a"; path = "audio/wordaudio/EN-pg1-the flowers.m4a"; sourceTree = "<group>"; };
+		BF2724721EC4B4D700045D5C /* es-pg1-el reloj.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "es-pg1-el reloj.m4a"; path = "audio/wordaudio/es-pg1-el reloj.m4a"; sourceTree = "<group>"; };
+		BF2724741EC4BF7400045D5C /* es-pg1-la silla.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "es-pg1-la silla.m4a"; path = "audio/wordaudio/es-pg1-la silla.m4a"; sourceTree = "<group>"; };
+		BF2724761EC4C0C900045D5C /* es-pg1-las flores.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "es-pg1-las flores.m4a"; path = "audio/wordaudio/es-pg1-las flores.m4a"; sourceTree = "<group>"; };
 		BF2B54AC1EA6B7200047DB7C /* HotAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotAction.h; sourceTree = "<group>"; };
 		BF2B54AD1EA6B7200047DB7C /* HotAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotAction.m; sourceTree = "<group>"; };
 		BF2B54AF1EA856460047DB7C /* hurray.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = hurray.m4a; path = audio/hurray.m4a; sourceTree = "<group>"; };
@@ -225,6 +237,7 @@
 		BF0B31E61E6DE18A00F7D5A7 /* moreAssets */ = {
 			isa = PBXGroup;
 			children = (
+				BF27246B1EC4B0AE00045D5C /* word audio */,
 				BF2B54AF1EA856460047DB7C /* hurray.m4a */,
 				BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */,
 				BF0B31E81E6DE27500F7D5A7 /* Janie Song-en.m4a */,
@@ -232,6 +245,19 @@
 				BF2DC0F21E83675800037050 /* pageaudio */,
 			);
 			name = moreAssets;
+			sourceTree = "<group>";
+		};
+		BF27246B1EC4B0AE00045D5C /* word audio */ = {
+			isa = PBXGroup;
+			children = (
+				BF27246C1EC4B0C400045D5C /* EN-pg1-the chair.m4a */,
+				BF27246D1EC4B0C400045D5C /* EN-pg1-the clock.m4a */,
+				BF27246E1EC4B0C400045D5C /* EN-pg1-the flowers.m4a */,
+				BF2724721EC4B4D700045D5C /* es-pg1-el reloj.m4a */,
+				BF2724741EC4BF7400045D5C /* es-pg1-la silla.m4a */,
+				BF2724761EC4C0C900045D5C /* es-pg1-las flores.m4a */,
+			);
+			name = "word audio";
 			sourceTree = "<group>";
 		};
 		BF2DC0F21E83675800037050 /* pageaudio */ = {
@@ -355,6 +381,7 @@
 				BF2DC1251E83682100037050 /* AUDIO JANIE ENGLISH PAGE 14.m4a in Resources */,
 				BF2DC1301E83682100037050 /* AUDIO JANIE SPANISH PAGE 7.m4a in Resources */,
 				BF0B31D51E6A685C00F7D5A7 /* LaunchScreen.storyboard in Resources */,
+				BF2724771EC4C0C900045D5C /* es-pg1-las flores.m4a in Resources */,
 				BF2DC1391E83682100037050 /* AUDIO JANIE SPANISH PAGE 16.m4a in Resources */,
 				BF2DC1191E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a in Resources */,
 				BF0B31D21E6A685C00F7D5A7 /* Assets.xcassets in Resources */,
@@ -379,9 +406,11 @@
 				BF2724691EAA82C000045D5C /* AUDIO JANIE SPANISH PAGE 19.m4a in Resources */,
 				BF2DC1281E83682100037050 /* AUDIO JANIE ENGLISH TITLE PAGE.m4a in Resources */,
 				BF2DC1351E83682100037050 /* AUDIO JANIE SPANISH PAGE 12.m4a in Resources */,
+				BF2724731EC4B4D700045D5C /* es-pg1-el reloj.m4a in Resources */,
 				BF2DC12C1E83682100037050 /* AUDIO JANIE SPANISH PAGE 3.m4a in Resources */,
 				BF0B31EC1E6DE27500F7D5A7 /* Janie Song-es.m4a in Resources */,
 				BF2DC11A1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 3.m4a in Resources */,
+				BF2724751EC4BF7400045D5C /* es-pg1-la silla.m4a in Resources */,
 				BF2DC1341E83682100037050 /* AUDIO JANIE SPANISH PAGE 11.m4a in Resources */,
 				BF2DC1241E83682100037050 /* AUDIO JANIE ENGLISH PAGE 13.m4a in Resources */,
 				BF2DC1231E83682100037050 /* AUDIO JANIE ENGLISH PAGE 12.m4a in Resources */,
@@ -393,6 +422,7 @@
 				BF2DC12B1E83682100037050 /* AUDIO JANIE SPANISH PAGE 2.m4a in Resources */,
 				BF2DC1291E83682100037050 /* AUDIO JANIE SPANISH DEDICATION PAGE.m4a in Resources */,
 				BF0B31E31E6C755D00F7D5A7 /* PageData.plist in Resources */,
+				BF27246F1EC4B0C400045D5C /* EN-pg1-the chair.m4a in Resources */,
 				BF0B31E51E6DDC6B00F7D5A7 /* Features and Todo in Resources */,
 				BF2DC13A1E83682100037050 /* AUDIO JANIE SPANISH TITLE PAGE.m4a in Resources */,
 				BF2DC1371E83682100037050 /* AUDIO JANIE SPANISH PAGE 14.m4a in Resources */,
@@ -401,8 +431,10 @@
 				BF2B54B01EA856460047DB7C /* hurray.m4a in Resources */,
 				BF2DC1381E83682100037050 /* AUDIO JANIE SPANISH PAGE 15.m4a in Resources */,
 				BF2DC1201E83682100037050 /* AUDIO JANIE ENGLISH PAGE 9.m4a in Resources */,
+				BF2724711EC4B0C400045D5C /* EN-pg1-the flowers.m4a in Resources */,
 				BF2DC11D1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 6.m4a in Resources */,
 				BF0B31EB1E6DE27500F7D5A7 /* Janie Song-en.m4a in Resources */,
+				BF2724701EC4B0C400045D5C /* EN-pg1-the clock.m4a in Resources */,
 				BF2DC1221E83682100037050 /* AUDIO JANIE ENGLISH PAGE 11.m4a in Resources */,
 				BF2724651EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 19.m4a in Resources */,
 				BF2DC11F1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 8.m4a in Resources */,

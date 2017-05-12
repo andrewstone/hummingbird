@@ -39,7 +39,7 @@
 }
 
 
-- (id)initWithPercentageRect:(PercentageRect *)r action:(NSString *)act shape:(NSString *)shape  path:(NSArray *)pointsDict {
+- (id)initWithPercentageRect:(PercentageRect *)r action:(NSString *)act shape:(NSString *)shape  path:(NSArray *)pointsDict english:(NSString *)engword spanish:(NSString *)spanWord {
     self = [super initWithFrame:CGRectZero];
     self.userInteractionEnabled = YES;
     self.backgroundColor = [UIColor clearColor];
@@ -47,6 +47,8 @@
     _action = act ? NSSelectorFromString(act) : NSSelectorFromString(@"defaultAction:");
     _shape = shape;
     _points = pointsDict;
+    _spanishWord = spanWord;
+    _englishWord = engword;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doTap:)];
     [self addGestureRecognizer:tap];
@@ -68,6 +70,7 @@
 
 - (void)drawRect:(CGRect)r {
 
+/**/ // to test where it is!
     CGRect rect = self.bounds; // [self.percentageRect rectInView:view];
     UIColor *c = [UIColor colorWithRed:.7 green:0.0 blue:0.1 alpha:0.2];
     
@@ -85,7 +88,8 @@
     CGContextSetFillColorWithColor(context, c.CGColor);
     CGContextAddPath(context, p);
     CGContextFillPath(context);
-    CGPathRelease(p);
+    CGPathRelease(p);/*
+*/
 
 }
 
@@ -107,5 +111,15 @@
     
     return p;
 }
+
+- (NSString *)soundFile {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    if (which == 2) {
+        return _englishWord ? _englishWord : @"hurray.m4a";
+    } else {
+        return _spanishWord ? _spanishWord : @"hurray.m4a";
+    }
+}
+
 
 @end

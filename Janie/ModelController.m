@@ -34,6 +34,9 @@
     NSTimeInterval bounceStartTime;
     NSTimer *bounceTimer;
     UITextView *currentTextView;
+    DataViewController *currentController;
+    NSArray *englishStartTimes;
+    NSArray *spanishStartTimes;
 }
 
 
@@ -70,6 +73,12 @@ static ModelController *sharedModel = nil;
     NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
     if (which == 1) return [self spanishSongList];
     else return [self englishSongList];
+}
+
+- (NSArray *)currentStartTimes {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    if (which == 1) return spanishStartTimes;
+    else return englishStartTimes;
 }
 
 - (NSArray *)getPageData {
@@ -216,7 +225,7 @@ static ModelController *sharedModel = nil;
         bounceTimes = nil;
         bouncePointer = -1;
     }
-    
+    currentController = dvc;
     currentTextView = [d valueForKey:@"textView"];
     originalAttributedString = [d valueForKey:@"string"];
     bounceTimes = [d valueForKey:@"bounceTimes"];
@@ -232,13 +241,40 @@ static ModelController *sharedModel = nil;
 
 - (void)updateBounceTextWithController:(DataViewController *)dvc {
     NSDictionary *d = [dvc valuesForBouncing:YES];
+    currentController = dvc;
     currentTextView = [d valueForKey:@"textView"];
     originalAttributedString = [d valueForKey:@"string"];
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    
+    currentController.playPauseButton.selected = NO;
     [self stopBounce];
+}
+
+- (NSArray *)getStartTimes:(NSArray *)songList {
+    NSMutableArray *a = [NSMutableArray array];
+    
+    
+    // Title Page, Dedication page and First page (item2) begin at 0.0:
+    for (int i = 0; i < 3; i++)
+    [a addObject:[NSNumber numberWithDouble:0.0]];
+    for (int i = 3; i < songList.count;i++) {
+        NSDictionary *d = [songList objectAtIndex:i];
+        if ([[d valueForKey:@"turnPage"]boolValue])
+            [a addObject:[d valueForKey:@"endTime"]];
+    }
+    
+    return a;
+}
+
+- (void)getStartTimes {
+    englishStartTimes = [self getStartTimes:[self englishSongList]];
+    spanishStartTimes = [self getStartTimes:[self spanishSongList]];
+}
+
+- (NSTimeInterval)startTimeForPage:(NSUInteger)page {
+    if (!englishStartTimes) [self getStartTimes];
+        return [[[self currentStartTimes] objectAtIndex:page] doubleValue];
 }
 
 @end
