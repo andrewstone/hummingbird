@@ -506,11 +506,6 @@
 			<string>titlePage</string>
 			<key>imageFullPage</key>
 			<true/>
-			<key>audioFileNames</key>
-			<array>
-				<string>AUDIO JANIE SPANISH DEDICATION PAGE.m4a</string>
-				<string>AUDIO JANIE ENGLISH DEDICATION PAGE.m4a</string>
-			</array>
 			<key>playOnLoad</key>
 			<false/>
 		</dict>
@@ -980,18 +975,58 @@ un ratoncito ada.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.5932203389830508</real>
+						<real>0.4067796610169492</real>
 						<key>y</key>
-						<real>0.6335034013605442</real>
+						<real>0.3775510204081633</real>
 						<key>width</key>
 						<real>0.0745762711864407</real>
 						<key>height</key>
-						<real>0.0748299319727891</real>
+						<real>0.1258503401360544</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
-					<key>shape</key>
-					<string>round</string>
+					<key>english</key>
+					<string>EN-pg2-the mouse.m4a</string>
+					<key>spanish</key>
+					<string>es-pg2-el ratón.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.5576271186440678</real>
+						<key>y</key>
+						<real>0.6207482993197279</real>
+						<key>width</key>
+						<real>0.13728813559322</real>
+						<key>height</key>
+						<real>0.1105442176870748</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg2-the sun.m4a</string>
+					<key>spanish</key>
+					<string>es-pg2-el sol.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.07288135593220341</real>
+						<key>y</key>
+						<real>0.2687074829931973</real>
+						<key>width</key>
+						<real>0.0830508474576271</real>
+						<key>height</key>
+						<real>0.0835866261398176</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg2-the window.m4a</string>
+					<key>spanish</key>
+					<string>es-pg2-la ventana.m4a</string>
 				</dict>
 			</array>
 			<key>englishWordList</key>

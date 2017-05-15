@@ -19,7 +19,13 @@
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     self.autoPlaySwitch.on = [ud boolForKey:@"AutoPlay"];
     self.languageController.selectedSegmentIndex = [ud integerForKey:@"WhichLanguage"];
-    self.playAudioSegmentedController.selectedSegmentIndex = [ud integerForKey:@"ReadOrPlayMusic"];
+    
+    NSUInteger which =[ud integerForKey:@"ReadOrPlayMusic"];
+    
+    self.playAudioSegmentedController.selectedSegmentIndex = which;
+    
+        _autoPlayContainer.alpha = (which == 1 ? 1.0 : 0.0);
+
     
 }
 
@@ -44,8 +50,16 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"WhichLanguage" object:self];
 }
 - (IBAction)changePlayMusicAction:(UISegmentedControl *)sender {
-    [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:@"ReadOrPlayMusic"];
-    [[NSUserDefaults standardUserDefaults] synchronize];    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReadOrPlayMusic" object:self];
+    
+    NSUInteger which = sender.selectedSegmentIndex;
+    [[NSUserDefaults standardUserDefaults] setInteger:which forKey:@"ReadOrPlayMusic"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        _autoPlayContainer.alpha = (which == 1 ? 1.0 : 0.0);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReadOrPlayMusic" object:self];
 
 }
 

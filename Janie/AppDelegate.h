@@ -24,5 +24,7 @@
 #define NO_AUDIO ([[NSUserDefaults standardUserDefaults] integerForKey:@"ReadOrPlayMusic"] == 0)
 #define AUDIO_IS_SUNG ([[NSUserDefaults standardUserDefaults] integerForKey:@"ReadOrPlayMusic"] == 2)
 #define AUDIO_IS_READ ([[NSUserDefaults standardUserDefaults] integerForKey:@"ReadOrPlayMusic"] == 1)
+
+#define AUTO_PLAY (AUDIO_IS_READ && [[NSUserDefaults standardUserDefaults] boolForKey:@"AutoPlay"])
 @end
 

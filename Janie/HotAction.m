@@ -70,7 +70,6 @@
 
 - (void)drawRect:(CGRect)r {
 
-/**/ // to test where it is!
     CGRect rect = self.bounds; // [self.percentageRect rectInView:view];
     UIColor *c = [UIColor colorWithRed:.7 green:0.0 blue:0.1 alpha:0.2];
     
@@ -88,8 +87,8 @@
     CGContextSetFillColorWithColor(context, c.CGColor);
     CGContextAddPath(context, p);
     CGContextFillPath(context);
-    CGPathRelease(p);/*
-*/
+    CGPathRelease(p);
+
 
 }
 

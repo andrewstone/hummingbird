@@ -65,7 +65,7 @@
 // the BookOptionsViewController
 
 - (void)autoPlayNotification:(NSNotification *)note {
-    [self startOrStopAutoPlay:[[NSUserDefaults standardUserDefaults] boolForKey:@"AutoPlay"]];
+//    [self startOrStopAutoPlay:[[NSUserDefaults standardUserDefaults] boolForKey:@"AutoPlay"]];
 }
 
 - (void)startOrStopAutoPlay:(BOOL)start {
@@ -395,8 +395,10 @@
         // we'll automatically turn the page if "AutoPlay" is On
         // of course, we automatically turn the page if Song is singing
         
-        if (!AUDIO_IS_SUNG)
-            [self autoPlayNotification:nil];
+        if (!AUDIO_IS_SUNG) {
+            if (AUTO_PLAY)
+                [self turnThePageProgrammatically:self];
+        }
     }
 }
 

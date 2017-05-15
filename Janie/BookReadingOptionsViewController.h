@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *playAudioSegmentedController;
 @property (weak, nonatomic) IBOutlet UISwitch *autoPlaySwitch;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *languageController;
+@property (weak, nonatomic) IBOutlet UIView *autoPlayContainer;
 
 - (IBAction)changePlayMusicAction:(UISegmentedControl *)sender;
 - (IBAction)changeAutoPlayAction:(UISwitch *)sender;
