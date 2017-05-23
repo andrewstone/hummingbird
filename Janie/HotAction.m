@@ -17,9 +17,17 @@
     return YES;
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+// this prevents the page turn bug when someone tapped a
+// hidden word within 20% of either edge of page
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    
+   // NSLog(@"gestureRecognizer's view: %@\notherGesture's View: %@",NSStringFromClass([[gestureRecognizer view]class]), NSStringFromClass([[otherGestureRecognizer view]class]));
+
     return YES;
 }
+
+// for shapes that are not square, additional hit testing:
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     // first hittest as needed!
