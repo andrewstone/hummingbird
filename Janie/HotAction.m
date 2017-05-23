@@ -69,7 +69,12 @@
 }
 
 - (void)drawRect:(CGRect)r {
-
+    
+// When you debug the HotAction locations
+// You an uncomment this block of code to see
+// where the hit item is
+    
+/*
     CGRect rect = self.bounds; // [self.percentageRect rectInView:view];
     UIColor *c = [UIColor colorWithRed:.7 green:0.0 blue:0.1 alpha:0.2];
     
@@ -88,7 +93,7 @@
     CGContextAddPath(context, p);
     CGContextFillPath(context);
     CGPathRelease(p);
-
+*/
 
 }
 
