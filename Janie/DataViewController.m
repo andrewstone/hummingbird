@@ -147,7 +147,10 @@
         
         //[newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
         
-        [newString addAttribute:NSFontAttributeName value:self.dataObject.boldFont range:range];
+        if (newString.length <= NSMaxRange(range)) {
+            [newString addAttribute:NSFontAttributeName value:self.dataObject.boldFont range:range];
+        } else NSLog(@"range overrun: %@",newString);
+        
         textView.attributedText = newString;
         
         // now make a callback at then end of our time:
