@@ -318,6 +318,9 @@
         cRect.origin.y = iRect.size.height + TOP_TEXT_MARGIN;
         cRect.size.height = vRect.size.height - (iRect.size.height + TOP_TEXT_MARGIN);
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        // if it's a 5S, we need to tweak it more!
+        if ([[UIScreen mainScreen] bounds].size.height <= 568.0)
+            tweakTextViewHeight = MAX(tweakTextViewHeight, 8.0);
         // No Landscape support because it won't fit on iPhone
         iRect.size.height = floor(vRect.size.height * IPHONE_RATIO_W_H) - tweakTextViewHeight;
         cRect.origin.y = iRect.size.height;
