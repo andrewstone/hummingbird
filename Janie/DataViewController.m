@@ -147,7 +147,7 @@
         
         //[newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
         
-        if (newString.length <= NSMaxRange(range)) {
+        if (NSMaxRange(range) <= newString.length) {
             [newString addAttribute:NSFontAttributeName value:self.dataObject.boldFont range:range];
         } else NSLog(@"range overrun: %@",newString);
         
