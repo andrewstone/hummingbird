@@ -263,7 +263,9 @@
     } else if (AUDIO_IS_SUNG && [AUDIO_CONTROLLER isPlaying]) {
         self.playPauseButton.selected = YES;
     }
-        
+    
+    self.playContainerView.hidden = NO_AUDIO;
+    
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
         [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
@@ -381,6 +383,17 @@
     [self stopBounce];
 }
 
+- (void)pauseBounceInController:(DataViewController *)dvc {
+    // restore text
+    NSDictionary *d = [dvc valuesForBouncing:YES];
+    UITextView *textView = [d valueForKey:@"textView"];
+    [textView setAttributedText: [d valueForKey:@"string"]];
+    
+    // leave pointers, but stop timer:
+    [bounceTimer invalidate];
+    bounceTimer = nil;
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -437,7 +450,7 @@
     [self corePlaySound:nextSound atTime:0.0f];
 }
 
-- (void)corePlaySound:(NSString *)nextSound atTime:(NSTimeInterval)start {
+- (void)corePlaySound:(NSString *)nextSound atTime:(NSTimeInterval)start delegate:(id)del {
     NSString *soundFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:nextSound];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     NSError *e = NULL;
@@ -449,9 +462,13 @@
     
     player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&e];
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] setAudioPlayer:player];
-    player.delegate = (AUDIO_IS_SUNG) ? [ModelController sharedModelController] : self;
+    player.delegate = del;
     
     [self corePlay:player atTime:start];
+}
+
+- (void)corePlaySound:(NSString *)nextSound atTime:(NSTimeInterval)start {
+    [self corePlaySound:nextSound atTime:start delegate:(AUDIO_IS_SUNG) ? [ModelController sharedModelController] : self];
 }
 
 - (void)coreNextSound {
@@ -487,13 +504,12 @@
 - (IBAction)playPause:(id)sender {
     AVAudioPlayer *player = AUDIO_CONTROLLER;
     if (player.isPlaying) {
-        [[self musicDelegate] stopBounceInController:self];
+        [[self musicDelegate] pauseBounceInController:self];
         [player pause];
         self.playPauseButton.selected = NO;
     } else {
         if (player) {
-            NSTimeInterval time = [player currentTime];
-            [player playAtTime:time + 0.001]; // see docs on playAtTime:
+            [player play]; // see docs on playAtTime:
             self.playPauseButton.selected = YES;
             [self bounceText:NO];
         } else [self coreNextSound];
@@ -563,6 +579,8 @@
     CGPoint pt = [gestureRecognizer locationInView:self.view];
     float ratio = pt.x/self.view.frame.size.width;
     BOOL dontDoIt =   (ratio < .2 || ratio > .8);
+    
+    NSLog(@"shouldBegin: %@", NSStringFromClass([[gestureRecognizer view] class]));
     return !dontDoIt;
 }
 
@@ -626,9 +644,11 @@
 
 - (IBAction)defaultAction:(HotAction *)sender{
     //play something
-    NSString *sound = [sender soundFile];
-    [[self musicDelegate] stopBounceInController:self];
-    [self corePlaySound:sound];
+    if (NO_AUDIO) {
+        NSString *sound = [sender soundFile];
+        [[self musicDelegate] stopBounceInController:self];
+        [self corePlaySound:sound atTime:0.0f delegate:nil];
+    }
 }
 
 

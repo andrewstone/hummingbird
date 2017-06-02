@@ -263,6 +263,17 @@ static ModelController *sharedModel = nil;
     bouncePointer = -1;
 }
 
+- (void)pauseBounceInController:(DataViewController *)dvc {
+    // restore text
+    NSDictionary *d = [dvc valuesForBouncing:YES];
+    UITextView *textView = [d valueForKey:@"textView"];
+    [textView setAttributedText: [d valueForKey:@"string"]];
+    
+    // leave pointers, but stop timer:
+    [bounceTimer invalidate];
+    bounceTimer = nil;
+}
+
 
 - (NSArray *)getStartTimes:(NSArray *)songList {
     NSMutableArray *a = [NSMutableArray array];
