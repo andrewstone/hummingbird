@@ -97,7 +97,8 @@
 - (void)playMusicNotification:(NSNotification *)note {
     if (AUDIO_IS_SUNG) {
         [APP_DELEGATE stopAndClearSound];
-    } else [self playNextSound:nil];
+    }
+    // else [self playNextSound:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -371,6 +372,16 @@
         }
     }
 }
+
+- (void)stopBounceInController:(DataViewController *)dvc {
+    // restore text
+    NSDictionary *d = [dvc valuesForBouncing:YES];
+    UITextView *textView = [d valueForKey:@"textView"];
+    [textView setAttributedText: [d valueForKey:@"string"]];
+    [self stopBounce];
+}
+
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     AVAudioPlayer *player = AUDIO_CONTROLLER;
@@ -409,8 +420,16 @@
 }
 
 - (void)corePlay:(AVAudioPlayer *)player atTime:(NSTimeInterval)start {
-    if (start > 0) [player playAtTime:start];
-    else [player play];
+    BOOL played = NO;
+    
+    if (start > 0) {
+        [player prepareToPlay];
+        player.currentTime = start;
+        played = [player play];
+
+    }    else played = [player play];
+    
+    if (!played) NSLog(@"Could not play atTime %f",start);
     self.playPauseButton.selected = YES;
 }
 
@@ -468,12 +487,9 @@
 - (IBAction)playPause:(id)sender {
     AVAudioPlayer *player = AUDIO_CONTROLLER;
     if (player.isPlaying) {
+        [[self musicDelegate] stopBounceInController:self];
         [player pause];
         self.playPauseButton.selected = NO;
-        if (AUDIO_IS_SUNG)
-            [[ModelController sharedModelController] stopBounce];
-       else [self stopBounce];
-        
     } else {
         if (player) {
             NSTimeInterval time = [player currentTime];
@@ -489,8 +505,11 @@
     AVAudioPlayer *player = AUDIO_CONTROLLER;
     NSTimeInterval time = 0.0f;
     
-    if (player.isPlaying)
-        [player stop];
+    if (player.isPlaying) {
+        [[self musicDelegate] stopBounceInController:self];
+        [APP_DELEGATE stopAndClearSound];
+        player = nil;
+    }
     
     if (AUDIO_IS_SUNG) {
         ModelController *mc = [ModelController sharedModelController];
@@ -548,6 +567,7 @@
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    NSLog(@"other gesture is %@",NSStringFromClass([[otherGestureRecognizer view]class]));
     return YES;
 }
 
@@ -571,7 +591,7 @@
     }
     
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         if (self.fullScreen) {
             [(UIImageView *)self.view setImage:nil];
             self.containerView.alpha = 1.0;
@@ -597,10 +617,17 @@
     [rootController turnPageFrom:self];
 }
 
+- (id)musicDelegate {
+    AVAudioPlayer *player = AUDIO_CONTROLLER;
+    if (player) return player.delegate;
+    if (AUDIO_IS_SUNG) return [ModelController sharedModelController];
+    return self;
+}
+
 - (IBAction)defaultAction:(HotAction *)sender{
     //play something
     NSString *sound = [sender soundFile];
-    
+    [[self musicDelegate] stopBounceInController:self];
     [self corePlaySound:sound];
 }
 

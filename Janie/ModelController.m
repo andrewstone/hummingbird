@@ -251,6 +251,19 @@ static ModelController *sharedModel = nil;
     [self stopBounce];
 }
 
+- (void)stopBounceInController:(DataViewController *)dvc {
+    // restore text
+    NSDictionary *d = [dvc valuesForBouncing:YES];
+    UITextView *textView = [d valueForKey:@"textView"];
+    [textView setAttributedText: [d valueForKey:@"string"]];
+    [self stopBounce];
+    // reset ivars:
+    bounceStartTime = 0;
+    bounceTimes = nil;
+    bouncePointer = -1;
+}
+
+
 - (NSArray *)getStartTimes:(NSArray *)songList {
     NSMutableArray *a = [NSMutableArray array];
     
