@@ -7,6 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0157FE1F0FF04F00ABA2A2 /* p6 Eng  the green hummingbird.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157BC1F0FF04F00ABA2A2 /* p6 Eng  the green hummingbird.m4a */; };
+		BF0157FF1F0FF04F00ABA2A2 /* p6 Eng  the leaf.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157BD1F0FF04F00ABA2A2 /* p6 Eng  the leaf.m4a */; };
+		BF0158001F0FF04F00ABA2A2 /* p6 Eng the mandolin.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157BE1F0FF04F00ABA2A2 /* p6 Eng the mandolin.m4a */; };
+		BF0158011F0FF04F00ABA2A2 /* p6 Span el colibrí verde.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157BF1F0FF04F00ABA2A2 /* p6 Span el colibrí verde.m4a */; };
+		BF0158021F0FF04F00ABA2A2 /* p6 Span la hoja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C01F0FF04F00ABA2A2 /* p6 Span la hoja.m4a */; };
+		BF0158031F0FF04F00ABA2A2 /* p6 Span la mandolina.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C11F0FF04F00ABA2A2 /* p6 Span la mandolina.m4a */; };
+		BF0158041F0FF04F00ABA2A2 /* p7 Eng  the clouds.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C21F0FF04F00ABA2A2 /* p7 Eng  the clouds.m4a */; };
+		BF0158051F0FF04F00ABA2A2 /* p7 Eng  the green shirt.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C31F0FF04F00ABA2A2 /* p7 Eng  the green shirt.m4a */; };
+		BF0158061F0FF04F00ABA2A2 /* p7 Eng  the shirt with stars.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C41F0FF04F00ABA2A2 /* p7 Eng  the shirt with stars.m4a */; };
+		BF0158071F0FF04F00ABA2A2 /* p7 Span la camisa con estrellas.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C51F0FF04F00ABA2A2 /* p7 Span la camisa con estrellas.m4a */; };
+		BF0158081F0FF04F00ABA2A2 /* p7 Span la camisa verde.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C61F0FF04F00ABA2A2 /* p7 Span la camisa verde.m4a */; };
+		BF0158091F0FF04F00ABA2A2 /* p7 Span las nubes.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C71F0FF04F00ABA2A2 /* p7 Span las nubes.m4a */; };
+		BF01580A1F0FF04F00ABA2A2 /* p8 Eng  the bee.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C81F0FF04F00ABA2A2 /* p8 Eng  the bee.m4a */; };
+		BF01580B1F0FF04F00ABA2A2 /* p8 Eng  the porcupine.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157C91F0FF04F00ABA2A2 /* p8 Eng  the porcupine.m4a */; };
+		BF01580C1F0FF04F00ABA2A2 /* p8 Eng  the snakes tears.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157CA1F0FF04F00ABA2A2 /* p8 Eng  the snakes tears.m4a */; };
+		BF01580D1F0FF04F00ABA2A2 /* p8 Eng  the squirrel.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157CB1F0FF04F00ABA2A2 /* p8 Eng  the squirrel.m4a */; };
+		BF01580E1F0FF04F00ABA2A2 /* p8 Eng  the trumpet.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157CC1F0FF04F00ABA2A2 /* p8 Eng  the trumpet.m4a */; };
+		BF01580F1F0FF04F00ABA2A2 /* p8 Span el puercoespín.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157CD1F0FF04F00ABA2A2 /* p8 Span el puercoespín.m4a */; };
+		BF0158101F0FF04F00ABA2A2 /* p8 Span la abeja.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157CE1F0FF04F00ABA2A2 /* p8 Span la abeja.m4a */; };
+		BF0158111F0FF04F00ABA2A2 /* p8 Span la ardilla.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157CF1F0FF04F00ABA2A2 /* p8 Span la ardilla.m4a */; };
+		BF0158121F0FF04F00ABA2A2 /* p8 Span la trompeta.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D01F0FF04F00ABA2A2 /* p8 Span la trompeta.m4a */; };
+		BF0158131F0FF04F00ABA2A2 /* p8 Span las lágrimas de serpiente.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D11F0FF04F00ABA2A2 /* p8 Span las lágrimas de serpiente.m4a */; };
+		BF0158141F0FF04F00ABA2A2 /* p9 Eng  the family.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D21F0FF04F00ABA2A2 /* p9 Eng  the family.m4a */; };
+		BF0158151F0FF04F00ABA2A2 /* p9 Eng  the moon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D31F0FF04F00ABA2A2 /* p9 Eng  the moon.m4a */; };
+		BF0158161F0FF04F00ABA2A2 /* p9 Eng  the tooth.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D41F0FF04F00ABA2A2 /* p9 Eng  the tooth.m4a */; };
+		BF0158171F0FF04F00ABA2A2 /* p9 Span el diente.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D51F0FF04F00ABA2A2 /* p9 Span el diente.m4a */; };
+		BF0158181F0FF04F00ABA2A2 /* p9 Span la familia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D61F0FF04F00ABA2A2 /* p9 Span la familia.m4a */; };
+		BF0158191F0FF04F00ABA2A2 /* p9 Span la luna.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D71F0FF04F00ABA2A2 /* p9 Span la luna.m4a */; };
+		BF01581A1F0FF04F00ABA2A2 /* p10 Eng  the carrot.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D81F0FF04F00ABA2A2 /* p10 Eng  the carrot.m4a */; };
+		BF01581B1F0FF04F00ABA2A2 /* p10 Eng  the hamburger.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157D91F0FF04F00ABA2A2 /* p10 Eng  the hamburger.m4a */; };
+		BF01581C1F0FF04F00ABA2A2 /* p10 Eng  the watermelon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157DA1F0FF04F00ABA2A2 /* p10 Eng  the watermelon.m4a */; };
+		BF01581D1F0FF04F00ABA2A2 /* p10 Span la hamburguesa.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157DB1F0FF04F00ABA2A2 /* p10 Span la hamburguesa.m4a */; };
+		BF01581E1F0FF04F00ABA2A2 /* p10 Span la sandia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157DC1F0FF04F00ABA2A2 /* p10 Span la sandia.m4a */; };
+		BF01581F1F0FF04F00ABA2A2 /* p10 Span la zanahoria.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157DD1F0FF04F00ABA2A2 /* p10 Span la zanahoria.m4a */; };
+		BF0158201F0FF04F00ABA2A2 /* p11 Eng  the boat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157DE1F0FF04F00ABA2A2 /* p11 Eng  the boat.m4a */; };
+		BF0158211F0FF04F00ABA2A2 /* p11 Eng  the drum.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157DF1F0FF04F00ABA2A2 /* p11 Eng  the drum.m4a */; };
+		BF0158221F0FF04F00ABA2A2 /* p11 Eng  the open book.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E01F0FF04F00ABA2A2 /* p11 Eng  the open book.m4a */; };
+		BF0158231F0FF04F00ABA2A2 /* p11 Eng  the open door.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E11F0FF04F00ABA2A2 /* p11 Eng  the open door.m4a */; };
+		BF0158241F0FF04F00ABA2A2 /* p11 Eng  the wind.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E21F0FF04F00ABA2A2 /* p11 Eng  the wind.m4a */; };
+		BF0158251F0FF04F00ABA2A2 /* p11 Span el libro abierto.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E31F0FF04F00ABA2A2 /* p11 Span el libro abierto.m4a */; };
+		BF0158261F0FF04F00ABA2A2 /* p11 Span el tambor.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E41F0FF04F00ABA2A2 /* p11 Span el tambor.m4a */; };
+		BF0158271F0FF04F00ABA2A2 /* p11 Span el viento.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E51F0FF04F00ABA2A2 /* p11 Span el viento.m4a */; };
+		BF0158281F0FF04F00ABA2A2 /* p11 Span la barca.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E61F0FF04F00ABA2A2 /* p11 Span la barca.m4a */; };
+		BF0158291F0FF04F00ABA2A2 /* p11 Span la puerta abierta.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E71F0FF04F00ABA2A2 /* p11 Span la puerta abierta.m4a */; };
+		BF01582A1F0FF04F00ABA2A2 /* p12 Eng  the bass fiddle.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E81F0FF04F00ABA2A2 /* p12 Eng  the bass fiddle.m4a */; };
+		BF01582B1F0FF04F00ABA2A2 /* p12 Eng  the frog.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157E91F0FF04F00ABA2A2 /* p12 Eng  the frog.m4a */; };
+		BF01582C1F0FF04F00ABA2A2 /* p12 Eng  the owl.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157EA1F0FF04F00ABA2A2 /* p12 Eng  the owl.m4a */; };
+		BF01582D1F0FF04F00ABA2A2 /* p12 Eng  the piano.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157EB1F0FF04F00ABA2A2 /* p12 Eng  the piano.m4a */; };
+		BF01582E1F0FF04F00ABA2A2 /* p12 Eng  the rabbit.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157EC1F0FF04F00ABA2A2 /* p12 Eng  the rabbit.m4a */; };
+		BF01582F1F0FF04F00ABA2A2 /* p12 Eng  the trumpet.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157ED1F0FF04F00ABA2A2 /* p12 Eng  the trumpet.m4a */; };
+		BF0158301F0FF04F00ABA2A2 /* p12 Span el búho.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157EE1F0FF04F00ABA2A2 /* p12 Span el búho.m4a */; };
+		BF0158311F0FF04F00ABA2A2 /* p12 Span el conejo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157EF1F0FF04F00ABA2A2 /* p12 Span el conejo.m4a */; };
+		BF0158321F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F01F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a */; };
+		BF0158331F0FF04F00ABA2A2 /* p12 Span la rana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F11F0FF04F00ABA2A2 /* p12 Span la rana.m4a */; };
+		BF0158341F0FF04F00ABA2A2 /* p12 Span la trompeta.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F21F0FF04F00ABA2A2 /* p12 Span la trompeta.m4a */; };
+		BF0158351F0FF04F00ABA2A2 /* p13 Eng  the big ear.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F31F0FF04F00ABA2A2 /* p13 Eng  the big ear.m4a */; };
+		BF0158361F0FF04F00ABA2A2 /* p13 Eng  the bookshelf.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F41F0FF04F00ABA2A2 /* p13 Eng  the bookshelf.m4a */; };
+		BF0158371F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F51F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a */; };
+		BF0158381F0FF04F00ABA2A2 /* p13 Span la estantería.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F61F0FF04F00ABA2A2 /* p13 Span la estantería.m4a */; };
+		BF0158391F0FF04F00ABA2A2 /* p13 Span la oreja grande.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F71F0FF04F00ABA2A2 /* p13 Span la oreja grande.m4a */; };
+		BF01583A1F0FF04F00ABA2A2 /* p14 Eng  the harmonica.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F81F0FF04F00ABA2A2 /* p14 Eng  the harmonica.m4a */; };
+		BF01583B1F0FF04F00ABA2A2 /* p14 Eng  the ladder.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157F91F0FF04F00ABA2A2 /* p14 Eng  the ladder.m4a */; };
+		BF01583C1F0FF04F00ABA2A2 /* p14 Eng  the musical notes.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157FA1F0FF04F00ABA2A2 /* p14 Eng  the musical notes.m4a */; };
+		BF01583D1F0FF04F00ABA2A2 /* p14 Span la armónica.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157FB1F0FF04F00ABA2A2 /* p14 Span la armónica.m4a */; };
+		BF01583E1F0FF04F00ABA2A2 /* p14 Span la escalera.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157FC1F0FF04F00ABA2A2 /* p14 Span la escalera.m4a */; };
+		BF01583F1F0FF04F00ABA2A2 /* p14 Span las notas musicales.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0157FD1F0FF04F00ABA2A2 /* p14 Span las notas musicales.m4a */; };
 		BF0B31C11E6A685C00F7D5A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0B31C01E6A685C00F7D5A7 /* main.m */; };
 		BF0B31C41E6A685C00F7D5A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0B31C31E6A685C00F7D5A7 /* AppDelegate.m */; };
 		BF0B31C71E6A685C00F7D5A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0B31C61E6A685C00F7D5A7 /* RootViewController.m */; };
@@ -105,6 +171,72 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0157BC1F0FF04F00ABA2A2 /* p6 Eng  the green hummingbird.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p6 Eng  the green hummingbird.m4a"; path = "audio/MoreWords/p6 Eng  the green hummingbird.m4a"; sourceTree = "<group>"; };
+		BF0157BD1F0FF04F00ABA2A2 /* p6 Eng  the leaf.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p6 Eng  the leaf.m4a"; path = "audio/MoreWords/p6 Eng  the leaf.m4a"; sourceTree = "<group>"; };
+		BF0157BE1F0FF04F00ABA2A2 /* p6 Eng the mandolin.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p6 Eng the mandolin.m4a"; path = "audio/MoreWords/p6 Eng the mandolin.m4a"; sourceTree = "<group>"; };
+		BF0157BF1F0FF04F00ABA2A2 /* p6 Span el colibrí verde.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p6 Span el colibrí verde.m4a"; path = "audio/MoreWords/p6 Span el colibrí verde.m4a"; sourceTree = "<group>"; };
+		BF0157C01F0FF04F00ABA2A2 /* p6 Span la hoja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p6 Span la hoja.m4a"; path = "audio/MoreWords/p6 Span la hoja.m4a"; sourceTree = "<group>"; };
+		BF0157C11F0FF04F00ABA2A2 /* p6 Span la mandolina.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p6 Span la mandolina.m4a"; path = "audio/MoreWords/p6 Span la mandolina.m4a"; sourceTree = "<group>"; };
+		BF0157C21F0FF04F00ABA2A2 /* p7 Eng  the clouds.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p7 Eng  the clouds.m4a"; path = "audio/MoreWords/p7 Eng  the clouds.m4a"; sourceTree = "<group>"; };
+		BF0157C31F0FF04F00ABA2A2 /* p7 Eng  the green shirt.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p7 Eng  the green shirt.m4a"; path = "audio/MoreWords/p7 Eng  the green shirt.m4a"; sourceTree = "<group>"; };
+		BF0157C41F0FF04F00ABA2A2 /* p7 Eng  the shirt with stars.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p7 Eng  the shirt with stars.m4a"; path = "audio/MoreWords/p7 Eng  the shirt with stars.m4a"; sourceTree = "<group>"; };
+		BF0157C51F0FF04F00ABA2A2 /* p7 Span la camisa con estrellas.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p7 Span la camisa con estrellas.m4a"; path = "audio/MoreWords/p7 Span la camisa con estrellas.m4a"; sourceTree = "<group>"; };
+		BF0157C61F0FF04F00ABA2A2 /* p7 Span la camisa verde.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p7 Span la camisa verde.m4a"; path = "audio/MoreWords/p7 Span la camisa verde.m4a"; sourceTree = "<group>"; };
+		BF0157C71F0FF04F00ABA2A2 /* p7 Span las nubes.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p7 Span las nubes.m4a"; path = "audio/MoreWords/p7 Span las nubes.m4a"; sourceTree = "<group>"; };
+		BF0157C81F0FF04F00ABA2A2 /* p8 Eng  the bee.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Eng  the bee.m4a"; path = "audio/MoreWords/p8 Eng  the bee.m4a"; sourceTree = "<group>"; };
+		BF0157C91F0FF04F00ABA2A2 /* p8 Eng  the porcupine.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Eng  the porcupine.m4a"; path = "audio/MoreWords/p8 Eng  the porcupine.m4a"; sourceTree = "<group>"; };
+		BF0157CA1F0FF04F00ABA2A2 /* p8 Eng  the snakes tears.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Eng  the snakes tears.m4a"; path = "audio/MoreWords/p8 Eng  the snakes tears.m4a"; sourceTree = "<group>"; };
+		BF0157CB1F0FF04F00ABA2A2 /* p8 Eng  the squirrel.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Eng  the squirrel.m4a"; path = "audio/MoreWords/p8 Eng  the squirrel.m4a"; sourceTree = "<group>"; };
+		BF0157CC1F0FF04F00ABA2A2 /* p8 Eng  the trumpet.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Eng  the trumpet.m4a"; path = "audio/MoreWords/p8 Eng  the trumpet.m4a"; sourceTree = "<group>"; };
+		BF0157CD1F0FF04F00ABA2A2 /* p8 Span el puercoespín.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Span el puercoespín.m4a"; path = "audio/MoreWords/p8 Span el puercoespín.m4a"; sourceTree = "<group>"; };
+		BF0157CE1F0FF04F00ABA2A2 /* p8 Span la abeja.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Span la abeja.m4a"; path = "audio/MoreWords/p8 Span la abeja.m4a"; sourceTree = "<group>"; };
+		BF0157CF1F0FF04F00ABA2A2 /* p8 Span la ardilla.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Span la ardilla.m4a"; path = "audio/MoreWords/p8 Span la ardilla.m4a"; sourceTree = "<group>"; };
+		BF0157D01F0FF04F00ABA2A2 /* p8 Span la trompeta.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Span la trompeta.m4a"; path = "audio/MoreWords/p8 Span la trompeta.m4a"; sourceTree = "<group>"; };
+		BF0157D11F0FF04F00ABA2A2 /* p8 Span las lágrimas de serpiente.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p8 Span las lágrimas de serpiente.m4a"; path = "audio/MoreWords/p8 Span las lágrimas de serpiente.m4a"; sourceTree = "<group>"; };
+		BF0157D21F0FF04F00ABA2A2 /* p9 Eng  the family.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p9 Eng  the family.m4a"; path = "audio/MoreWords/p9 Eng  the family.m4a"; sourceTree = "<group>"; };
+		BF0157D31F0FF04F00ABA2A2 /* p9 Eng  the moon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p9 Eng  the moon.m4a"; path = "audio/MoreWords/p9 Eng  the moon.m4a"; sourceTree = "<group>"; };
+		BF0157D41F0FF04F00ABA2A2 /* p9 Eng  the tooth.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p9 Eng  the tooth.m4a"; path = "audio/MoreWords/p9 Eng  the tooth.m4a"; sourceTree = "<group>"; };
+		BF0157D51F0FF04F00ABA2A2 /* p9 Span el diente.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p9 Span el diente.m4a"; path = "audio/MoreWords/p9 Span el diente.m4a"; sourceTree = "<group>"; };
+		BF0157D61F0FF04F00ABA2A2 /* p9 Span la familia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p9 Span la familia.m4a"; path = "audio/MoreWords/p9 Span la familia.m4a"; sourceTree = "<group>"; };
+		BF0157D71F0FF04F00ABA2A2 /* p9 Span la luna.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p9 Span la luna.m4a"; path = "audio/MoreWords/p9 Span la luna.m4a"; sourceTree = "<group>"; };
+		BF0157D81F0FF04F00ABA2A2 /* p10 Eng  the carrot.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p10 Eng  the carrot.m4a"; path = "audio/MoreWords/p10 Eng  the carrot.m4a"; sourceTree = "<group>"; };
+		BF0157D91F0FF04F00ABA2A2 /* p10 Eng  the hamburger.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p10 Eng  the hamburger.m4a"; path = "audio/MoreWords/p10 Eng  the hamburger.m4a"; sourceTree = "<group>"; };
+		BF0157DA1F0FF04F00ABA2A2 /* p10 Eng  the watermelon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p10 Eng  the watermelon.m4a"; path = "audio/MoreWords/p10 Eng  the watermelon.m4a"; sourceTree = "<group>"; };
+		BF0157DB1F0FF04F00ABA2A2 /* p10 Span la hamburguesa.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p10 Span la hamburguesa.m4a"; path = "audio/MoreWords/p10 Span la hamburguesa.m4a"; sourceTree = "<group>"; };
+		BF0157DC1F0FF04F00ABA2A2 /* p10 Span la sandia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p10 Span la sandia.m4a"; path = "audio/MoreWords/p10 Span la sandia.m4a"; sourceTree = "<group>"; };
+		BF0157DD1F0FF04F00ABA2A2 /* p10 Span la zanahoria.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p10 Span la zanahoria.m4a"; path = "audio/MoreWords/p10 Span la zanahoria.m4a"; sourceTree = "<group>"; };
+		BF0157DE1F0FF04F00ABA2A2 /* p11 Eng  the boat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Eng  the boat.m4a"; path = "audio/MoreWords/p11 Eng  the boat.m4a"; sourceTree = "<group>"; };
+		BF0157DF1F0FF04F00ABA2A2 /* p11 Eng  the drum.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Eng  the drum.m4a"; path = "audio/MoreWords/p11 Eng  the drum.m4a"; sourceTree = "<group>"; };
+		BF0157E01F0FF04F00ABA2A2 /* p11 Eng  the open book.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Eng  the open book.m4a"; path = "audio/MoreWords/p11 Eng  the open book.m4a"; sourceTree = "<group>"; };
+		BF0157E11F0FF04F00ABA2A2 /* p11 Eng  the open door.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Eng  the open door.m4a"; path = "audio/MoreWords/p11 Eng  the open door.m4a"; sourceTree = "<group>"; };
+		BF0157E21F0FF04F00ABA2A2 /* p11 Eng  the wind.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Eng  the wind.m4a"; path = "audio/MoreWords/p11 Eng  the wind.m4a"; sourceTree = "<group>"; };
+		BF0157E31F0FF04F00ABA2A2 /* p11 Span el libro abierto.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Span el libro abierto.m4a"; path = "audio/MoreWords/p11 Span el libro abierto.m4a"; sourceTree = "<group>"; };
+		BF0157E41F0FF04F00ABA2A2 /* p11 Span el tambor.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Span el tambor.m4a"; path = "audio/MoreWords/p11 Span el tambor.m4a"; sourceTree = "<group>"; };
+		BF0157E51F0FF04F00ABA2A2 /* p11 Span el viento.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Span el viento.m4a"; path = "audio/MoreWords/p11 Span el viento.m4a"; sourceTree = "<group>"; };
+		BF0157E61F0FF04F00ABA2A2 /* p11 Span la barca.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Span la barca.m4a"; path = "audio/MoreWords/p11 Span la barca.m4a"; sourceTree = "<group>"; };
+		BF0157E71F0FF04F00ABA2A2 /* p11 Span la puerta abierta.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p11 Span la puerta abierta.m4a"; path = "audio/MoreWords/p11 Span la puerta abierta.m4a"; sourceTree = "<group>"; };
+		BF0157E81F0FF04F00ABA2A2 /* p12 Eng  the bass fiddle.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Eng  the bass fiddle.m4a"; path = "audio/MoreWords/p12 Eng  the bass fiddle.m4a"; sourceTree = "<group>"; };
+		BF0157E91F0FF04F00ABA2A2 /* p12 Eng  the frog.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Eng  the frog.m4a"; path = "audio/MoreWords/p12 Eng  the frog.m4a"; sourceTree = "<group>"; };
+		BF0157EA1F0FF04F00ABA2A2 /* p12 Eng  the owl.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Eng  the owl.m4a"; path = "audio/MoreWords/p12 Eng  the owl.m4a"; sourceTree = "<group>"; };
+		BF0157EB1F0FF04F00ABA2A2 /* p12 Eng  the piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Eng  the piano.m4a"; path = "audio/MoreWords/p12 Eng  the piano.m4a"; sourceTree = "<group>"; };
+		BF0157EC1F0FF04F00ABA2A2 /* p12 Eng  the rabbit.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Eng  the rabbit.m4a"; path = "audio/MoreWords/p12 Eng  the rabbit.m4a"; sourceTree = "<group>"; };
+		BF0157ED1F0FF04F00ABA2A2 /* p12 Eng  the trumpet.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Eng  the trumpet.m4a"; path = "audio/MoreWords/p12 Eng  the trumpet.m4a"; sourceTree = "<group>"; };
+		BF0157EE1F0FF04F00ABA2A2 /* p12 Span el búho.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Span el búho.m4a"; path = "audio/MoreWords/p12 Span el búho.m4a"; sourceTree = "<group>"; };
+		BF0157EF1F0FF04F00ABA2A2 /* p12 Span el conejo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Span el conejo.m4a"; path = "audio/MoreWords/p12 Span el conejo.m4a"; sourceTree = "<group>"; };
+		BF0157F01F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Span el contrabajo.m4a"; path = "audio/MoreWords/p12 Span el contrabajo.m4a"; sourceTree = "<group>"; };
+		BF0157F11F0FF04F00ABA2A2 /* p12 Span la rana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Span la rana.m4a"; path = "audio/MoreWords/p12 Span la rana.m4a"; sourceTree = "<group>"; };
+		BF0157F21F0FF04F00ABA2A2 /* p12 Span la trompeta.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p12 Span la trompeta.m4a"; path = "audio/MoreWords/p12 Span la trompeta.m4a"; sourceTree = "<group>"; };
+		BF0157F31F0FF04F00ABA2A2 /* p13 Eng  the big ear.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p13 Eng  the big ear.m4a"; path = "audio/MoreWords/p13 Eng  the big ear.m4a"; sourceTree = "<group>"; };
+		BF0157F41F0FF04F00ABA2A2 /* p13 Eng  the bookshelf.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p13 Eng  the bookshelf.m4a"; path = "audio/MoreWords/p13 Eng  the bookshelf.m4a"; sourceTree = "<group>"; };
+		BF0157F51F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p13 Eng  the purple insect.m4a"; path = "audio/MoreWords/p13 Eng  the purple insect.m4a"; sourceTree = "<group>"; };
+		BF0157F61F0FF04F00ABA2A2 /* p13 Span la estantería.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p13 Span la estantería.m4a"; path = "audio/MoreWords/p13 Span la estantería.m4a"; sourceTree = "<group>"; };
+		BF0157F71F0FF04F00ABA2A2 /* p13 Span la oreja grande.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p13 Span la oreja grande.m4a"; path = "audio/MoreWords/p13 Span la oreja grande.m4a"; sourceTree = "<group>"; };
+		BF0157F81F0FF04F00ABA2A2 /* p14 Eng  the harmonica.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p14 Eng  the harmonica.m4a"; path = "audio/MoreWords/p14 Eng  the harmonica.m4a"; sourceTree = "<group>"; };
+		BF0157F91F0FF04F00ABA2A2 /* p14 Eng  the ladder.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p14 Eng  the ladder.m4a"; path = "audio/MoreWords/p14 Eng  the ladder.m4a"; sourceTree = "<group>"; };
+		BF0157FA1F0FF04F00ABA2A2 /* p14 Eng  the musical notes.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p14 Eng  the musical notes.m4a"; path = "audio/MoreWords/p14 Eng  the musical notes.m4a"; sourceTree = "<group>"; };
+		BF0157FB1F0FF04F00ABA2A2 /* p14 Span la armónica.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p14 Span la armónica.m4a"; path = "audio/MoreWords/p14 Span la armónica.m4a"; sourceTree = "<group>"; };
+		BF0157FC1F0FF04F00ABA2A2 /* p14 Span la escalera.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p14 Span la escalera.m4a"; path = "audio/MoreWords/p14 Span la escalera.m4a"; sourceTree = "<group>"; };
+		BF0157FD1F0FF04F00ABA2A2 /* p14 Span las notas musicales.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p14 Span las notas musicales.m4a"; path = "audio/MoreWords/p14 Span las notas musicales.m4a"; sourceTree = "<group>"; };
 		BF0B31BC1E6A685C00F7D5A7 /* Hummingbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hummingbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0B31C01E6A685C00F7D5A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF0B31C21E6A685C00F7D5A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -328,6 +460,72 @@
 				BF2724A21EC55B2F00045D5C /* es-pg5-el pájaro cantante.m4a */,
 				BF2724A31EC55B2F00045D5C /* es-pg5-la bicicleta.m4a */,
 				BF2724A41EC55B2F00045D5C /* es-pg5-los rayos de sol.m4a */,
+				BF0157BC1F0FF04F00ABA2A2 /* p6 Eng  the green hummingbird.m4a */,
+				BF0157BD1F0FF04F00ABA2A2 /* p6 Eng  the leaf.m4a */,
+				BF0157BE1F0FF04F00ABA2A2 /* p6 Eng the mandolin.m4a */,
+				BF0157BF1F0FF04F00ABA2A2 /* p6 Span el colibrí verde.m4a */,
+				BF0157C01F0FF04F00ABA2A2 /* p6 Span la hoja.m4a */,
+				BF0157C11F0FF04F00ABA2A2 /* p6 Span la mandolina.m4a */,
+				BF0157C21F0FF04F00ABA2A2 /* p7 Eng  the clouds.m4a */,
+				BF0157C31F0FF04F00ABA2A2 /* p7 Eng  the green shirt.m4a */,
+				BF0157C41F0FF04F00ABA2A2 /* p7 Eng  the shirt with stars.m4a */,
+				BF0157C51F0FF04F00ABA2A2 /* p7 Span la camisa con estrellas.m4a */,
+				BF0157C61F0FF04F00ABA2A2 /* p7 Span la camisa verde.m4a */,
+				BF0157C71F0FF04F00ABA2A2 /* p7 Span las nubes.m4a */,
+				BF0157C81F0FF04F00ABA2A2 /* p8 Eng  the bee.m4a */,
+				BF0157C91F0FF04F00ABA2A2 /* p8 Eng  the porcupine.m4a */,
+				BF0157CA1F0FF04F00ABA2A2 /* p8 Eng  the snakes tears.m4a */,
+				BF0157CB1F0FF04F00ABA2A2 /* p8 Eng  the squirrel.m4a */,
+				BF0157CC1F0FF04F00ABA2A2 /* p8 Eng  the trumpet.m4a */,
+				BF0157CD1F0FF04F00ABA2A2 /* p8 Span el puercoespín.m4a */,
+				BF0157CE1F0FF04F00ABA2A2 /* p8 Span la abeja.m4a */,
+				BF0157CF1F0FF04F00ABA2A2 /* p8 Span la ardilla.m4a */,
+				BF0157D01F0FF04F00ABA2A2 /* p8 Span la trompeta.m4a */,
+				BF0157D11F0FF04F00ABA2A2 /* p8 Span las lágrimas de serpiente.m4a */,
+				BF0157D21F0FF04F00ABA2A2 /* p9 Eng  the family.m4a */,
+				BF0157D31F0FF04F00ABA2A2 /* p9 Eng  the moon.m4a */,
+				BF0157D41F0FF04F00ABA2A2 /* p9 Eng  the tooth.m4a */,
+				BF0157D51F0FF04F00ABA2A2 /* p9 Span el diente.m4a */,
+				BF0157D61F0FF04F00ABA2A2 /* p9 Span la familia.m4a */,
+				BF0157D71F0FF04F00ABA2A2 /* p9 Span la luna.m4a */,
+				BF0157D81F0FF04F00ABA2A2 /* p10 Eng  the carrot.m4a */,
+				BF0157D91F0FF04F00ABA2A2 /* p10 Eng  the hamburger.m4a */,
+				BF0157DA1F0FF04F00ABA2A2 /* p10 Eng  the watermelon.m4a */,
+				BF0157DB1F0FF04F00ABA2A2 /* p10 Span la hamburguesa.m4a */,
+				BF0157DC1F0FF04F00ABA2A2 /* p10 Span la sandia.m4a */,
+				BF0157DD1F0FF04F00ABA2A2 /* p10 Span la zanahoria.m4a */,
+				BF0157DE1F0FF04F00ABA2A2 /* p11 Eng  the boat.m4a */,
+				BF0157DF1F0FF04F00ABA2A2 /* p11 Eng  the drum.m4a */,
+				BF0157E01F0FF04F00ABA2A2 /* p11 Eng  the open book.m4a */,
+				BF0157E11F0FF04F00ABA2A2 /* p11 Eng  the open door.m4a */,
+				BF0157E21F0FF04F00ABA2A2 /* p11 Eng  the wind.m4a */,
+				BF0157E31F0FF04F00ABA2A2 /* p11 Span el libro abierto.m4a */,
+				BF0157E41F0FF04F00ABA2A2 /* p11 Span el tambor.m4a */,
+				BF0157E51F0FF04F00ABA2A2 /* p11 Span el viento.m4a */,
+				BF0157E61F0FF04F00ABA2A2 /* p11 Span la barca.m4a */,
+				BF0157E71F0FF04F00ABA2A2 /* p11 Span la puerta abierta.m4a */,
+				BF0157E81F0FF04F00ABA2A2 /* p12 Eng  the bass fiddle.m4a */,
+				BF0157E91F0FF04F00ABA2A2 /* p12 Eng  the frog.m4a */,
+				BF0157EA1F0FF04F00ABA2A2 /* p12 Eng  the owl.m4a */,
+				BF0157EB1F0FF04F00ABA2A2 /* p12 Eng  the piano.m4a */,
+				BF0157EC1F0FF04F00ABA2A2 /* p12 Eng  the rabbit.m4a */,
+				BF0157ED1F0FF04F00ABA2A2 /* p12 Eng  the trumpet.m4a */,
+				BF0157EE1F0FF04F00ABA2A2 /* p12 Span el búho.m4a */,
+				BF0157EF1F0FF04F00ABA2A2 /* p12 Span el conejo.m4a */,
+				BF0157F01F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a */,
+				BF0157F11F0FF04F00ABA2A2 /* p12 Span la rana.m4a */,
+				BF0157F21F0FF04F00ABA2A2 /* p12 Span la trompeta.m4a */,
+				BF0157F31F0FF04F00ABA2A2 /* p13 Eng  the big ear.m4a */,
+				BF0157F41F0FF04F00ABA2A2 /* p13 Eng  the bookshelf.m4a */,
+				BF0157F51F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a */,
+				BF0157F61F0FF04F00ABA2A2 /* p13 Span la estantería.m4a */,
+				BF0157F71F0FF04F00ABA2A2 /* p13 Span la oreja grande.m4a */,
+				BF0157F81F0FF04F00ABA2A2 /* p14 Eng  the harmonica.m4a */,
+				BF0157F91F0FF04F00ABA2A2 /* p14 Eng  the ladder.m4a */,
+				BF0157FA1F0FF04F00ABA2A2 /* p14 Eng  the musical notes.m4a */,
+				BF0157FB1F0FF04F00ABA2A2 /* p14 Span la armónica.m4a */,
+				BF0157FC1F0FF04F00ABA2A2 /* p14 Span la escalera.m4a */,
+				BF0157FD1F0FF04F00ABA2A2 /* p14 Span las notas musicales.m4a */,
 			);
 			name = "word audio";
 			sourceTree = "<group>";
@@ -450,35 +648,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0158241F0FF04F00ABA2A2 /* p11 Eng  the wind.m4a in Resources */,
 				BF2724891EC5599500045D5C /* es-pg3-son las siete.m4a in Resources */,
+				BF0158111F0FF04F00ABA2A2 /* p8 Span la ardilla.m4a in Resources */,
 				BF2DC1251E83682100037050 /* AUDIO JANIE ENGLISH PAGE 14.m4a in Resources */,
 				BF2DC1301E83682100037050 /* AUDIO JANIE SPANISH PAGE 7.m4a in Resources */,
+				BF01581A1F0FF04F00ABA2A2 /* p10 Eng  the carrot.m4a in Resources */,
+				BF0158141F0FF04F00ABA2A2 /* p9 Eng  the family.m4a in Resources */,
 				BF0B31D51E6A685C00F7D5A7 /* LaunchScreen.storyboard in Resources */,
 				BF27248F1EC559AA00045D5C /* EN-pg3-the green fish.m4a in Resources */,
+				BF01581E1F0FF04F00ABA2A2 /* p10 Span la sandia.m4a in Resources */,
+				BF0158301F0FF04F00ABA2A2 /* p12 Span el búho.m4a in Resources */,
+				BF0158251F0FF04F00ABA2A2 /* p11 Span el libro abierto.m4a in Resources */,
 				BF2724771EC4C0C900045D5C /* es-pg1-las flores.m4a in Resources */,
 				BF2DC1391E83682100037050 /* AUDIO JANIE SPANISH PAGE 16.m4a in Resources */,
+				BF01581F1F0FF04F00ABA2A2 /* p10 Span la zanahoria.m4a in Resources */,
 				BF2724871EC5599500045D5C /* es-pg3-el pez verde.m4a in Resources */,
 				BF2DC1191E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a in Resources */,
 				BF0B31D21E6A685C00F7D5A7 /* Assets.xcassets in Resources */,
+				BF0158041F0FF04F00ABA2A2 /* p7 Eng  the clouds.m4a in Resources */,
 				BF2DC12D1E83682100037050 /* AUDIO JANIE SPANISH PAGE 4.m4a in Resources */,
 				BF27249F1EC55ACA00045D5C /* EN-pg5-the bicycle.m4a in Resources */,
 				BF2724671EAA82B900045D5C /* AUDIO JANIE SPANISH PAGE 17.m4a in Resources */,
+				BF0158231F0FF04F00ABA2A2 /* p11 Eng  the open door.m4a in Resources */,
+				BF0158071F0FF04F00ABA2A2 /* p7 Span la camisa con estrellas.m4a in Resources */,
 				BF2724991EC55A7C00045D5C /* EN-pg4-the blue whale.m4a in Resources */,
+				BF01581B1F0FF04F00ABA2A2 /* p10 Eng  the hamburger.m4a in Resources */,
 				BF2DC11C1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 5.m4a in Resources */,
+				BF0158261F0FF04F00ABA2A2 /* p11 Span el tambor.m4a in Resources */,
 				BF0B31D01E6A685C00F7D5A7 /* Main.storyboard in Resources */,
 				BF0B31EA1E6DE27500F7D5A7 /* Janie Instrumental.m4a in Resources */,
+				BF0158371F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a in Resources */,
 				BF2724951EC55A6B00045D5C /* es-pg4-la ballena azul.m4a in Resources */,
 				BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */,
+				BF0158161F0FF04F00ABA2A2 /* p9 Eng  the tooth.m4a in Resources */,
+				BF01580E1F0FF04F00ABA2A2 /* p8 Eng  the trumpet.m4a in Resources */,
 				BF2724641EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 18.m4a in Resources */,
+				BF01583A1F0FF04F00ABA2A2 /* p14 Eng  the harmonica.m4a in Resources */,
 				BF2DC11B1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 4.m4a in Resources */,
+				BF0158211F0FF04F00ABA2A2 /* p11 Eng  the drum.m4a in Resources */,
+				BF0158051F0FF04F00ABA2A2 /* p7 Eng  the green shirt.m4a in Resources */,
+				BF01583F1F0FF04F00ABA2A2 /* p14 Span las notas musicales.m4a in Resources */,
 				BF2DC1361E83682100037050 /* AUDIO JANIE SPANISH PAGE 13.m4a in Resources */,
 				BF27246A1EAA82C400045D5C /* AUDIO JANIE SPANISH PAGE 20.m4a in Resources */,
 				BF2724661EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 20.m4a in Resources */,
 				BF2DC1261E83682100037050 /* AUDIO JANIE ENGLISH PAGE 15.m4a in Resources */,
 				BF2DC1271E83682100037050 /* AUDIO JANIE ENGLISH PAGE 16.m4a in Resources */,
+				BF0158001F0FF04F00ABA2A2 /* p6 Eng the mandolin.m4a in Resources */,
 				BF2DC1311E83682100037050 /* AUDIO JANIE SPANISH PAGE 8.m4a in Resources */,
 				BF2DC12F1E83682100037050 /* AUDIO JANIE SPANISH PAGE 6.m4a in Resources */,
 				BF2724681EAA82BC00045D5C /* AUDIO JANIE SPANISH PAGE 18.m4a in Resources */,
+				BF01583C1F0FF04F00ABA2A2 /* p14 Eng  the musical notes.m4a in Resources */,
 				BF2DC1171E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a in Resources */,
 				BF2DC12E1E83682100037050 /* AUDIO JANIE SPANISH PAGE 5.m4a in Resources */,
 				BF27249A1EC55A7C00045D5C /* EN-pg4-the snail.m4a in Resources */,
@@ -486,53 +706,97 @@
 				BF27247D1EC558AE00045D5C /* es-pg2-la ventana.m4a in Resources */,
 				BF2724821EC558CA00045D5C /* EN-pg2-the sun.m4a in Resources */,
 				BF2DC1281E83682100037050 /* AUDIO JANIE ENGLISH TITLE PAGE.m4a in Resources */,
+				BF01582A1F0FF04F00ABA2A2 /* p12 Eng  the bass fiddle.m4a in Resources */,
+				BF01583E1F0FF04F00ABA2A2 /* p14 Span la escalera.m4a in Resources */,
 				BF2DC1351E83682100037050 /* AUDIO JANIE SPANISH PAGE 12.m4a in Resources */,
 				BF2724731EC4B4D700045D5C /* es-pg1-el reloj.m4a in Resources */,
 				BF2DC12C1E83682100037050 /* AUDIO JANIE SPANISH PAGE 3.m4a in Resources */,
+				BF01583B1F0FF04F00ABA2A2 /* p14 Eng  the ladder.m4a in Resources */,
+				BF0158361F0FF04F00ABA2A2 /* p13 Eng  the bookshelf.m4a in Resources */,
 				BF27248E1EC559AA00045D5C /* EN-pg3-seventhirty.m4a in Resources */,
 				BF2724831EC558CA00045D5C /* EN-pg2-the window.m4a in Resources */,
+				BF01582D1F0FF04F00ABA2A2 /* p12 Eng  the piano.m4a in Resources */,
+				BF0157FF1F0FF04F00ABA2A2 /* p6 Eng  the leaf.m4a in Resources */,
 				BF0B31EC1E6DE27500F7D5A7 /* Janie Song-es.m4a in Resources */,
+				BF0158271F0FF04F00ABA2A2 /* p11 Span el viento.m4a in Resources */,
 				BF2DC11A1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 3.m4a in Resources */,
+				BF0157FE1F0FF04F00ABA2A2 /* p6 Eng  the green hummingbird.m4a in Resources */,
+				BF0158031F0FF04F00ABA2A2 /* p6 Span la mandolina.m4a in Resources */,
 				BF2724751EC4BF7400045D5C /* es-pg1-la silla.m4a in Resources */,
+				BF01580D1F0FF04F00ABA2A2 /* p8 Eng  the squirrel.m4a in Resources */,
 				BF2DC1341E83682100037050 /* AUDIO JANIE SPANISH PAGE 11.m4a in Resources */,
+				BF0158341F0FF04F00ABA2A2 /* p12 Span la trompeta.m4a in Resources */,
+				BF01582F1F0FF04F00ABA2A2 /* p12 Eng  the trumpet.m4a in Resources */,
 				BF2DC1241E83682100037050 /* AUDIO JANIE ENGLISH PAGE 13.m4a in Resources */,
+				BF0158081F0FF04F00ABA2A2 /* p7 Span la camisa verde.m4a in Resources */,
+				BF0158221F0FF04F00ABA2A2 /* p11 Eng  the open book.m4a in Resources */,
+				BF0158061F0FF04F00ABA2A2 /* p7 Eng  the shirt with stars.m4a in Resources */,
+				BF01582E1F0FF04F00ABA2A2 /* p12 Eng  the rabbit.m4a in Resources */,
 				BF2DC1231E83682100037050 /* AUDIO JANIE ENGLISH PAGE 12.m4a in Resources */,
+				BF01581D1F0FF04F00ABA2A2 /* p10 Span la hamburguesa.m4a in Resources */,
+				BF0158151F0FF04F00ABA2A2 /* p9 Eng  the moon.m4a in Resources */,
+				BF0158351F0FF04F00ABA2A2 /* p13 Eng  the big ear.m4a in Resources */,
 				BF2DC1321E83682100037050 /* AUDIO JANIE SPANISH PAGE 9.m4a in Resources */,
 				BF27249B1EC55A7C00045D5C /* EN-pg4-the violin.m4a in Resources */,
 				BF2724931EC55A6B00045D5C /* es-pg4-el caracol.m4a in Resources */,
 				BF27247C1EC558AE00045D5C /* es-pg2-el sol.m4a in Resources */,
+				BF0158311F0FF04F00ABA2A2 /* p12 Span el conejo.m4a in Resources */,
+				BF0158021F0FF04F00ABA2A2 /* p6 Span la hoja.m4a in Resources */,
+				BF0158391F0FF04F00ABA2A2 /* p13 Span la oreja grande.m4a in Resources */,
+				BF0158291F0FF04F00ABA2A2 /* p11 Span la puerta abierta.m4a in Resources */,
+				BF0158281F0FF04F00ABA2A2 /* p11 Span la barca.m4a in Resources */,
+				BF0158191F0FF04F00ABA2A2 /* p9 Span la luna.m4a in Resources */,
+				BF01580B1F0FF04F00ABA2A2 /* p8 Eng  the porcupine.m4a in Resources */,
 				BF27247B1EC558AE00045D5C /* es-pg2-el ratón.m4a in Resources */,
 				BF2DC1331E83682100037050 /* AUDIO JANIE SPANISH PAGE 10.m4a in Resources */,
 				BF2724A01EC55ACA00045D5C /* EN-pg5-the singing bird.m4a in Resources */,
+				BF01583D1F0FF04F00ABA2A2 /* p14 Span la armónica.m4a in Resources */,
+				BF0158121F0FF04F00ABA2A2 /* p8 Span la trompeta.m4a in Resources */,
+				BF01582C1F0FF04F00ABA2A2 /* p12 Eng  the owl.m4a in Resources */,
 				BF2DC11E1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 7.m4a in Resources */,
 				BF2DC1181E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a in Resources */,
 				BF2DC1211E83682100037050 /* AUDIO JANIE ENGLISH PAGE 10.m4a in Resources */,
 				BF2724941EC55A6B00045D5C /* es-pg4-el violin.m4a in Resources */,
+				BF0158131F0FF04F00ABA2A2 /* p8 Span las lágrimas de serpiente.m4a in Resources */,
 				BF2724A61EC55B2F00045D5C /* es-pg5-la bicicleta.m4a in Resources */,
+				BF01581C1F0FF04F00ABA2A2 /* p10 Eng  the watermelon.m4a in Resources */,
+				BF0158331F0FF04F00ABA2A2 /* p12 Span la rana.m4a in Resources */,
 				BF2DC12B1E83682100037050 /* AUDIO JANIE SPANISH PAGE 2.m4a in Resources */,
+				BF01580A1F0FF04F00ABA2A2 /* p8 Eng  the bee.m4a in Resources */,
 				BF2DC1291E83682100037050 /* AUDIO JANIE SPANISH DEDICATION PAGE.m4a in Resources */,
+				BF0158201F0FF04F00ABA2A2 /* p11 Eng  the boat.m4a in Resources */,
+				BF0158011F0FF04F00ABA2A2 /* p6 Span el colibrí verde.m4a in Resources */,
 				BF0B31E31E6C755D00F7D5A7 /* PageData.plist in Resources */,
+				BF01580F1F0FF04F00ABA2A2 /* p8 Span el puercoespín.m4a in Resources */,
+				BF0158101F0FF04F00ABA2A2 /* p8 Span la abeja.m4a in Resources */,
 				BF2724881EC5599500045D5C /* es-pg3-son las siete y media.m4a in Resources */,
 				BF2724811EC558CA00045D5C /* EN-pg2-the mouse.m4a in Resources */,
 				BF27246F1EC4B0C400045D5C /* EN-pg1-the chair.m4a in Resources */,
 				BF0B31E51E6DDC6B00F7D5A7 /* Features and Todo in Resources */,
 				BF2DC13A1E83682100037050 /* AUDIO JANIE SPANISH TITLE PAGE.m4a in Resources */,
 				BF2DC1371E83682100037050 /* AUDIO JANIE SPANISH PAGE 14.m4a in Resources */,
+				BF0158091F0FF04F00ABA2A2 /* p7 Span las nubes.m4a in Resources */,
 				BF27248D1EC559AA00045D5C /* EN-pg3-seven oclock.m4a in Resources */,
 				BF2DC12A1E83682100037050 /* AUDIO JANIE SPANISH PAGE 1.m4a in Resources */,
 				BF2724631EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 17.m4a in Resources */,
 				BF2724A51EC55B2F00045D5C /* es-pg5-el pájaro cantante.m4a in Resources */,
 				BF2B54B01EA856460047DB7C /* hurray.m4a in Resources */,
+				BF0158181F0FF04F00ABA2A2 /* p9 Span la familia.m4a in Resources */,
+				BF0158381F0FF04F00ABA2A2 /* p13 Span la estantería.m4a in Resources */,
+				BF01580C1F0FF04F00ABA2A2 /* p8 Eng  the snakes tears.m4a in Resources */,
 				BF2DC1381E83682100037050 /* AUDIO JANIE SPANISH PAGE 15.m4a in Resources */,
 				BF2DC1201E83682100037050 /* AUDIO JANIE ENGLISH PAGE 9.m4a in Resources */,
 				BF2724711EC4B0C400045D5C /* EN-pg1-the flowers.m4a in Resources */,
 				BF2724A11EC55ACA00045D5C /* EN-pg5-the sun rays.m4a in Resources */,
+				BF0158171F0FF04F00ABA2A2 /* p9 Span el diente.m4a in Resources */,
 				BF2724A71EC55B2F00045D5C /* es-pg5-los rayos de sol.m4a in Resources */,
 				BF2DC11D1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 6.m4a in Resources */,
 				BF0B31EB1E6DE27500F7D5A7 /* Janie Song-en.m4a in Resources */,
 				BF2724701EC4B0C400045D5C /* EN-pg1-the clock.m4a in Resources */,
 				BF2DC1221E83682100037050 /* AUDIO JANIE ENGLISH PAGE 11.m4a in Resources */,
+				BF01582B1F0FF04F00ABA2A2 /* p12 Eng  the frog.m4a in Resources */,
 				BF2724651EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 19.m4a in Resources */,
+				BF0158321F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a in Resources */,
 				BF2DC11F1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 8.m4a in Resources */,
 				BF48CE2A1E7F62C4006D3FDC /* BookReadingOptionsViewController.xib in Resources */,
 			);
