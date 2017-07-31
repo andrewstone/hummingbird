@@ -203,6 +203,7 @@
 		BF48CE2A1E7F62C4006D3FDC /* BookReadingOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */; };
 		BF9BA1581E97FB6900FD8155 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */; };
 		BF9D11A91E8D4BE6006B232B /* PercentageRect.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D11A81E8D4BE6006B232B /* PercentageRect.m */; };
+		BFBC29151F2FDB5800618503 /* SDPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC29141F2FDB5800618503 /* SDPageViewController.m */; };
 		BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */; };
 /* End PBXBuildFile section */
 
@@ -413,6 +414,8 @@
 		BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BF9D11A71E8D4BE6006B232B /* PercentageRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageRect.h; sourceTree = "<group>"; };
 		BF9D11A81E8D4BE6006B232B /* PercentageRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageRect.m; sourceTree = "<group>"; };
+		BFBC29131F2FDB5800618503 /* SDPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPageViewController.h; sourceTree = "<group>"; };
+		BFBC29141F2FDB5800618503 /* SDPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPageViewController.m; sourceTree = "<group>"; };
 		BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BookReadingOptionsViewController~ipad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -454,6 +457,8 @@
 				BF0B31C21E6A685C00F7D5A7 /* AppDelegate.h */,
 				BF0B31C31E6A685C00F7D5A7 /* AppDelegate.m */,
 				BF0B31C51E6A685C00F7D5A7 /* RootViewController.h */,
+				BFBC29131F2FDB5800618503 /* SDPageViewController.h */,
+				BFBC29141F2FDB5800618503 /* SDPageViewController.m */,
 				BF0B31C61E6A685C00F7D5A7 /* RootViewController.m */,
 				BF0B31C81E6A685C00F7D5A7 /* DataViewController.h */,
 				BF0B31C91E6A685C00F7D5A7 /* DataViewController.m */,
@@ -957,6 +962,7 @@
 				BF0B31C41E6A685C00F7D5A7 /* AppDelegate.m in Sources */,
 				BF0B31CD1E6A685C00F7D5A7 /* ModelController.m in Sources */,
 				BF0B31C11E6A685C00F7D5A7 /* main.m in Sources */,
+				BFBC29151F2FDB5800618503 /* SDPageViewController.m in Sources */,
 				BF2B54AE1EA6B7200047DB7C /* HotAction.m in Sources */,
 				BF0B31E11E6C746B00F7D5A7 /* PageData.m in Sources */,
 				BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */,

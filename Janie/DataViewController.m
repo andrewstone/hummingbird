@@ -582,7 +582,7 @@
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    NSLog(@"other gesture is %@",NSStringFromClass([[otherGestureRecognizer view]class]));
+    NSLog(@"other gesture is %@:%@ and has delegate of %@",NSStringFromClass([[otherGestureRecognizer view]class]),otherGestureRecognizer,NSStringFromClass([[otherGestureRecognizer delegate]class]));
     return YES;
 }
 
@@ -596,6 +596,14 @@
     or.origin.y = r.size.height - or.size.height;
     self.optionsController.view.frame = or;
     [self.view addSubview:self.optionsController.view];
+}
+
+- (UIView *)hotActionsParentView {
+    return self.fullScreen ? (UIImageView *)self.view : self.imageView;
+}
+
+- (NSArray *)hotActions {
+    return self.dataObject.hotRects;
 }
 
 - (IBAction)imageViewTapped:(id)sender {

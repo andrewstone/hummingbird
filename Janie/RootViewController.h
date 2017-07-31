@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class DataViewController;
+@class DataViewController, SDPageViewController;
 
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
 
-@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) SDPageViewController *pageViewController;
 
 - (DataViewController *)turnPageFrom:(DataViewController *)dvc;
 - (DataViewController *)nextPage;
