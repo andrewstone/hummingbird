@@ -435,12 +435,9 @@
 - (void)corePlay:(AVAudioPlayer *)player atTime:(NSTimeInterval)start {
     BOOL played = NO;
     
-    if (start > 0) {
         [player prepareToPlay];
         player.currentTime = start;
         played = [player play];
-
-    }    else played = [player play];
     
     if (!played) NSLog(@"Could not play atTime %f",start);
     self.playPauseButton.selected = YES;

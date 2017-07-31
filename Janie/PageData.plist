@@ -2453,11 +2453,11 @@ and do all her favorite things.</string>
 						<key>x</key>
 						<real>0.0715447154471545</real>
 						<key>y</key>
-						<real>0.7462887989203779</real>
+						<real>0.747638326585695</real>
 						<key>width</key>
-						<real>0.1300813008130081</real>
+						<real>0.130081300813008</real>
 						<key>height</key>
-						<real>0.1300813008130081</real>
+						<real>0.09851551956815111</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -2472,13 +2472,13 @@ and do all her favorite things.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.07288135593220341</real>
+						<real>0.6682926829268293</real>
 						<key>y</key>
-						<real>0.2687074829931973</real>
+						<real>0.54251012145749</real>
 						<key>width</key>
-						<real>0.0830508474576271</real>
+						<real>0.08130081300813009</real>
 						<key>height</key>
-						<real>0.0835866261398176</real>
+						<real>0.0728744939271255</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -2855,6 +2855,68 @@ when how to leave she didn’t know.</string>
 			<integer>40</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.4555160142348754</real>
+						<key>y</key>
+						<real>0.634375</real>
+						<key>width</key>
+						<real>0.2562277580071174</real>
+						<key>height</key>
+						<real>0.096875</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg4-the blue whale.m4a</string>
+					<key>spanish</key>
+					<string>es-pg4-la ballena azul.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.3469750889679715</real>
+						<key>y</key>
+						<real>0.603125</real>
+						<key>width</key>
+						<real>0.103202846975089</real>
+						<key>height</key>
+						<real>0.06</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg4-the snail.m4a</string>
+					<key>shape</key>
+					<string>round</string>
+					<key>spanish</key>
+					<string>es-pg4-el caracol.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1316725978647687</real>
+						<key>y</key>
+						<real>0.68125</real>
+						<key>width</key>
+						<real>0.0676156583629893</real>
+						<key>height</key>
+						<real>0.1390625</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg4-the violin.m4a</string>
+					<key>spanish</key>
+					<string>es-pg4-el violin.m4a</string>
+				</dict>
+			</array>
 			<key>spanishWordList</key>
 			<array>
 				<dict>
@@ -3254,6 +3316,68 @@ And when she gets here I can show you.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1605960264900662</real>
+						<key>y</key>
+						<real>0.8554033485540335</real>
+						<key>width</key>
+						<real>0.1407284768211921</real>
+						<key>height</key>
+						<real>0.0974124809741248</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg5-the bicycle.m4a</string>
+					<key>spanish</key>
+					<string>es-pg5-la bicicleta.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.6092715231788079</real>
+						<key>y</key>
+						<real>0.6818873668188737</real>
+						<key>width</key>
+						<real>0.103202846975089</real>
+						<key>height</key>
+						<real>0.0715372907153729</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg5-the singing bird.m4a</string>
+					<key>shape</key>
+					<string>round</string>
+					<key>spanish</key>
+					<string>es-pg5-el pájaro cantante.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1225165562913907</real>
+						<key>y</key>
+						<real>0.70041059602649</real>
+						<key>width</key>
+						<real>0.181494661921708</real>
+						<key>height</key>
+						<real>0.1171993911719939</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg5-the sun rays.m4a</string>
+					<key>spanish</key>
+					<string>es-pg5-los rayos de sol.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -3597,6 +3721,68 @@ but they didn’t say a thing.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.08500000000000001</real>
+						<key>y</key>
+						<real>0.269449715370019</real>
+						<key>width</key>
+						<real>0.1233333333333333</real>
+						<key>height</key>
+						<real>0.1043643263757116</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>shape</key>
+					<string>round</string>
+					<key>english</key>
+					<string>p6 Eng  the green hummingbird.m4a</string>
+					<key>spanish</key>
+					<string>p6 Span el colibrí verde.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.0283333333333333</real>
+						<key>y</key>
+						<real>0.7362428842504743</real>
+						<key>width</key>
+						<real>0.1033333333333333</real>
+						<key>height</key>
+						<real>0.1043643263757116</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p6 Eng  the leaf.m4a</string>
+					<key>spanish</key>
+					<string>p6 Span la hoja.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.8</real>
+						<key>y</key>
+						<real>0.650853889943074</real>
+						<key>width</key>
+						<real>0.15</real>
+						<key>height</key>
+						<real>0.1043643263757116</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p6 Eng the mandolin.m4a</string>
+					<key>spanish</key>
+					<string>p6 Span la mandolina.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -4044,6 +4230,66 @@ she had some time to kill.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.823728813559322</real>
+						<key>y</key>
+						<real>0.1688555347091932</real>
+						<key>width</key>
+						<real>0.1016949152542373</real>
+						<key>height</key>
+						<real>0.07879924953095679</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p7 Eng  the clouds.m4a</string>
+					<key>spanish</key>
+					<string>p7 Span las nubes.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1830508474576271</real>
+						<key>y</key>
+						<real>0.649155722326454</real>
+						<key>width</key>
+						<real>0.1898305084745763</real>
+						<key>height</key>
+						<real>0.1669793621013133</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p7 Eng  the green shirt.m4a</string>
+					<key>spanish</key>
+					<string>p7 Span la camisa verde.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.771186440677966</real>
+						<key>y</key>
+						<real>0.0844277673545966</real>
+						<key>width</key>
+						<real>0.128813559322034</real>
+						<key>height</key>
+						<real>0.0731707317073171</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p7 Eng  the shirt with stars.m4a</string>
+					<key>spanish</key>
+					<string>p7 Span la camisa con estrellas.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -4467,6 +4713,66 @@ Some teachers saw and watched in awe, saying,
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.823728813559322</real>
+						<key>y</key>
+						<real>0.1688555347091932</real>
+						<key>width</key>
+						<real>0.1016949152542373</real>
+						<key>height</key>
+						<real>0.07879924953095679</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p8 Eng  the bee.m4a</string>
+					<key>spanish</key>
+					<string>p8 Span la abeja.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1830508474576271</real>
+						<key>y</key>
+						<real>0.649155722326454</real>
+						<key>width</key>
+						<real>0.1898305084745763</real>
+						<key>height</key>
+						<real>0.1669793621013133</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p7 Eng  the green shirt.m4a</string>
+					<key>spanish</key>
+					<string>p7 Span la camisa verde.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.771186440677966</real>
+						<key>y</key>
+						<real>0.0844277673545966</real>
+						<key>width</key>
+						<real>0.128813559322034</real>
+						<key>height</key>
+						<real>0.0731707317073171</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p7 Eng  the shirt with stars.m4a</string>
+					<key>spanish</key>
+					<string>p7 Span la camisa con estrellas.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
