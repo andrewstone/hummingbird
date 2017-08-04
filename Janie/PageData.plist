@@ -10060,6 +10060,12 @@ Y cuando llegue lo demostraré.</string>
 			<key>tweakTextViewHeight</key>
 			<integer>50</integer>
 		</dict>
+		<dict>
+			<key>InitialAction</key>
+			<string>runISpyAction:</string>
+			<key>playOnLoad</key>
+			<false/>
+		</dict>
 	</array>
 	<key>version</key>
 	<integer>1</integer>

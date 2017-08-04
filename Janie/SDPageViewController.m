@@ -24,8 +24,13 @@
 @implementation SDPageViewController
 
 - (BOOL)_shouldNavigateInDirection:(long long *)arg1 inResponseToTapGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    
     BOOL result = [super _shouldNavigateInDirection:arg1 inResponseToTapGestureRecognizer:otherGestureRecognizer];
 
+    /* this may be needed to get it to fly in store:
+    NSString *s = [NSString stringWithFormat:@"%c%@%@%@",'_',@"shouldNavigateInDirection",@":",@"inResponseToTapGestureRecognizer:"];
+    id result = [super performSelector:NSSelectorFromString(s) withObject:(id)arg1 withObject:otherGestureRecognizer];
+    */
     
     // if the tap is over a hidden object - quickly ignore
     DataViewController *dvc = [[self viewControllers] objectAtIndex:0];
@@ -40,7 +45,7 @@
         }
     }
                   
-    return result;
+    return result > 0;
 }
 
 /*

@@ -163,6 +163,8 @@
 		BF2724A71EC55B2F00045D5C /* es-pg5-los rayos de sol.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2724A41EC55B2F00045D5C /* es-pg5-los rayos de sol.m4a */; };
 		BF2B54AE1EA6B7200047DB7C /* HotAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2B54AD1EA6B7200047DB7C /* HotAction.m */; };
 		BF2B54B01EA856460047DB7C /* hurray.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2B54AF1EA856460047DB7C /* hurray.m4a */; };
+		BF2BC6F01F34E3AF0080C895 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2BC6EE1F34E3AF0080C895 /* WebViewController.m */; };
+		BF2BC6F11F34E3AF0080C895 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2BC6EF1F34E3AF0080C895 /* WebViewController.xib */; };
 		BF2DC1171E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F31E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a */; };
 		BF2DC1181E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F41E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a */; };
 		BF2DC1191E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF2DC0F51E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a */; };
@@ -204,6 +206,8 @@
 		BF9BA1581E97FB6900FD8155 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */; };
 		BF9D11A91E8D4BE6006B232B /* PercentageRect.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9D11A81E8D4BE6006B232B /* PercentageRect.m */; };
 		BFBC29151F2FDB5800618503 /* SDPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC29141F2FDB5800618503 /* SDPageViewController.m */; };
+		BFBC29191F302FE100618503 /* ISpyWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBC29171F302FE100618503 /* ISpyWordsViewController.m */; };
+		BFBC291A1F302FE100618503 /* ISpyWordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBC29181F302FE100618503 /* ISpyWordsViewController.xib */; };
 		BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */; };
 /* End PBXBuildFile section */
 
@@ -372,6 +376,9 @@
 		BF2B54AC1EA6B7200047DB7C /* HotAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotAction.h; sourceTree = "<group>"; };
 		BF2B54AD1EA6B7200047DB7C /* HotAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotAction.m; sourceTree = "<group>"; };
 		BF2B54AF1EA856460047DB7C /* hurray.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = hurray.m4a; path = audio/hurray.m4a; sourceTree = "<group>"; };
+		BF2BC6ED1F34E3AF0080C895 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		BF2BC6EE1F34E3AF0080C895 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		BF2BC6EF1F34E3AF0080C895 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		BF2DC0F31E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH DEDICATION PAGE.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH DEDICATION PAGE.m4a"; sourceTree = "<group>"; };
 		BF2DC0F41E83682100037050 /* AUDIO JANIE ENGLISH PAGE 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 1.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 1.m4a"; sourceTree = "<group>"; };
 		BF2DC0F51E83682100037050 /* AUDIO JANIE ENGLISH PAGE 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AUDIO JANIE ENGLISH PAGE 2.m4a"; path = "audio/pageaudio/AUDIO JANIE ENGLISH PAGE 2.m4a"; sourceTree = "<group>"; };
@@ -416,6 +423,9 @@
 		BF9D11A81E8D4BE6006B232B /* PercentageRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageRect.m; sourceTree = "<group>"; };
 		BFBC29131F2FDB5800618503 /* SDPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPageViewController.h; sourceTree = "<group>"; };
 		BFBC29141F2FDB5800618503 /* SDPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPageViewController.m; sourceTree = "<group>"; };
+		BFBC29161F302FE100618503 /* ISpyWordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISpyWordsViewController.h; sourceTree = "<group>"; };
+		BFBC29171F302FE100618503 /* ISpyWordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISpyWordsViewController.m; sourceTree = "<group>"; };
+		BFBC29181F302FE100618503 /* ISpyWordsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISpyWordsViewController.xib; sourceTree = "<group>"; };
 		BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BookReadingOptionsViewController~ipad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -457,11 +467,17 @@
 				BF0B31C21E6A685C00F7D5A7 /* AppDelegate.h */,
 				BF0B31C31E6A685C00F7D5A7 /* AppDelegate.m */,
 				BF0B31C51E6A685C00F7D5A7 /* RootViewController.h */,
+				BF0B31C61E6A685C00F7D5A7 /* RootViewController.m */,
 				BFBC29131F2FDB5800618503 /* SDPageViewController.h */,
 				BFBC29141F2FDB5800618503 /* SDPageViewController.m */,
-				BF0B31C61E6A685C00F7D5A7 /* RootViewController.m */,
 				BF0B31C81E6A685C00F7D5A7 /* DataViewController.h */,
 				BF0B31C91E6A685C00F7D5A7 /* DataViewController.m */,
+				BFBC29161F302FE100618503 /* ISpyWordsViewController.h */,
+				BFBC29171F302FE100618503 /* ISpyWordsViewController.m */,
+				BFBC29181F302FE100618503 /* ISpyWordsViewController.xib */,
+				BF2BC6ED1F34E3AF0080C895 /* WebViewController.h */,
+				BF2BC6EE1F34E3AF0080C895 /* WebViewController.m */,
+				BF2BC6EF1F34E3AF0080C895 /* WebViewController.xib */,
 				BF48CE261E7F62C4006D3FDC /* BookReadingOptionsViewController.h */,
 				BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */,
 				BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */,
@@ -827,6 +843,7 @@
 				BF2DC1171E83682100037050 /* AUDIO JANIE ENGLISH DEDICATION PAGE.m4a in Resources */,
 				BF2DC12E1E83682100037050 /* AUDIO JANIE SPANISH PAGE 5.m4a in Resources */,
 				BF27249A1EC55A7C00045D5C /* EN-pg4-the snail.m4a in Resources */,
+				BF2BC6F11F34E3AF0080C895 /* WebViewController.xib in Resources */,
 				BF2724691EAA82C000045D5C /* AUDIO JANIE SPANISH PAGE 19.m4a in Resources */,
 				BF27247D1EC558AE00045D5C /* es-pg2-la ventana.m4a in Resources */,
 				BF2724821EC558CA00045D5C /* EN-pg2-the sun.m4a in Resources */,
@@ -944,6 +961,7 @@
 				BF01582B1F0FF04F00ABA2A2 /* p12 Eng  the frog.m4a in Resources */,
 				BF0158F51F228BB600ABA2A2 /* p15 Span el guitarrista.m4a in Resources */,
 				BF2724651EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 19.m4a in Resources */,
+				BFBC291A1F302FE100618503 /* ISpyWordsViewController.xib in Resources */,
 				BF0158321F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a in Resources */,
 				BF0159121F228BB600ABA2A2 /* p20 Span el gato negro.m4a in Resources */,
 				BF2DC11F1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 8.m4a in Resources */,
@@ -965,7 +983,9 @@
 				BFBC29151F2FDB5800618503 /* SDPageViewController.m in Sources */,
 				BF2B54AE1EA6B7200047DB7C /* HotAction.m in Sources */,
 				BF0B31E11E6C746B00F7D5A7 /* PageData.m in Sources */,
+				BF2BC6F01F34E3AF0080C895 /* WebViewController.m in Sources */,
 				BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */,
+				BFBC29191F302FE100618503 /* ISpyWordsViewController.m in Sources */,
 				BF0B31C71E6A685C00F7D5A7 /* RootViewController.m in Sources */,
 				BF9D11A91E8D4BE6006B232B /* PercentageRect.m in Sources */,
 			);

@@ -597,6 +597,17 @@
     self.optionsController.view.frame = or;
     [self.view addSubview:self.optionsController.view];
 }
+- (IBAction)runISpyAction:(id)sender {
+    if (!self.ispyController) {
+        self.ispyController = [[ISpyWordsViewController alloc] initWithNibName:nil bundle:nil];
+    }
+    CGRect r = self.view.bounds;
+ //   CGRect or = self.ispyController.view.frame;
+//    or.origin.x = (r.size.width - or.size.width)/2.0;
+//    or.origin.y = r.size.height - or.size.height;
+    self.ispyController.view.frame = r;
+    [self.view addSubview:self.ispyController.view];
+}
 
 - (UIView *)hotActionsParentView {
     return self.fullScreen ? (UIImageView *)self.view : self.imageView;

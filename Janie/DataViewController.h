@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PageData.h"
 #import "BookReadingOptionsViewController.h"
+#import "ISpyWordsViewController.h"
 #import "HotAction.h"
 
 @interface DataViewController : UIViewController <AVAudioPlayerDelegate, UIGestureRecognizerDelegate>
@@ -25,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (strong, nonatomic) PageData *dataObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
+@property (strong, nonatomic) ISpyWordsViewController* ispyController;
 @property (nonatomic) BOOL fullScreen;
 
 - (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array

@@ -1,4 +1,9 @@
+
+
+
 BUGS May 8:
+
+
 - text does NOT pause bouncing
         - global should restart song at that page's point'
         - on 5S, text needs to go up about 6 pixels towards imageView
