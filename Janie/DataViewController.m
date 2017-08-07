@@ -600,6 +600,7 @@
 - (IBAction)runISpyAction:(id)sender {
     if (!self.ispyController) {
         self.ispyController = [[ISpyWordsViewController alloc] initWithNibName:nil bundle:nil];
+        self.ispyController.owner = self;
     }
     CGRect r = self.view.bounds;
  //   CGRect or = self.ispyController.view.frame;

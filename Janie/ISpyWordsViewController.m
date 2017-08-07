@@ -8,6 +8,11 @@
 
 #import "ISpyWordsViewController.h"
 #import "WebViewController.h"
+#import "ModelController.h"
+#import "DataViewController.h"
+#import "AppDelegate.h"
+#import "RootViewController.h"
+
 
 @interface ISpyWordsViewController ()
 
@@ -20,10 +25,10 @@
 }
 
 - (void)viewDidLoad {
-    _titles = @[@"Read book by yourself",@"Lei el libro por tu mismo",
-                @"Listen to book being read",@"Eschucha el libro leido",
-                @"Hear the song sung by Seth",@"Eschucha la canción cantada por Seth",
-                @"Learn more about / Apprende mas cerca Seth"];
+    _titles = @[@"Read book by yourself",@"Leer el libro por ti mismo",
+                @"Listen to the book",@"Eschucha el libro",
+                @"Seth sings the book!",@"¡Seth canta el libro!",
+                @"Get to know / Conoce a Seth"];
     
     [self.actionsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"actionThing"];
 
@@ -74,29 +79,39 @@
     if (indexPath.row == numItems-1) {
         [self loadWebGuy];
     } else {
+        NSUInteger readOrPlay = 0;
+        NSUInteger englishOrSpanish = 2;
+//        BOOL autoPlay = 0;
+        
         switch (indexPath.row) {
             case 0: {
-                
+                readOrPlay = 0;
                 break;
             }
             case 1: {
-                
+                readOrPlay = 0;
+                englishOrSpanish = 1;
+
                 break;
             }
             case 2: {
-                
+                readOrPlay = 1;
+
                 break;
             }
             case 3: {
-                
+                readOrPlay = 1;
+                englishOrSpanish = 1;
+           
                 break;
             }
             case 4: {
-                
+                readOrPlay = 2;
                 break;
             }
             case 5: {
-                
+                englishOrSpanish = 1;
+                readOrPlay = 2;
                 break;
             }
                 
@@ -104,10 +119,20 @@
                 break;
         }
     
+        [[NSUserDefaults standardUserDefaults] setInteger:readOrPlay forKey:@"ReadOrPlayMusic"];
+        [[NSUserDefaults standardUserDefaults] setInteger:readOrPlay forKey:@"WhichLanguage"];
         
+//        [[NSUserDefaults standardUserDefaults] setBool:autoPlay forKey:@"AutoPlay"];
+
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        // simply go to page 3 and it should JUST WORK!
+        [(RootViewController *)ROOT_VIEW_CONTROLLER goToFirstPage];
+        
+
         
     }
-    
+    [self.actionsTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)loadWebGuy {

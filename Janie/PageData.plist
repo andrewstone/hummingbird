@@ -10032,7 +10032,7 @@ though we find it differently.</string>
 				<string>Janie Song-en.m4a</string>
 			</array>
 			<key>playOnLoad</key>
-			<true/>
+			<false/>
 			<key>english</key>
 			<string>Has anyone seen Janie?
 

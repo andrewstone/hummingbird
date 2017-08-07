@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class AVAudioPlayer, RootViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -27,4 +26,3 @@
 
 #define AUTO_PLAY (AUDIO_IS_READ && [[NSUserDefaults standardUserDefaults] boolForKey:@"AutoPlay"])
 @end
-

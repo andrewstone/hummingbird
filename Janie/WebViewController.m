@@ -66,7 +66,7 @@
         MFMailComposeViewController *message = [[MFMailComposeViewController alloc] init];
         [message setMessageBody:@"My message here"  isHTML:NO];
         [message setToRecipients:[NSArray arrayWithObject:@"sethhoffmanmusic@gmail.com"]];
-        //[message setSubject:@""];
+        [message setSubject:@"¡Hola Colibrí!"];
         message.mailComposeDelegate = self;
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
             message.modalPresentationStyle = UIModalPresentationFormSheet;

@@ -3,6 +3,15 @@
 
 BUGS May 8:
 
+- if singing, and user turns page, reset audio to that page
+(otherwise it crashes)
+
+
+- pausing and resuming music the bounce is off
+- pausing and restarting music the bounce is off
+
+
+
 
 - text does NOT pause bouncing
         - global should restart song at that page's point'

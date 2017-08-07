@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DataViewController;
 
 @interface ISpyWordsViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *actionsTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *wordsImageView;
+@property (weak, nonatomic) DataViewController *owner;
 
 - (IBAction)doneAction:(id)sender;
 

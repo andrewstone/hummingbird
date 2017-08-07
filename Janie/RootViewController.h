@@ -15,6 +15,8 @@
 
 - (DataViewController *)turnPageFrom:(DataViewController *)dvc;
 - (DataViewController *)nextPage;
+- (DataViewController *)goToFirstPage;
+
 
 @end
 

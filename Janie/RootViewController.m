@@ -56,6 +56,21 @@
 
 }
 
+- (DataViewController *)goToPageWithDataViewController:(DataViewController *)nextDVC {
+    if (nextDVC) {
+        [self.pageViewController setViewControllers:@[nextDVC] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+    }
+    return nextDVC;
+}
+
+- (DataViewController *)goToFirstPage {
+#define FIRST_REAL_PAGE_INDEX   2
+    ModelController *model = [ModelController sharedModelController];
+   DataViewController *dvc = [model viewControllerAtIndex:FIRST_REAL_PAGE_INDEX storyboard:self.storyboard];
+
+    return [self goToPageWithDataViewController:dvc];
+}
+
 - (DataViewController *)nextPage {
     NSArray *vcs = self.pageViewController.viewControllers;
     return [self turnPageFrom:[vcs lastObject]];
