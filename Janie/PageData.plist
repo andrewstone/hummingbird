@@ -4749,9 +4749,9 @@ Some teachers saw and watched in awe, saying,
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p7 Eng  the green shirt.m4a</string>
+					<string>p8 Eng  the trumpet.m4a</string>
 					<key>spanish</key>
-					<string>p7 Span la camisa verde.m4a</string>
+					<string>p8 Span la trompeta.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
@@ -4768,9 +4768,47 @@ Some teachers saw and watched in awe, saying,
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p7 Eng  the shirt with stars.m4a</string>
+					<string>p8 Eng  the snakes tears.m4a</string>
 					<key>spanish</key>
-					<string>p7 Span la camisa con estrellas.m4a</string>
+					<string>p8 Span las lágrimas de serpiente.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.771186440677966</real>
+						<key>y</key>
+						<real>0.0844277673545966</real>
+						<key>width</key>
+						<real>0.128813559322034</real>
+						<key>height</key>
+						<real>0.0731707317073171</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p8 Eng  the porcupine.m4a</string>
+					<key>spanish</key>
+					<string>p8 Span el puercoespín.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7334437086</real>
+						<key>y</key>
+						<real>0.7333333332999999</real>
+						<key>width</key>
+						<real>0.2003311258</real>
+						<key>height</key>
+						<real>0.1823129252</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p8 Eng  the squirrel.m4a</string>
+					<key>spanish</key>
+					<string>p8 Span la ardilla.m4a</string>
 				</dict>
 			</array>
 			<key>englishWordList</key>

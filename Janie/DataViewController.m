@@ -531,12 +531,7 @@
         NSLog(@"start at %f", time);
         [self corePlaySound:[mc currentSong] atTime:time];
     } else {
-        
-        if (!player)
             [self coreNextSound];
-        else {
-            [self corePlay:player atTime:time];
-        }
     }
     
 }
