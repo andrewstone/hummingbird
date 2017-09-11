@@ -4719,13 +4719,13 @@ Some teachers saw and watched in awe, saying,
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.823728813559322</real>
+						<real>0.821192053</real>
 						<key>y</key>
-						<real>0.1688555347091932</real>
+						<real>0.0666666667</real>
 						<key>width</key>
-						<real>0.1016949152542373</real>
+						<real>0.09271523180000001</real>
 						<key>height</key>
-						<real>0.07879924953095679</real>
+						<real>0.07210884350000001</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -4738,13 +4738,13 @@ Some teachers saw and watched in awe, saying,
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.1830508474576271</real>
+						<real>0.1920529801</real>
 						<key>y</key>
-						<real>0.649155722326454</real>
+						<real>0.7523809524</real>
 						<key>width</key>
-						<real>0.1898305084745763</real>
+						<real>0.09271523180000001</real>
 						<key>height</key>
-						<real>0.1669793621013133</real>
+						<real>0.1469387755</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -4757,13 +4757,13 @@ Some teachers saw and watched in awe, saying,
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.771186440677966</real>
+						<real>0.7301324503</real>
 						<key>y</key>
-						<real>0.0844277673545966</real>
+						<real>0.4149659864</real>
 						<key>width</key>
-						<real>0.128813559322034</real>
+						<real>0.09271523180000001</real>
 						<key>height</key>
-						<real>0.0731707317073171</real>
+						<real>0.1047619048</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -4776,13 +4776,13 @@ Some teachers saw and watched in awe, saying,
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.771186440677966</real>
+						<real>0.0844370861</real>
 						<key>y</key>
-						<real>0.0844277673545966</real>
+						<real>0.5632653061</real>
 						<key>width</key>
-						<real>0.128813559322034</real>
+						<real>0.2003311258</real>
 						<key>height</key>
-						<real>0.0731707317073171</real>
+						<real>0.1469387755</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -4795,13 +4795,13 @@ Some teachers saw and watched in awe, saying,
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.7334437086</real>
+						<real>0.7218543046</real>
 						<key>y</key>
-						<real>0.7333333332999999</real>
+						<real>0.7074829932</real>
 						<key>width</key>
-						<real>0.2003311258</real>
+						<real>0.2251655629</real>
 						<key>height</key>
-						<real>0.1823129252</real>
+						<real>0.1986394558</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -5212,6 +5212,66 @@ And when she gets here I can show you.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1378151261</real>
+						<key>y</key>
+						<real>0.2257551669</real>
+						<key>width</key>
+						<real>0.2369747899</real>
+						<key>height</key>
+						<real>0.2241653418</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p9 Eng  the family.m4a</string>
+					<key>spanish</key>
+					<string>p9 Span la familia.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.6621848739</real>
+						<key>y</key>
+						<real>0.2178060413</real>
+						<key>width</key>
+						<real>0.0924369748</real>
+						<key>height</key>
+						<real>0.079491256</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p9 Eng  the moon.m4a</string>
+					<key>spanish</key>
+					<string>p9 Span la luna.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7159663866</real>
+						<key>y</key>
+						<real>0.3608903021</real>
+						<key>width</key>
+						<real>0.0924369748</real>
+						<key>height</key>
+						<real>0.079491256</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p9 Eng  the tooth.m4a</string>
+					<key>spanish</key>
+					<string>p9 Span el diente.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -5621,6 +5681,66 @@ what a tooth fairy’s life is all about.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.06677796330000001</real>
+						<key>y</key>
+						<real>0.652757079</real>
+						<key>width</key>
+						<real>0.1318864775</real>
+						<key>height</key>
+						<real>0.2578241431</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p10 Eng  the carrot.m4a</string>
+					<key>spanish</key>
+					<string>p10 Span la zanahoria.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.0634390651</real>
+						<key>y</key>
+						<real>0.4530551416</real>
+						<key>width</key>
+						<real>0.0918196995</real>
+						<key>height</key>
+						<real>0.0715350224</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p10 Eng  the hamburger.m4a</string>
+					<key>spanish</key>
+					<string>p10 Span la hamburguesa.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.0951585977</real>
+						<key>y</key>
+						<real>0.1192250373</real>
+						<key>width</key>
+						<real>0.0918196995</real>
+						<key>height</key>
+						<real>0.0715350224</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p10 Eng  the watermelon.m4a</string>
+					<key>spanish</key>
+					<string>p10 Span la sandia.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -6014,6 +6134,104 @@ with hummingbird Hawaiian Punch.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7248322148</real>
+						<key>y</key>
+						<real>0.7575757576</real>
+						<key>width</key>
+						<real>0.1593959732</real>
+						<key>height</key>
+						<real>0.1272727273</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the boat.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span la barca.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1677852349</real>
+						<key>y</key>
+						<real>0.1378787879</real>
+						<key>width</key>
+						<real>0.1090604027</real>
+						<key>height</key>
+						<real>0.1015151515</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the drum.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span el tambor.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.5755033557</real>
+						<key>y</key>
+						<real>0.4863636364</real>
+						<key>width</key>
+						<real>0.3070469799</real>
+						<key>height</key>
+						<real>0.1575757576</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the open book.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span el libro abierto.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1744966443</real>
+						<key>y</key>
+						<real>0.2333333333</real>
+						<key>width</key>
+						<real>0.1140939597</real>
+						<key>height</key>
+						<real>0.2151515152</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the open door.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span la puerta abierta.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.6208053690999999</real>
+						<key>y</key>
+						<real>0.7893939394</real>
+						<key>width</key>
+						<real>0.1258389262</real>
+						<key>height</key>
+						<real>0.09696969699999999</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the wind.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span el viento.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -6367,6 +6585,104 @@ can’t seem to find the way.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7248322148</real>
+						<key>y</key>
+						<real>0.7575757576</real>
+						<key>width</key>
+						<real>0.1593959732</real>
+						<key>height</key>
+						<real>0.1272727273</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the boat.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span la barca.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1677852349</real>
+						<key>y</key>
+						<real>0.1378787879</real>
+						<key>width</key>
+						<real>0.1090604027</real>
+						<key>height</key>
+						<real>0.1015151515</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the drum.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span el tambor.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.095158597</real>
+						<key>y</key>
+						<real>0.4863636364</real>
+						<key>width</key>
+						<real>0.3070469799</real>
+						<key>height</key>
+						<real>0.1575757576</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the open book.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span el libro abierto.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1744966443</real>
+						<key>y</key>
+						<real>0.2333333333</real>
+						<key>width</key>
+						<real>0.1140939597</real>
+						<key>height</key>
+						<real>0.2151515152</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the open door.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span la puerta abierta.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.6208053690999999</real>
+						<key>y</key>
+						<real>0.7893939394</real>
+						<key>width</key>
+						<real>0.1258389262</real>
+						<key>height</key>
+						<real>0.0545454545</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p11 Eng  the wind.m4a</string>
+					<key>spanish</key>
+					<string>p11 Span el viento.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
