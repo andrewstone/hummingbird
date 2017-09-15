@@ -6602,9 +6602,9 @@ can’t seem to find the way.</string>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p11 Eng  the boat.m4a</string>
+					<string>p12 Eng  the bass fiddle.m4a</string>
 					<key>spanish</key>
-					<string>p11 Span la barca.m4a</string>
+					<string>p12 Span el contrabajo.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
@@ -6621,9 +6621,9 @@ can’t seem to find the way.</string>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p11 Eng  the drum.m4a</string>
+					<string>p12 Eng  the frog.m4a</string>
 					<key>spanish</key>
-					<string>p11 Span el tambor.m4a</string>
+					<string>p12 Span la rana.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
@@ -6640,9 +6640,9 @@ can’t seem to find the way.</string>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p11 Eng  the open book.m4a</string>
+					<string>p12 Eng  the owl.m4a</string>
 					<key>spanish</key>
-					<string>p11 Span el libro abierto.m4a</string>
+					<string>p12 Span el búho.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
@@ -6659,9 +6659,9 @@ can’t seem to find the way.</string>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p11 Eng  the open door.m4a</string>
+					<string>p12 Eng  the piano.m4a</string>
 					<key>spanish</key>
-					<string>p11 Span la puerta abierta.m4a</string>
+					<string>p12 Eng  the piano.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
@@ -6678,9 +6678,28 @@ can’t seem to find the way.</string>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p11 Eng  the wind.m4a</string>
+					<string>p12 Eng  the rabbit.m4a</string>
 					<key>spanish</key>
-					<string>p11 Span el viento.m4a</string>
+					<string>p12 Span el conejo.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.6208053690999999</real>
+						<key>y</key>
+						<real>0.7893939394</real>
+						<key>width</key>
+						<real>0.1258389262</real>
+						<key>height</key>
+						<real>0.0545454545</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p12 Eng  the trumpet.m4a</string>
+					<key>spanish</key>
+					<string>p12 Span la trompeta.m4a</string>
 				</dict>
 			</array>
 			<key>englishWordList</key>
