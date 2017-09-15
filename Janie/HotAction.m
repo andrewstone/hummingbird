@@ -64,10 +64,21 @@
     return self;
 }
 
+- (void)giveVisualFeedback {
+ [UIView animateWithDuration:0.3 animations:^{
+        self.backgroundColor = [UIColor colorWithWhite:0.8 alpha:.7];
+        
+    } completion:^(BOOL finished) {
+        self.backgroundColor = [UIColor clearColor];
+        
+    }];
+}
+
 
 - (void)doTap:(UITapGestureRecognizer *)tap {
     if (tap.state == UIGestureRecognizerStateEnded) {
-        
+        // give visual feedback
+        [self giveVisualFeedback];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [self.target performSelector:_action withObject:self];
@@ -76,13 +87,14 @@
     }
 }
 
+/*
 - (void)drawRect:(CGRect)r {
     
 // When you debug the HotAction locations
 // You an uncomment this block of code to see
 // where the hit item is
 
-/*
+
     CGRect rect = self.bounds; // [self.percentageRect rectInView:view];
     UIColor *c = [UIColor colorWithRed:.7 green:0.0 blue:0.1 alpha:0.2];
     
@@ -101,10 +113,11 @@
     CGContextAddPath(context, p);
     CGContextFillPath(context);
     CGPathRelease(p);
-*/
+
 
     
 }
+*/
 
 - (CGRect)desiredRectInView:(UIImageView *)parent maintainsAspect:(BOOL)aspect {
     return [_percentageRect rectInView:parent maintainsAspect:aspect];

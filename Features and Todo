@@ -1,8 +1,10 @@
 
 Feature:
-when a hidden object pressed, make it blink or something
+** when a hidden object pressed, make it blink or something
 
 BUGS May 8:
+
+- pausing/resuming talk results in bouncing not working
 
 - if singing, and user turns page, reset audio to that page
 (otherwise it crashes)
