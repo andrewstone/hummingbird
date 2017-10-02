@@ -6591,13 +6591,13 @@ can’t seem to find the way.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.7248322148</real>
+						<real>0.2728785358</real>
 						<key>y</key>
-						<real>0.7575757576</real>
+						<real>0.7675324675</real>
 						<key>width</key>
-						<real>0.1593959732</real>
+						<real>0.1064891847</real>
 						<key>height</key>
-						<real>0.1272727273</real>
+						<real>0.1766233766</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -6610,13 +6610,13 @@ can’t seem to find the way.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.1677852349</real>
+						<real>0.7121464226000001</real>
 						<key>y</key>
-						<real>0.1378787879</real>
+						<real>0.3727272727</real>
 						<key>width</key>
-						<real>0.1090604027</real>
+						<real>0.0948419301</real>
 						<key>height</key>
-						<real>0.1015151515</real>
+						<real>0.1194805195</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -6629,13 +6629,13 @@ can’t seem to find the way.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.095158597</real>
+						<real>0.8186356073</real>
 						<key>y</key>
-						<real>0.4863636364</real>
+						<real>0.2844155844</real>
 						<key>width</key>
-						<real>0.3070469799</real>
+						<real>0.0798668885</real>
 						<key>height</key>
-						<real>0.1575757576</real>
+						<real>0.1</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -6648,18 +6648,18 @@ can’t seem to find the way.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.1744966443</real>
+						<real>0.7603993344</real>
 						<key>y</key>
-						<real>0.2333333333</real>
+						<real>0.6792207792</real>
 						<key>width</key>
-						<real>0.1140939597</real>
+						<real>0.1048252912</real>
 						<key>height</key>
-						<real>0.2151515152</real>
+						<real>0.138961039</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>p12 Eng  the piano.m4a</string>
+					<string>pg12 Span el piano.m4a</string>
 					<key>spanish</key>
 					<string>p12 Eng  the piano.m4a</string>
 				</dict>
@@ -6667,13 +6667,13 @@ can’t seem to find the way.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.6208053690999999</real>
+						<real>0.2961730449</real>
 						<key>y</key>
-						<real>0.7893939394</real>
+						<real>0.4051948052</real>
 						<key>width</key>
-						<real>0.1258389262</real>
+						<real>0.1663893511</real>
 						<key>height</key>
-						<real>0.0545454545</real>
+						<real>0.1168831169</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -6686,13 +6686,13 @@ can’t seem to find the way.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.6208053690999999</real>
+						<real>0.1247920133</real>
 						<key>y</key>
-						<real>0.7893939394</real>
+						<real>0.7844155844</real>
 						<key>width</key>
-						<real>0.1258389262</real>
+						<real>0.1414309484</real>
 						<key>height</key>
-						<real>0.0545454545</real>
+						<real>0.0623376623</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
@@ -7103,6 +7103,68 @@ And when she gets here I can show you.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.5762711864</real>
+						<key>y</key>
+						<real>0.7945736434</real>
+						<key>width</key>
+						<real>0.0745762712</real>
+						<key>height</key>
+						<real>0.0697674419</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>shape</key>
+					<string>round</string>
+					<key>english</key>
+					<string>p13 Eng  the big ear.m4a</string>
+					<key>spanish</key>
+					<string>p13 Span la oreja grande.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.3694915254</real>
+						<key>y</key>
+						<real>0.7273901809</real>
+						<key>width</key>
+						<real>0.2186440678</real>
+						<key>height</key>
+						<real>0.0697674419</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p13 Eng  the bookshelf.m4a</string>
+					<key>spanish</key>
+					<string>p13 Span la estantería.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.6525423728999999</real>
+						<key>y</key>
+						<real>0.4651162791</real>
+						<key>width</key>
+						<real>0.0762711864</real>
+						<key>height</key>
+						<real>0.0697674419</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p13 Eng  the purple insect.m4a</string>
+					<key>spanish</key>
+					<string>pg13 Span el insecto morado.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -7464,6 +7526,66 @@ to what she had to say.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7553191489</real>
+						<key>y</key>
+						<real>0.2857142857</real>
+						<key>width</key>
+						<real>0.1542553191</real>
+						<key>height</key>
+						<real>0.0519480519</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p14 Eng  the harmonica.m4a</string>
+					<key>spanish</key>
+					<string>p14 Span la armónica.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.5</real>
+						<key>y</key>
+						<real>0.4597402597</real>
+						<key>width</key>
+						<real>0.115248227</real>
+						<key>height</key>
+						<real>0.1454545455</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p14 Eng  the ladder.m4a</string>
+					<key>spanish</key>
+					<string>p14 Span la escalera.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7872340426</real>
+						<key>y</key>
+						<real>0.3324675325</real>
+						<key>width</key>
+						<real>0.0868794326</real>
+						<key>height</key>
+						<real>0.1298701299</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p14 Eng  the musical notes.m4a</string>
+					<key>spanish</key>
+					<string>p14 Span las notas musicales.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -7841,6 +7963,68 @@ until every one was closed.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7919463087</real>
+						<key>y</key>
+						<real>0.82</real>
+						<key>width</key>
+						<real>0.08389261739999999</real>
+						<key>height</key>
+						<real>0.0746666667</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>shape</key>
+					<string>round</string>
+					<key>english</key>
+					<string>p15 Eng the guitar player.m4a</string>
+					<key>spanish</key>
+					<string>p15 Span el guitarrista.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.7399328858999999</real>
+						<key>y</key>
+						<real>0.2413333333</real>
+						<key>width</key>
+						<real>0.0922818792</real>
+						<key>height</key>
+						<real>0.1613333333</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p15 Eng the two butterflies.m4a</string>
+					<key>spanish</key>
+					<string>p15 Span las dos mariposas.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.2332214765</real>
+						<key>y</key>
+						<real>0.192</real>
+						<key>width</key>
+						<real>0.1610738255</real>
+						<key>height</key>
+						<real>0.1826666667</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>p15 Eng turn off the light.m4a</string>
+					<key>spanish</key>
+					<string>p15 Span apagar la luz.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>
@@ -8266,6 +8450,66 @@ Saying, “Goodbye!” to everyone.</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>hotRects</key>
+			<array>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.1671806167400881</real>
+						<key>y</key>
+						<real>0.17643</real>
+						<key>width</key>
+						<real>0.140969</real>
+						<key>height</key>
+						<real>0.12204</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg1-the clock.m4a</string>
+					<key>spanish</key>
+					<string>es-pg1-el reloj.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.0698529411764706</real>
+						<key>y</key>
+						<real>0.740121580547113</real>
+						<key>width</key>
+						<real>0.145220588235294</real>
+						<key>height</key>
+						<real>0.155015197568389</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg1-the chair.m4a</string>
+					<key>spanish</key>
+					<string>es-pg1-la silla.m4a</string>
+				</dict>
+				<dict>
+					<key>rect</key>
+					<dict>
+						<key>x</key>
+						<real>0.2536764705882353</real>
+						<key>y</key>
+						<real>0.8632218844984803</real>
+						<key>width</key>
+						<real>0.110294117647059</real>
+						<key>height</key>
+						<real>0.0835866261398176</real>
+					</dict>
+					<key>action</key>
+					<string>defaultAction:</string>
+					<key>english</key>
+					<string>EN-pg1-the flowers.m4a</string>
+					<key>spanish</key>
+					<string>es-pg1-las flores.m4a</string>
+				</dict>
+			</array>
 			<key>englishWordList</key>
 			<array>
 				<dict>

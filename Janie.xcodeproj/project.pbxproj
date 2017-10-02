@@ -418,6 +418,8 @@
 		BF48CE261E7F62C4006D3FDC /* BookReadingOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReadingOptionsViewController.h; sourceTree = "<group>"; };
 		BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReadingOptionsViewController.m; sourceTree = "<group>"; };
 		BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookReadingOptionsViewController.xib; sourceTree = "<group>"; };
+		BF6F43531F82CE36000EF080 /* pg13 Span el insecto morado.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pg13 Span el insecto morado.m4a"; path = "audio/MoreWords/pg13 Span el insecto morado.m4a"; sourceTree = "<group>"; };
+		BF6F43541F82CE36000EF080 /* pg12 Span el piano.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pg12 Span el piano.m4a"; path = "audio/MoreWords/pg12 Span el piano.m4a"; sourceTree = "<group>"; };
 		BF9BA1571E97FB6900FD8155 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BF9D11A71E8D4BE6006B232B /* PercentageRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentageRect.h; sourceTree = "<group>"; };
 		BF9D11A81E8D4BE6006B232B /* PercentageRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentageRect.m; sourceTree = "<group>"; };
@@ -608,6 +610,8 @@
 				BF0157F01F0FF04F00ABA2A2 /* p12 Span el contrabajo.m4a */,
 				BF0157F11F0FF04F00ABA2A2 /* p12 Span la rana.m4a */,
 				BF0157F21F0FF04F00ABA2A2 /* p12 Span la trompeta.m4a */,
+				BF6F43541F82CE36000EF080 /* pg12 Span el piano.m4a */,
+				BF6F43531F82CE36000EF080 /* pg13 Span el insecto morado.m4a */,
 				BF0157F31F0FF04F00ABA2A2 /* p13 Eng  the big ear.m4a */,
 				BF0157F41F0FF04F00ABA2A2 /* p13 Eng  the bookshelf.m4a */,
 				BF0157F51F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a */,
