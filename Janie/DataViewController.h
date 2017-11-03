@@ -27,6 +27,8 @@
 @property (strong, nonatomic) PageData *dataObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
 @property (strong, nonatomic) ISpyWordsViewController* ispyController;
+@property (strong, nonatomic) IBOutlet UIImageView *fullImageView;
+@property (strong, nonatomic) IBOutlet UIScrollView *fullImageScrollView;
 @property (nonatomic) BOOL fullScreen;
 
 - (IBAction)playNextSound:(id)sender; // if just 1, just that gets played, otherwise loops through array

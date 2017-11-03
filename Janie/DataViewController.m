@@ -43,6 +43,7 @@
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
     tap.numberOfTapsRequired = 2;
     tap.delegate = self;
+    // HERE
     [self.view addGestureRecognizer:tap];
     
     
@@ -234,6 +235,7 @@
     [super viewWillAppear:animated];
     
     if (self.dataObject.imageFullPage) {
+        // HERE THIS IS NOT FOR PAN ZOOM BUT FOR SHOWING PAGES 1 and 2:
         [[[(UIImageView *)self.view subviews] objectAtIndex:0] setHidden:YES];
         [(UIImageView *)self.view setContentMode:UIViewContentModeScaleAspectFit];
         [(UIImageView *)self.view setImage:[self.dataObject pageImage]];
@@ -283,6 +285,13 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
+    if (self.fullScreen){
+        CGSize size = self.fullImageView.image.size;
+        CGRect rect = self.view.bounds;
+        self.fullImageScrollView.frame = rect;
+        self.fullImageScrollView.contentSize=size;
+//        self.fullImageView.frame = CGRectMake(0.0,0.0,size.width,size.height);
+    }
 
 
 //    CGRect screen = [[UIScreen mainScreen] bounds];
@@ -336,7 +345,8 @@
     
     self.imageView.frame = iRect;
     // layout hot rects:
-    UIImageView * currentImageView = self.fullScreen ? (UIImageView *)self.view : self.imageView;
+    // HERE
+    UIImageView * currentImageView = self.fullScreen ? (UIImageView *)self.fullImageView : self.imageView;
 
     for (HotAction *hotty in self.dataObject.hotRects) {
         [hotty setFrame:[hotty desiredRectInView:currentImageView maintainsAspect:!self.fullScreen]];
@@ -606,7 +616,10 @@
 }
 
 - (UIView *)hotActionsParentView {
-    return self.fullScreen ? (UIImageView *)self.view : self.imageView;
+    // HERE
+
+//    return self.fullScreen ? (UIImageView *)self.view : self.imageView;
+    return self.fullScreen ? (UIImageView *)self.fullImageView : self.imageView;
 }
 
 - (NSArray *)hotActions {
@@ -623,15 +636,30 @@
     
     [UIView animateWithDuration:0.3 animations:^{
         if (self.fullScreen) {
-            [(UIImageView *)self.view setImage:nil];
+            // HERE
+
+            [(UIImageView *)self.fullImageView setImage:nil];
             self.containerView.alpha = 1.0;
+            self.fullImageScrollView.alpha = 0.0;
         } else {
-            [(UIImageView *)self.view setImage:[self.imageView.image copy]];
+            UIImage *newImage = [self.imageView.image copy];
+            CGSize size = [newImage size];
+            CGRect rect = self.view.bounds;
+            self.fullImageScrollView.frame = rect;
+            self.fullImageScrollView.contentSize=size;
+
+            [(UIImageView *)self.fullImageView setImage:newImage];
+            self.fullImageScrollView.contentSize=size;
+            self.fullImageView.frame = CGRectMake(0.0,0.0,size.width,size.height);
+            self.fullImageView.userInteractionEnabled = YES;
+
             self.containerView.alpha = 0.0;
+            self.fullImageScrollView.alpha = 1.0;
         }
     } completion:^(BOOL finished) {
         self.fullScreen = !self.fullScreen;
-        UIImageView * which = self.fullScreen ? (UIImageView *)self.view : self.imageView;
+        // HERE
+        UIImageView * which = self.fullScreen ? (UIImageView *)self.fullImageView : self.imageView;
         
         for (HotAction *hotty in self.dataObject.hotRects) {
             [which addSubview:hotty];
