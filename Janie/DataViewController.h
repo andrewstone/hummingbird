@@ -11,6 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PageData.h"
 #import "BookReadingOptionsViewController.h"
+#import "BookReadingHelpViewController.h"
+
 #import "ISpyWordsViewController.h"
 #import "HotAction.h"
 
@@ -26,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (strong, nonatomic) PageData *dataObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
+@property (strong, nonatomic) BookReadingHelpViewController* bookReadingHelpController;
 @property (strong, nonatomic) ISpyWordsViewController* ispyController;
 @property (strong, nonatomic) IBOutlet UIImageView *fullImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *fullImageScrollView;
@@ -35,8 +38,10 @@
 - (IBAction)playPause:(id)sender;
 - (IBAction)restartAudio:(id)sender;
 - (IBAction)swapLanguages:(id)sender;
-- (IBAction)imageViewTapped:(id)sender;
+- (IBAction)imageViewTapped:(UITapGestureRecognizer *)sender;
 - (IBAction)turnThePageProgrammatically:(id)sender;
+- (IBAction)runOptionsHelpPanel:(id)sender;
+- (IBAction)removeHelpPanel:(id)sender;
 
  // the default action of HotAction tap:
 - (IBAction)defaultAction:(HotAction *)sender;
@@ -47,7 +52,7 @@
 - (NSMutableAttributedString *)stringForText:(NSString *)s isSpanish:(BOOL)isSpanish;
 - (NSDictionary *)valuesForBouncing:(BOOL)sung;
 
-- (UIView *)hotActionsParentView;
+- (UIImageView *)hotActionsParentView;
 - (NSArray *)hotActions;
 
 @end

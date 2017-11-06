@@ -109,6 +109,9 @@
 		BF0159121F228BB600ABA2A2 /* p20 Span el gato negro.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0158EE1F228BB500ABA2A2 /* p20 Span el gato negro.m4a */; };
 		BF0159131F228BB600ABA2A2 /* p20 Span el lagarto.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0158EF1F228BB500ABA2A2 /* p20 Span el lagarto.m4a */; };
 		BF0159141F228BB600ABA2A2 /* p20 Span las tijeras.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BF0158F01F228BB500ABA2A2 /* p20 Span las tijeras.m4a */; };
+		BF0599D01FAFDA980015DBAA /* BookReadingHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0599CF1FAFDA980015DBAA /* BookReadingHelpViewController.m */; };
+		BF0599D21FAFDACA0015DBAA /* BookReadingHelpViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0599D11FAFDACA0015DBAA /* BookReadingHelpViewController~ipad.xib */; };
+		BF0599D41FAFDAFA0015DBAA /* BookReadingHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0599D31FAFDAFA0015DBAA /* BookReadingHelpViewController.xib */; };
 		BF0B31C11E6A685C00F7D5A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0B31C01E6A685C00F7D5A7 /* main.m */; };
 		BF0B31C41E6A685C00F7D5A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0B31C31E6A685C00F7D5A7 /* AppDelegate.m */; };
 		BF0B31C71E6A685C00F7D5A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0B31C61E6A685C00F7D5A7 /* RootViewController.m */; };
@@ -314,6 +317,10 @@
 		BF0158EE1F228BB500ABA2A2 /* p20 Span el gato negro.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p20 Span el gato negro.m4a"; path = "audio/MoreWords/p20 Span el gato negro.m4a"; sourceTree = "<group>"; };
 		BF0158EF1F228BB500ABA2A2 /* p20 Span el lagarto.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p20 Span el lagarto.m4a"; path = "audio/MoreWords/p20 Span el lagarto.m4a"; sourceTree = "<group>"; };
 		BF0158F01F228BB500ABA2A2 /* p20 Span las tijeras.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "p20 Span las tijeras.m4a"; path = "audio/MoreWords/p20 Span las tijeras.m4a"; sourceTree = "<group>"; };
+		BF0599CE1FAFDA980015DBAA /* BookReadingHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookReadingHelpViewController.h; sourceTree = "<group>"; };
+		BF0599CF1FAFDA980015DBAA /* BookReadingHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookReadingHelpViewController.m; sourceTree = "<group>"; };
+		BF0599D11FAFDACA0015DBAA /* BookReadingHelpViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "BookReadingHelpViewController~ipad.xib"; sourceTree = "<group>"; };
+		BF0599D31FAFDAFA0015DBAA /* BookReadingHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookReadingHelpViewController.xib; sourceTree = "<group>"; };
 		BF0B31BC1E6A685C00F7D5A7 /* Hummingbird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hummingbird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0B31C01E6A685C00F7D5A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF0B31C21E6A685C00F7D5A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -484,6 +491,10 @@
 				BF48CE271E7F62C4006D3FDC /* BookReadingOptionsViewController.m */,
 				BF48CE281E7F62C4006D3FDC /* BookReadingOptionsViewController.xib */,
 				BFE18CD71E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib */,
+				BF0599D11FAFDACA0015DBAA /* BookReadingHelpViewController~ipad.xib */,
+				BF0599D31FAFDAFA0015DBAA /* BookReadingHelpViewController.xib */,
+				BF0599CE1FAFDA980015DBAA /* BookReadingHelpViewController.h */,
+				BF0599CF1FAFDA980015DBAA /* BookReadingHelpViewController.m */,
 				BF0B31DF1E6C746B00F7D5A7 /* PageData.h */,
 				BF0B31E01E6C746B00F7D5A7 /* PageData.m */,
 				BF9D11A71E8D4BE6006B232B /* PercentageRect.h */,
@@ -748,7 +759,7 @@
 		BF0B31B41E6A685B00F7D5A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "This One";
 				TargetAttributes = {
 					BF0B31BB1E6A685B00F7D5A7 = {
@@ -817,6 +828,7 @@
 				BF0B31D01E6A685C00F7D5A7 /* Main.storyboard in Resources */,
 				BF0B31EA1E6DE27500F7D5A7 /* Janie Instrumental.m4a in Resources */,
 				BF0158371F0FF04F00ABA2A2 /* p13 Eng  the purple insect.m4a in Resources */,
+				BF0599D41FAFDAFA0015DBAA /* BookReadingHelpViewController.xib in Resources */,
 				BF2724951EC55A6B00045D5C /* es-pg4-la ballena azul.m4a in Resources */,
 				BF01590C1F228BB600ABA2A2 /* p19 Span la abeja.m4a in Resources */,
 				BFE18CD81E7F8CC30090F179 /* BookReadingOptionsViewController~ipad.xib in Resources */,
@@ -955,6 +967,7 @@
 				BF2DC1201E83682100037050 /* AUDIO JANIE ENGLISH PAGE 9.m4a in Resources */,
 				BF2724711EC4B0C400045D5C /* EN-pg1-the flowers.m4a in Resources */,
 				BF2724A11EC55ACA00045D5C /* EN-pg5-the sun rays.m4a in Resources */,
+				BF0599D21FAFDACA0015DBAA /* BookReadingHelpViewController~ipad.xib in Resources */,
 				BF0158171F0FF04F00ABA2A2 /* p9 Span el diente.m4a in Resources */,
 				BF2724A71EC55B2F00045D5C /* es-pg5-los rayos de sol.m4a in Resources */,
 				BF2DC11D1E83682100037050 /* AUDIO JANIE ENGLISH PAGE 6.m4a in Resources */,
@@ -991,6 +1004,7 @@
 				BF48CE291E7F62C4006D3FDC /* BookReadingOptionsViewController.m in Sources */,
 				BFBC29191F302FE100618503 /* ISpyWordsViewController.m in Sources */,
 				BF0B31C71E6A685C00F7D5A7 /* RootViewController.m in Sources */,
+				BF0599D01FAFDA980015DBAA /* BookReadingHelpViewController.m in Sources */,
 				BF9D11A91E8D4BE6006B232B /* PercentageRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1026,7 +1040,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1034,7 +1050,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1074,7 +1094,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1082,7 +1104,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -11,6 +11,7 @@
 #import "ModelController.h"
 #import "RootViewController.h"
 #import "HotAction.h"
+#import "PercentageRect.h"
 
 @interface DataViewController ()
 
@@ -598,10 +599,51 @@
     CGRect r = self.view.bounds;
     CGRect or = self.optionsController.view.frame;
     or.origin.x = (r.size.width - or.size.width)/2.0;
-    or.origin.y = r.size.height - or.size.height;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+
+    or.origin.y = or.size.height; // 0.0; //r.size.height - or.size.height;
+    } else or.origin.y = 30.0;
+    
     self.optionsController.view.frame = or;
+    self.optionsController.myController = self;
     [self.view addSubview:self.optionsController.view];
+    
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"SawHelp"]) {
+              [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"SawHelp"];
+            [self performSelector:@selector(runOptionsHelpPanel:) withObject:self afterDelay:2.0];
+            
+              }
 }
+
+
+- (IBAction)runOptionsHelpPanel:(id)sender {
+    // a subpanel of BookReadingOptionsViewController, but we need to clean up
+    // so we'll own it:
+    if (!self.bookReadingHelpController) {
+        self.bookReadingHelpController = [[BookReadingHelpViewController alloc] initWithNibName:nil bundle:nil];
+    }
+    
+    CGRect r = self.view.bounds;
+    CGRect or = self.bookReadingHelpController.view.frame;
+    or.origin.x = (r.size.width - or.size.width)/2.0;
+    or.origin.y = 32.0; // 0.0; //r.size.height - or.size.height;
+    self.bookReadingHelpController.view.frame = or;
+    self.bookReadingHelpController.view.layer.cornerRadius = 10.0;
+    self.bookReadingHelpController.myController = self;
+    [self.view addSubview:self.bookReadingHelpController.view];
+    
+}
+- (IBAction)removeHelpPanel:(id)sender {
+    if (self.bookReadingHelpController) {
+        [UIView animateWithDuration:0.3 delay:0.01 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.bookReadingHelpController.view.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [self.bookReadingHelpController.view removeFromSuperview];
+            self.bookReadingHelpController = nil;
+        }];
+    }
+}
+
 - (IBAction)runISpyAction:(id)sender {
     if (!self.ispyController) {
         self.ispyController = [[ISpyWordsViewController alloc] initWithNibName:nil bundle:nil];
@@ -615,7 +657,7 @@
     [self.view addSubview:self.ispyController.view];
 }
 
-- (UIView *)hotActionsParentView {
+- (UIImageView *)hotActionsParentView {
     // HERE
 
 //    return self.fullScreen ? (UIImageView *)self.view : self.imageView;
@@ -626,14 +668,17 @@
     return self.dataObject.hotRects;
 }
 
-- (IBAction)imageViewTapped:(id)sender {
+- (IBAction)imageViewTapped:(UITapGestureRecognizer *)sender {
     // we are either in the bigly state or the regular state
-    
+    if (sender.state == UIGestureRecognizerStateEnded) {
     for (HotAction *hotty in self.dataObject.hotRects) {
         [hotty removeFromSuperview];
     }
-    
-    
+        UIImageView *previousImageView = [self hotActionsParentView];
+        CGSize previousImageSize = previousImageView.bounds.size;
+        CGPoint center = [sender locationInView:previousImageView];
+        PercentageRect *centerAsPercent = [[PercentageRect alloc] initWithPercentageX:center.x/previousImageSize.width y:center.y/previousImageSize.height width:0.01 height:0.01];
+
     [UIView animateWithDuration:0.3 animations:^{
         if (self.fullScreen) {
             // HERE
@@ -661,12 +706,22 @@
         // HERE
         UIImageView * which = self.fullScreen ? (UIImageView *)self.fullImageView : self.imageView;
         
+        if (self.fullScreen) {
+            // scroll to where the double tap was
+            CGRect centerRect = [centerAsPercent rectInView:self.fullImageView maintainsAspect:YES];
+            CGPoint center = centerRect.origin;
+#define AROUND_CENTER 100
+            centerRect = CGRectMake(center.x - AROUND_CENTER, center.y - AROUND_CENTER,
+                                    AROUND_CENTER*2, AROUND_CENTER*2); // right around the tap
+            [self.fullImageScrollView scrollRectToVisible:centerRect animated:NO];
+        }
         for (HotAction *hotty in self.dataObject.hotRects) {
             [which addSubview:hotty];
             [hotty setFrame:[hotty desiredRectInView:which maintainsAspect:!self.fullScreen]];
         }
 
     }];
+    }
 }
 
 - (IBAction)turnThePageProgrammatically:(id)sender {

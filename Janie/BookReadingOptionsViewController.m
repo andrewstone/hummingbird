@@ -7,12 +7,16 @@
 //
 
 #import "BookReadingOptionsViewController.h"
-
+#import "DataViewController.h"
 @interface BookReadingOptionsViewController ()
 
 @end
 
 @implementation BookReadingOptionsViewController
+
+- (IBAction)runHelpAction:(UIButton *)sender {
+    [self.myController runOptionsHelpPanel:self];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
