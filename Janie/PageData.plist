@@ -8456,58 +8456,58 @@ Saying, “Goodbye!” to everyone.</string>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.1671806167400881</real>
+						<real>0.0905511811</real>
 						<key>y</key>
-						<real>0.17643</real>
+						<real>0.1976744186</real>
 						<key>width</key>
-						<real>0.140969</real>
+						<real>0.2860892388</real>
 						<key>height</key>
-						<real>0.12204</real>
+						<real>0.1014799154</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>EN-pg1-the clock.m4a</string>
+					<string>p16 Eng the mountains.m4a</string>
 					<key>spanish</key>
-					<string>es-pg1-el reloj.m4a</string>
+					<string>p16 Span las montañas.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.0698529411764706</real>
+						<real>0.4593175853</real>
 						<key>y</key>
-						<real>0.740121580547113</real>
+						<real>0.2463002114</real>
 						<key>width</key>
-						<real>0.145220588235294</real>
+						<real>0.0853018373</real>
 						<key>height</key>
-						<real>0.155015197568389</real>
+						<real>0.0634249471</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>EN-pg1-the chair.m4a</string>
+					<string>p16 Eng the tennis ball.m4a</string>
 					<key>spanish</key>
-					<string>es-pg1-la silla.m4a</string>
+					<string>p16 Span la pelota de tenis.m4a</string>
 				</dict>
 				<dict>
 					<key>rect</key>
 					<dict>
 						<key>x</key>
-						<real>0.2536764705882353</real>
+						<real>0.688976378</real>
 						<key>y</key>
-						<real>0.8632218844984803</real>
+						<real>0.4746300211</real>
 						<key>width</key>
-						<real>0.110294117647059</real>
+						<real>0.1811023622</real>
 						<key>height</key>
-						<real>0.0835866261398176</real>
+						<real>0.0687103594</real>
 					</dict>
 					<key>action</key>
 					<string>defaultAction:</string>
 					<key>english</key>
-					<string>EN-pg1-the flowers.m4a</string>
+					<string>p16 Eng the umbrella.m4a</string>
 					<key>spanish</key>
-					<string>es-pg1-las flores.m4a</string>
+					<string>p16 Span el paraguas.m4a</string>
 				</dict>
 			</array>
 			<key>englishWordList</key>

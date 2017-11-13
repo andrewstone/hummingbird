@@ -275,7 +275,6 @@
         [hotty setTarget:self];
         [self.imageView addSubview:hotty];
     }
-
 }
 
 
@@ -690,6 +689,8 @@
             UIImage *newImage = [self.imageView.image copy];
             CGSize size = [newImage size];
             CGRect rect = self.view.bounds;
+            self.fullImageScrollView.hidden = 0;
+
             self.fullImageScrollView.frame = rect;
             self.fullImageScrollView.contentSize=size;
 
@@ -705,6 +706,8 @@
         self.fullScreen = !self.fullScreen;
         // HERE
         UIImageView * which = self.fullScreen ? (UIImageView *)self.fullImageView : self.imageView;
+        if (!self.fullScreen)
+            self.fullImageScrollView.hidden = 1;
         
         if (self.fullScreen) {
             // scroll to where the double tap was
