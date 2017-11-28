@@ -19,6 +19,7 @@
 @implementation RootViewController
 
 @synthesize modelController = _modelController;
+- (BOOL)prefersStatusBarHidden { return YES; }
 
 - (void)viewDidLoad {
     [super viewDidLoad];

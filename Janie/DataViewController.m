@@ -615,7 +615,7 @@
 }
 
 
-- (IBAction)runOptionsHelpPanel:(id)sender {
+- (IBAction)runOptionsHelpPanel:(UIButton *)button {
     // a subpanel of BookReadingOptionsViewController, but we need to clean up
     // so we'll own it:
     if (!self.bookReadingHelpController) {
@@ -626,10 +626,18 @@
     CGRect or = self.bookReadingHelpController.view.frame;
     or.origin.x = (r.size.width - or.size.width)/2.0;
     or.origin.y = 32.0; // 0.0; //r.size.height - or.size.height;
-    self.bookReadingHelpController.view.frame = or;
-    self.bookReadingHelpController.view.layer.cornerRadius = 10.0;
+    self.bookReadingHelpController.view.frame = or; // the right size
+    CGAffineTransform t = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
+    self.bookReadingHelpController.view.transform = t;
+   self.bookReadingHelpController.view.layer.cornerRadius = 10.0;
     self.bookReadingHelpController.myController = self;
     [self.view addSubview:self.bookReadingHelpController.view];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.bookReadingHelpController.view.transform = CGAffineTransformIdentity;
+        self.bookReadingHelpController.view.frame = or;
+    } completion:^(BOOL finished) {
+        ;
+    }];
     
 }
 - (IBAction)removeHelpPanel:(id)sender {

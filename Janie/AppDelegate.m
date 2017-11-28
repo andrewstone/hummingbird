@@ -33,7 +33,7 @@
         [ud setInteger:1 forKey:@"WhichLanguage"];
         
     }
-    
+   // [[UIApplication sharedApplication] setStatusBarHidden:YES];
     return YES;
 }
 
