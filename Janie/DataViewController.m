@@ -615,34 +615,44 @@
 }
 
 
-- (IBAction)runOptionsHelpPanel:(UIButton *)button {
+- (IBAction)runOptionsHelpPanel:(id)button {
     // a subpanel of BookReadingOptionsViewController, but we need to clean up
     // so we'll own it:
     if (!self.bookReadingHelpController) {
         self.bookReadingHelpController = [[BookReadingHelpViewController alloc] initWithNibName:nil bundle:nil];
     }
-    
     CGRect r = self.view.bounds;
     CGRect or = self.bookReadingHelpController.view.frame;
     or.origin.x = (r.size.width - or.size.width)/2.0;
     or.origin.y = 32.0; // 0.0; //r.size.height - or.size.height;
-    self.bookReadingHelpController.view.frame = or; // the right size
+    
+    CGRect start = CGRectMake(0, 0, or.size.width, or.size.height);
+    
+    self.bookReadingHelpController.view.frame = start; // the right size
     CGAffineTransform t = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
+    t = CGAffineTransformTranslate(t, -(10 * or.size.width/2.0), -(10 * or.size.height/2.0));
+
     self.bookReadingHelpController.view.transform = t;
    self.bookReadingHelpController.view.layer.cornerRadius = 10.0;
     self.bookReadingHelpController.myController = self;
+    self.bookReadingHelpController.view.alpha = 0.0;
     [self.view addSubview:self.bookReadingHelpController.view];
     [UIView animateWithDuration:0.5 animations:^{
         self.bookReadingHelpController.view.transform = CGAffineTransformIdentity;
         self.bookReadingHelpController.view.frame = or;
-    } completion:^(BOOL finished) {
+        self.bookReadingHelpController.view.alpha = 1.0;
+   } completion:^(BOOL finished) {
         ;
     }];
     
 }
 - (IBAction)removeHelpPanel:(id)sender {
     if (self.bookReadingHelpController) {
+        CGRect r = self.bookReadingHelpController.view.frame;
         [UIView animateWithDuration:0.3 delay:0.01 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            CGAffineTransform t = CGAffineTransformMakeScale(0.1, 0.1);
+            t = CGAffineTransformTranslate(t, -(10 * r.size.width/2.0), -(10 * r.size.height/2.0));
+            self.bookReadingHelpController.view.transform = t;
             self.bookReadingHelpController.view.alpha = 0.0;
         } completion:^(BOOL finished) {
             [self.bookReadingHelpController.view removeFromSuperview];
