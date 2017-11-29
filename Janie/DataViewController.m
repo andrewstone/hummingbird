@@ -630,10 +630,12 @@
     
     self.bookReadingHelpController.view.frame = start; // the right size
     CGAffineTransform t = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
-    t = CGAffineTransformTranslate(t, -(10 * or.size.width/2.0), -(10 * or.size.height/2.0));
+    t = CGAffineTransformTranslate(t, -(4 * or.size.width), -(4 * or.size.height));
 
     self.bookReadingHelpController.view.transform = t;
    self.bookReadingHelpController.view.layer.cornerRadius = 10.0;
+    self.bookReadingHelpController.view.layer.borderColor = [[UIColor darkGrayColor] CGColor];
+    self.bookReadingHelpController.view.layer.borderWidth = 2.0;
     self.bookReadingHelpController.myController = self;
     self.bookReadingHelpController.view.alpha = 0.0;
     [self.view addSubview:self.bookReadingHelpController.view];
@@ -649,9 +651,9 @@
 - (IBAction)removeHelpPanel:(id)sender {
     if (self.bookReadingHelpController) {
         CGRect r = self.bookReadingHelpController.view.frame;
-        [UIView animateWithDuration:0.3 delay:0.01 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.4 delay:0.01 options:UIViewAnimationOptionCurveEaseOut animations:^{
             CGAffineTransform t = CGAffineTransformMakeScale(0.1, 0.1);
-            t = CGAffineTransformTranslate(t, -(10 * r.size.width/2.0), -(10 * r.size.height/2.0));
+            t = CGAffineTransformTranslate(t, -(4 * r.size.width), -(4 * r.size.height));
             self.bookReadingHelpController.view.transform = t;
             self.bookReadingHelpController.view.alpha = 0.0;
         } completion:^(BOOL finished) {
