@@ -523,6 +523,7 @@
 		BF0B31E61E6DE18A00F7D5A7 /* moreAssets */ = {
 			isa = PBXGroup;
 			children = (
+				BF91ECA11FD5D98D00A5CECB /* hidden audio */,
 				BF27246B1EC4B0AE00045D5C /* word audio */,
 				BF2B54AF1EA856460047DB7C /* hurray.m4a */,
 				BF0B31E71E6DE27500F7D5A7 /* Janie Instrumental.m4a */,
@@ -723,6 +724,13 @@
 				BF2724621EAA7F5200045D5C /* AUDIO JANIE ENGLISH PAGE 20.m4a */,
 			);
 			name = pageaudio;
+			sourceTree = "<group>";
+		};
+		BF91ECA11FD5D98D00A5CECB /* hidden audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "hidden audio";
 			sourceTree = "<group>";
 		};
 		BF9BA1561E97FB6900FD8155 /* Frameworks */ = {
