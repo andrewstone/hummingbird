@@ -32,7 +32,7 @@
                         <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="Ewc-t6-aGf"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="    Leer o escuchar palabras o Seth canta:" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-UE-3f1">
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="    Leer o escuchar palabras o Seth canta:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-UE-3f1">
                     <rect key="frame" x="81" y="250" width="508" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -40,7 +40,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1. Choose Language / Elegir el Idioma" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g26-nc-bFm">
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1. Choose Language / Elegir el Idioma" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g26-nc-bFm">
                     <rect key="frame" x="103" y="55" width="455" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -100,7 +100,7 @@
                         <action selector="changeLanguageAction:" destination="-1" eventType="valueChanged" id="jto-vU-tOn"/>
                     </connections>
                 </segmentedControl>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2. Read yourself, listen to words, or Seth sing" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVl-gP-bLd">
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2. Read yourself, listen to words, or Seth sing" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVl-gP-bLd">
                     <rect key="frame" x="81" y="221" width="508" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -108,7 +108,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="silent / silencia      spoken/hablado  sung/cantado" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDr-qK-zfK">
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="silent / silencia      spoken/hablado  sung/cantado" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDr-qK-zfK">
                     <rect key="frame" x="81" y="352" width="537" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
