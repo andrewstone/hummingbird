@@ -175,6 +175,9 @@ static ModelController *sharedModel = nil;
     bouncePointer++;
     
     if (bouncePointer < bounceTimes.count) {
+        // if something goes wrong don't do this!
+        if (AUDIO_CONTROLLER == nil) return;
+        
         NSDictionary *info = bounceTimes[bouncePointer];
         NSNumber * turnThePage = [info valueForKey:@"turnPage"];
         NSTimeInterval endTime = [[info valueForKey:@"endTime"] doubleValue];

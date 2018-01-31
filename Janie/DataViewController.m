@@ -152,7 +152,7 @@
         
         if (NSMaxRange(range) <= newString.length) {
             [newString addAttribute:NSFontAttributeName value:self.dataObject.boldFont range:range];
-        } else NSLog(@"range overrun: %@",newString);
+        } // else NSLog(@"range overrun: %@",newString);
         
         textView.attributedText = newString;
         
@@ -267,8 +267,8 @@
         self.playPauseButton.selected = YES;
     }
     
-    self.playContainerView.hidden = NO_AUDIO;
-    
+    self.playPauseButton.hidden = !AUDIO_IS_READ;
+    self.playContainerView.hidden = NO;
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
         [hotty setFrame:[hotty desiredRectInView:self.imageView maintainsAspect:YES]];
@@ -288,8 +288,12 @@
     if (self.fullScreen){
         CGSize size = self.fullImageView.image.size;
         CGRect rect = self.view.bounds;
+        CGRect br = self.nextPageButton.frame;
         self.fullImageScrollView.frame = rect;
         self.fullImageScrollView.contentSize=size;
+        br.origin.x = rect.size.width - br.size.width;
+        br.origin.y = rect.size.height/2.0;
+        self.nextPageButton.frame = br;
 //        self.fullImageView.frame = CGRectMake(0.0,0.0,size.width,size.height);
     }
 
@@ -449,7 +453,7 @@
         player.currentTime = start;
         played = [player play];
     
-    if (!played) NSLog(@"Could not play atTime %f",start);
+   // if (!played) NSLog(@"Could not play atTime %f",start);
     self.playPauseButton.selected = YES;
 }
 
@@ -523,6 +527,19 @@
     }
 }
 
+- (IBAction)restartFromBeginnning:(id)sender {
+    AVAudioPlayer *player = AUDIO_CONTROLLER;
+    
+    if (player.isPlaying) {
+        [[self musicDelegate] stopBounceInController:self];
+        [APP_DELEGATE stopAndClearSound];
+        player = nil;
+    }
+    if ([[ModelController sharedModelController] indexOfViewController:self] == 2)
+        [(RootViewController *)ROOT_VIEW_CONTROLLER goToSetUpPage];
+        else
+    [(RootViewController *)ROOT_VIEW_CONTROLLER goToFirstPage];
+}
 
 - (IBAction)restartAudio:(id)sender {
     AVAudioPlayer *player = AUDIO_CONTROLLER;
@@ -538,8 +555,10 @@
         ModelController *mc = [ModelController sharedModelController];
         NSUInteger pageIndex = [mc indexOfViewController:self];
         time = [mc startTimeForPage:pageIndex];
-        NSLog(@"start at %f", time);
+       //  NSLog(@"start at %f", time);
         [self corePlaySound:[mc currentSong] atTime:time];
+        [[ModelController sharedModelController] updateBounceTextWithController:self];
+
     } else {
             [self coreNextSound];
     }
@@ -582,12 +601,12 @@
     float ratio = pt.x/self.view.frame.size.width;
     BOOL dontDoIt =   (ratio < .2 || ratio > .8);
     
-    NSLog(@"shouldBegin: %@", NSStringFromClass([[gestureRecognizer view] class]));
+   // NSLog(@"shouldBegin: %@", NSStringFromClass([[gestureRecognizer view] class]));
     return !dontDoIt;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    NSLog(@"other gesture is %@:%@ and has delegate of %@",NSStringFromClass([[otherGestureRecognizer view]class]),otherGestureRecognizer,NSStringFromClass([[otherGestureRecognizer delegate]class]));
+   // NSLog(@"other gesture is %@:%@ and has delegate of %@",NSStringFromClass([[otherGestureRecognizer view]class]),otherGestureRecognizer,NSStringFromClass([[otherGestureRecognizer delegate]class]));
     return YES;
 }
 

@@ -10,6 +10,7 @@
 #import "ModelController.h"
 #import "DataViewController.h"
 #import "SDPageViewController.h"
+#import "AppDelegate.h"
 
 @interface RootViewController ()
 
@@ -67,8 +68,15 @@
 - (DataViewController *)goToFirstPage {
 #define FIRST_REAL_PAGE_INDEX   2
     ModelController *model = [ModelController sharedModelController];
-   DataViewController *dvc = [model viewControllerAtIndex:FIRST_REAL_PAGE_INDEX storyboard:self.storyboard];
-
+    DataViewController *dvc = [model viewControllerAtIndex:FIRST_REAL_PAGE_INDEX storyboard:self.storyboard];
+    
+    return [self goToPageWithDataViewController:dvc];
+}
+- (DataViewController *)goToSetUpPage {
+#define SETUP_PAGE_INDEX   1
+    ModelController *model = [ModelController sharedModelController];
+    DataViewController *dvc = [model viewControllerAtIndex:SETUP_PAGE_INDEX storyboard:self.storyboard];
+    
     return [self goToPageWithDataViewController:dvc];
 }
 
@@ -125,5 +133,31 @@
     return UIPageViewControllerSpineLocationMid;
 }
 
+- (void)pageViewController:(UIPageViewController *)pageViewController
+willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers;
+{
+    // NSLog(@"willTransitionToViewControllers");
+    // a manual transition
+    if (AUDIO_IS_SUNG && AUDIO_CONTROLLER) {
+        DataViewController *currentViewController = self.pageViewController.viewControllers[0];
+        [APP_DELEGATE stopAndClearSound];
+
+        [[ModelController sharedModelController] stopBounceInController:currentViewController];
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"ReadOrPlayMusic"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+
+    
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController
+        didFinishAnimating:(BOOL)finished
+   previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers
+       transitionCompleted:(BOOL)completed {
+//    if (completed)
+//    NSLog(@"didTransitionToViewControllers");
+//    else NSLog(@"did not TRANSITION");
+
+}
 
 @end

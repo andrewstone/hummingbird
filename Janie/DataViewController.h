@@ -26,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet UIView *playContainerView;
 @property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
+@property (strong, nonatomic) IBOutlet UIButton *nextPageButton;
 @property (strong, nonatomic) PageData *dataObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
 @property (strong, nonatomic) BookReadingHelpViewController* bookReadingHelpController;
@@ -54,6 +55,7 @@
 
 - (UIImageView *)hotActionsParentView;
 - (NSArray *)hotActions;
+- (IBAction)restartFromBeginnning:(id)sender;
 
 @end
 

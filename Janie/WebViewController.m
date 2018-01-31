@@ -72,7 +72,7 @@
             message.modalPresentationStyle = UIModalPresentationFormSheet;
         [self presentViewController:message animated:YES completion:nil];
 
-    } else NSLog(@"cannot send mail");
+    } // else NSLog(@"cannot send mail");
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(nullable NSError *)error {

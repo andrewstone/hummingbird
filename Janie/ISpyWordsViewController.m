@@ -120,7 +120,7 @@
         }
     
         [[NSUserDefaults standardUserDefaults] setInteger:readOrPlay forKey:@"ReadOrPlayMusic"];
-        [[NSUserDefaults standardUserDefaults] setInteger:readOrPlay forKey:@"WhichLanguage"];
+        [[NSUserDefaults standardUserDefaults] setInteger:englishOrSpanish forKey:@"WhichLanguage"];
         
 //        [[NSUserDefaults standardUserDefaults] setBool:autoPlay forKey:@"AutoPlay"];
 

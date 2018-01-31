@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,33 +78,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view hidden="YES" autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIz-D7-rVT">
-                                        <rect key="frame" x="183" y="706" width="72" height="30"/>
+                                        <rect key="frame" x="183" y="702" width="72" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-Sb-aty">
                                                 <rect key="frame" x="0.0" y="-2" width="36" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="|&lt;">
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="⏮">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="restartAudio:" destination="S4R-Ja-viH" eventType="touchUpInside" id="KWP-Ve-n5b"/>
+                                                    <action selector="restartFromBeginnning:" destination="S4R-Ja-viH" eventType="touchUpInside" id="aTc-mq-Y3M"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdG-U8-k7a">
                                                 <rect key="frame" x="36" y="0.0" width="36" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <state key="normal" title="&gt;">
+                                                <state key="normal" title="◀️">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <state key="selected" title="=">
+                                                <state key="selected" title="◀️">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="playPause:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Btp-Pz-0bY"/>
+                                                    <action selector="restartAudio:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Q03-VM-j2D"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -121,6 +121,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-Ge-xgk">
+                                        <rect key="frame" x="360" y="353" width="46" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="▶️"/>
+                                        <connections>
+                                            <action selector="turnThePageProgrammatically:" destination="S4R-Ja-viH" eventType="touchUpInside" id="8VP-MD-kZH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -133,6 +142,7 @@
                         <outlet property="fullImageScrollView" destination="KE6-jR-UqA" id="yC8-Lj-DDd"/>
                         <outlet property="fullImageView" destination="XAs-DZ-zBL" id="EzY-VG-Cpi"/>
                         <outlet property="imageView" destination="1pm-TI-WEv" id="L4i-as-UrU"/>
+                        <outlet property="nextPageButton" destination="eHi-Ge-xgk" id="11h-hG-bZr"/>
                         <outlet property="playContainerView" destination="kIz-D7-rVT" id="fNT-m6-F9h"/>
                         <outlet property="playPauseButton" destination="hdG-U8-k7a" id="ezl-k7-9Y8"/>
                         <outlet property="spanishTextView" destination="yxb-Ud-TAu" id="Nce-nQ-p4l"/>
