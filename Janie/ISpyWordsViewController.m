@@ -25,7 +25,7 @@
 }
 
 - (void)viewDidLoad {
-    _titles = @[@"Read book by yourself",@"Leer el libro por ti mismo",
+    _titles = @[@"Read book by yourself",@"Lee el libro por ti mismo",
                 @"Listen to the book",@"Eschucha el libro",
                 @"Seth sings the book!",@"¡Seth canta el libro!",
                 @"Get to know / Conoce a Seth"];
