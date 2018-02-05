@@ -439,11 +439,13 @@
         // we'll automatically turn the page if "AutoPlay" is On
         // of course, we automatically turn the page if Song is singing
         
-        if (!AUDIO_IS_SUNG) {
+        if (AUDIO_IS_READ && !self.wasPlayedByHiddenObject) {
             if (AUTO_PLAY)
                 [self turnThePageProgrammatically:self];
         }
     }
+    self.wasPlayedByHiddenObject = NO;
+
 }
 
 - (void)corePlay:(AVAudioPlayer *)player atTime:(NSTimeInterval)start {
@@ -786,12 +788,13 @@
     return self;
 }
 
-- (IBAction)defaultAction:(HotAction *)sender{
+- (IBAction)defaultAction:(HotAction *)sender {
     //play something
     if (NO_AUDIO || !AUDIO_CONTROLLER || ![AUDIO_CONTROLLER isPlaying] ) {
         NSString *sound = [sender soundFile];
         [[self musicDelegate] stopBounceInController:self];
-        [self corePlaySound:sound atTime:0.0f delegate:nil];
+        self.wasPlayedByHiddenObject = YES;
+        [self corePlaySound:sound atTime:0.0f delegate:self];
     }
 }
 

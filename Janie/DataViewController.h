@@ -28,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (strong, nonatomic) IBOutlet UIButton *nextPageButton;
 @property (strong, nonatomic) PageData *dataObject;
+@property (nonatomic) BOOL wasPlayedByHiddenObject;
 @property (strong, nonatomic) BookReadingOptionsViewController* optionsController;
 @property (strong, nonatomic) BookReadingHelpViewController* bookReadingHelpController;
 @property (strong, nonatomic) ISpyWordsViewController* ispyController;
