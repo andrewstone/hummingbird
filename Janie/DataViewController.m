@@ -788,7 +788,7 @@
 
 - (IBAction)defaultAction:(HotAction *)sender{
     //play something
-    if (NO_AUDIO) {
+    if (NO_AUDIO || !AUDIO_CONTROLLER || ![AUDIO_CONTROLLER isPlaying] ) {
         NSString *sound = [sender soundFile];
         [[self musicDelegate] stopBounceInController:self];
         [self corePlaySound:sound atTime:0.0f delegate:nil];
