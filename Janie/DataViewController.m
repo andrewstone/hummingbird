@@ -267,7 +267,7 @@
         self.playPauseButton.selected = YES;
     }
     
-    self.playPauseButton.hidden = !AUDIO_IS_READ;
+    self.playPauseButton.hidden = NO_AUDIO;
     self.playContainerView.hidden = NO;
     // Here we add the special hot actions
     for (HotAction *hotty in self.dataObject.hotRects) {
@@ -527,6 +527,10 @@
     }
 }
 
+- (IBAction)justPause:(id)sender {
+
+}
+
 - (IBAction)restartFromBeginnning:(id)sender {
     AVAudioPlayer *player = AUDIO_CONTROLLER;
     
@@ -541,6 +545,7 @@
     [(RootViewController *)ROOT_VIEW_CONTROLLER goToFirstPage];
 }
 
+
 - (IBAction)restartAudio:(id)sender {
     AVAudioPlayer *player = AUDIO_CONTROLLER;
     NSTimeInterval time = 0.0f;
@@ -549,6 +554,8 @@
         [[self musicDelegate] stopBounceInController:self];
         [APP_DELEGATE stopAndClearSound];
         player = nil;
+        self.playPauseButton.selected = NO;
+        return;
     }
     
     if (AUDIO_IS_SUNG) {
