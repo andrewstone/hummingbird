@@ -541,10 +541,13 @@
         [APP_DELEGATE stopAndClearSound];
         player = nil;
     }
-    if ([[ModelController sharedModelController] indexOfViewController:self] == 2)
-        [(RootViewController *)ROOT_VIEW_CONTROLLER goToSetUpPage];
-        else
-    [(RootViewController *)ROOT_VIEW_CONTROLLER goToFirstPage];
+    
+    [(RootViewController *)ROOT_VIEW_CONTROLLER goToSetUpPage];
+
+//    if ([[ModelController sharedModelController] indexOfViewController:self] == 2)
+//        [(RootViewController *)ROOT_VIEW_CONTROLLER goToSetUpPage];
+//        else
+//    [(RootViewController *)ROOT_VIEW_CONTROLLER goToFirstPage];
 }
 
 
