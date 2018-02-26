@@ -245,7 +245,7 @@
     } else {
         self.imageView.image = [self.dataObject pageImage];
         self.dataLabel.text =
-        [NSString stringWithFormat:@"%lu", [[ModelController sharedModelController]indexOfViewController:self] - 1];
+        [NSString stringWithFormat:@"%lu", (unsigned long)([[ModelController sharedModelController]indexOfViewController:self] - 1)];
         [self coreSetupText];
     }
 }
