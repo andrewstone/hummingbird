@@ -18,7 +18,7 @@
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController;
-
+- (NSUInteger)numberOfPages;
 
 - (NSArray *)englishSongList;
 - (NSArray *)spanishSongList;

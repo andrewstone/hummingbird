@@ -258,9 +258,10 @@
 
     NSUInteger pageIndex = [[ModelController sharedModelController]indexOfViewController:self];
     BOOL isDedicationPage = pageIndex == 1;
-    if (!((pageIndex == 0|| isDedicationPage) && AUDIO_IS_SUNG))
+    BOOL isFinalPage = (pageIndex == [[ModelController sharedModelController]numberOfPages] - 1);
+    if (!((pageIndex == 0|| isDedicationPage || isFinalPage) && AUDIO_IS_SUNG))
         [self playNextSound:nil];
-    else if (isDedicationPage) {
+    else if (isDedicationPage || isFinalPage) {
         [[ModelController sharedModelController] stopBounce];
         [APP_DELEGATE stopAndClearSound];
     } else if (AUDIO_IS_SUNG && [AUDIO_CONTROLLER isPlaying]) {

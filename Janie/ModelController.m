@@ -47,6 +47,10 @@ static ModelController *sharedModel = nil;
     return sharedModel;
 }
 
+- (NSUInteger)numberOfPages {
+    return _pageData.count;
+}
+
 - (NSArray *)englishSongList {
     return [_globals valueForKey:@"englishSongList"];
 }
