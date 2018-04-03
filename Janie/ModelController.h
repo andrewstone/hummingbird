@@ -34,6 +34,6 @@
 - (NSTimeInterval)startTimeForPage:(NSUInteger)page;
 - (void)stopBounce;
 - (void)stopBounceInController:(DataViewController *)dvc;
- 
+
 @end
 
