@@ -498,13 +498,18 @@
         // we just leave it going if it's not there already
         AVAudioPlayer *player = AUDIO_CONTROLLER;
         
-        if (!player) {
-            NSString *song = [[ModelController sharedModelController] currentSong];
-            [self corePlaySound:song];
-            [[ModelController sharedModelController] bounceTextWithController:self];
+        // there will be no player if manually turned - find page!
+        ModelController *mc = [ModelController sharedModelController];
+        NSUInteger pageIndex = [mc indexOfViewController:self];
+        NSTimeInterval time = [mc startTimeForPage:pageIndex];
 
+        if (!player) {
+            [self corePlaySound:[mc currentSong] atTime:time];
+            if (time == 0.0f)
+            [mc bounceTextWithController:self];
+            else [mc updateBounceTextWithController:self];
         } else {
-            [[ModelController sharedModelController] updateBounceTextWithController:self];
+            [mc updateBounceTextWithController:self];
         }
 
     } else if (AUDIO_IS_READ || self.dataObject.playOnLoad || overrideAudio)

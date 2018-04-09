@@ -30,10 +30,11 @@
 
 - (void)bounceTextWithController:(DataViewController *)dvc;
 - (void)updateBounceTextWithController:(DataViewController *)dvc;
+- (void)restoreBounceInController:(DataViewController *)dvc;
 
 - (NSTimeInterval)startTimeForPage:(NSUInteger)page;
 - (void)stopBounce;
 - (void)stopBounceInController:(DataViewController *)dvc;
-
+- (void)pauseBounceInController:(DataViewController *)dvc;
 @end
 

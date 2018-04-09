@@ -17,7 +17,9 @@
 @property (readonly, strong, nonatomic) ModelController *modelController;
 @end
 
-@implementation RootViewController
+@implementation RootViewController {
+    int _ManualTransition;
+}
 
 @synthesize modelController = _modelController;
 - (BOOL)prefersStatusBarHidden { return YES; }
@@ -142,9 +144,12 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
         DataViewController *currentViewController = self.pageViewController.viewControllers[0];
         [APP_DELEGATE stopAndClearSound];
 
-        [[ModelController sharedModelController] stopBounceInController:currentViewController];
-        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"ReadOrPlayMusic"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[ModelController sharedModelController] pauseBounceInController:currentViewController];
+        
+        _ManualTransition = 1;
+        
+//        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"ReadOrPlayMusic"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 
     
@@ -154,8 +159,16 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
         didFinishAnimating:(BOOL)finished
    previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers
        transitionCompleted:(BOOL)completed {
-//    if (completed)
-//    NSLog(@"didTransitionToViewControllers");
+    if (completed) {
+    NSLog(@"_ManualTransition = %d",_ManualTransition);
+        if (_ManualTransition == 1) {
+            // start up Bounce and
+            [[ModelController sharedModelController] restoreBounceInController:(DataViewController *)[[pageViewController viewControllers]objectAtIndex:0]];
+
+        }
+    }
+    
+    _ManualTransition = 0;
 //    else NSLog(@"did not TRANSITION");
 
 }

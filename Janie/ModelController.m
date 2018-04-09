@@ -196,7 +196,8 @@ static ModelController *sharedModel = nil;
         //        [newString addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:range];
         
         //[newString addAttribute:NSExpansionAttributeName value:[NSNumber numberWithDouble:log(1.1)] range:range];
-        
+        // length = 2, range = 0,2 max = 2
+        if (NSMaxRange(range) <= newString.length)
         [newString addAttribute:NSFontAttributeName value:dvc.dataObject.boldFont range:range];
         currentTextView.attributedText = newString;
         
@@ -268,6 +269,10 @@ static ModelController *sharedModel = nil;
     bounceStartTime = 0;
     bounceTimes = nil;
     bouncePointer = -1;
+}
+- (void)restoreBounceInController:(DataViewController *)dvc {
+    // we have to begin again
+    // [dvc restartAudio:nil];
 }
 
 - (void)pauseBounceInController:(DataViewController *)dvc {
