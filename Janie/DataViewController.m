@@ -315,7 +315,7 @@
     self.dataLabel.font = [self.dataObject textFont];
     [self.dataLabel sizeToFit];
     CGRect lRext = self.dataLabel.frame;
-    lRext.origin = CGPointMake(8.0,vRect.size.height - lRext.size.height);
+    lRext.origin = CGPointMake(vRect.size.width - lRext.size.width - 8.0,vRect.size.height - lRext.size.height);
     self.dataLabel.frame = lRext;
 
     CGFloat tweakTextViewHeight  = self.dataObject.tweakTextViewHeight;
@@ -608,12 +608,14 @@
 //        // we fail it
 //        
 //    }
-
+    CGRect viewRect = [self.view bounds];
+    CGPoint pt = [tap locationInView:self.view];
+    BOOL tooLow = viewRect.size.height - pt.y < 30.0;
     if (tap.state == UIGestureRecognizerStateBegan) {
         
     }
     if (tap.state == UIGestureRecognizerStateEnded) {
-        if (!AUDIO_IS_SUNG)
+        if (!AUDIO_IS_SUNG && !tooLow)
             [self swapLanguages:self];
     }
 }
