@@ -160,7 +160,7 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
    previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers
        transitionCompleted:(BOOL)completed {
     if (completed) {
-    NSLog(@"_ManualTransition = %d",_ManualTransition);
+    //NSLog(@"_ManualTransition = %d",_ManualTransition);
         if (_ManualTransition == 1) {
             // start up Bounce and
             [[ModelController sharedModelController] restoreBounceInController:(DataViewController *)[[pageViewController viewControllers]objectAtIndex:0]];

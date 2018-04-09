@@ -279,6 +279,11 @@ static ModelController *sharedModel = nil;
     bouncePointer = -1;
 }
 - (void)restoreBounceInController:(DataViewController *)dvc {
+    // not on last page or first or second pages
+    NSUInteger which = [self indexOfViewController:dvc];
+    if (which == 0 || which == 1 || which ==_pageData.count-1)
+        return;
+    
     [self updateBounceTextWithController:dvc];
     bounceStartTime = CFAbsoluteTimeGetCurrent() - [self startTimeForPage:[self indexOfViewController:dvc]];
     bouncePointer = [self bouncePointerForPage:[self indexOfViewController:dvc]];
