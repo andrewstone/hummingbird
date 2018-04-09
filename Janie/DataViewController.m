@@ -315,7 +315,7 @@
     self.dataLabel.font = [self.dataObject textFont];
     [self.dataLabel sizeToFit];
     CGRect lRext = self.dataLabel.frame;
-    lRext.origin = CGPointMake(vRect.size.width - lRext.size.width - 8.0,vRect.size.height - lRext.size.height);
+    lRext.origin = CGPointMake(vRect.size.width - lRext.size.width - 8.0,vRect.size.height - lRext.size.height - 3.0);
     self.dataLabel.frame = lRext;
 
     CGFloat tweakTextViewHeight  = self.dataObject.tweakTextViewHeight;
