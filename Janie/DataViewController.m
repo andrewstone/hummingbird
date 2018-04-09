@@ -562,7 +562,11 @@
     NSTimeInterval time = 0.0f;
     
     if (player.isPlaying) {
-        [[self musicDelegate] stopBounceInController:self];
+        if (AUDIO_IS_SUNG)
+            [[self musicDelegate] pauseBounceInController:self];
+        else
+            [[self musicDelegate] stopBounceInController:self];
+
         [APP_DELEGATE stopAndClearSound];
         player = nil;
         self.playPauseButton.selected = NO;
@@ -573,9 +577,9 @@
         ModelController *mc = [ModelController sharedModelController];
         NSUInteger pageIndex = [mc indexOfViewController:self];
         time = [mc startTimeForPage:pageIndex];
-       //  NSLog(@"start at %f", time);
+
         [self corePlaySound:[mc currentSong] atTime:time];
-        [[ModelController sharedModelController] updateBounceTextWithController:self];
+        [[ModelController sharedModelController] restoreBounceInController:self];
 
     } else {
             [self coreNextSound];

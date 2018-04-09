@@ -37,6 +37,8 @@
     DataViewController *currentController;
     NSArray *englishStartTimes;
     NSArray *spanishStartTimes;
+    NSArray *englishStartBounce;
+    NSArray *spanishStartBounce;
 }
 
 
@@ -83,6 +85,12 @@ static ModelController *sharedModel = nil;
     NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
     if (which == 1) return spanishStartTimes;
     else return englishStartTimes;
+}
+
+- (NSArray *)currentStartBouncePointers {
+    NSInteger which = [[NSUserDefaults standardUserDefaults] integerForKey:@"WhichLanguage"];
+    if (which == 1) return spanishStartBounce;
+    else return englishStartBounce;
 }
 
 - (NSArray *)getPageData {
@@ -271,8 +279,13 @@ static ModelController *sharedModel = nil;
     bouncePointer = -1;
 }
 - (void)restoreBounceInController:(DataViewController *)dvc {
-    // we have to begin again
-    // [dvc restartAudio:nil];
+    [self updateBounceTextWithController:dvc];
+    bounceStartTime = CFAbsoluteTimeGetCurrent() - [self startTimeForPage:[self indexOfViewController:dvc]];
+    bouncePointer = [self bouncePointerForPage:[self indexOfViewController:dvc]];
+    if (bounceTimes.count) {
+        [self nextLoopIn:(DataViewController *)dvc];
+    }
+
 }
 
 - (void)pauseBounceInController:(DataViewController *)dvc {
@@ -296,8 +309,9 @@ static ModelController *sharedModel = nil;
     [a addObject:[NSNumber numberWithDouble:0.0]];
     for (int i = 3; i < songList.count;i++) {
         NSDictionary *d = [songList objectAtIndex:i];
-        if ([[d valueForKey:@"turnPage"]boolValue])
+        if ([[d valueForKey:@"turnPage"]boolValue]) {
             [a addObject:[d valueForKey:@"endTime"]];
+        }
     }
     
     return a;
@@ -308,9 +322,34 @@ static ModelController *sharedModel = nil;
     spanishStartTimes = [self getStartTimes:[self spanishSongList]];
 }
 
+- (NSArray *)getBounceTimes:(NSArray *)songList {
+    NSMutableArray *a = [NSMutableArray array];
+    
+    
+    // Title Page, Dedication page and First page (item2) begin at 0.0:
+    for (int i = 0; i < 3; i++)
+        [a addObject:[NSNumber numberWithUnsignedInteger:0]];
+    for (int i = 3; i < songList.count;i++) {
+        NSDictionary *d = [songList objectAtIndex:i];
+        if ([[d valueForKey:@"turnPage"]boolValue]) {
+            [a addObject:[NSNumber numberWithUnsignedInteger:i]];
+        }
+    }
+    
+    return a;
+}
+
+- (void)getBounceTimes {
+    englishStartBounce = [self getBounceTimes:[self englishSongList]];
+    spanishStartBounce = [self getBounceTimes:[self spanishSongList]];
+}
 - (NSTimeInterval)startTimeForPage:(NSUInteger)page {
     if (!englishStartTimes) [self getStartTimes];
         return [[[self currentStartTimes] objectAtIndex:page] doubleValue];
 }
 
+- (NSUInteger)bouncePointerForPage:(NSUInteger)page {
+    if (!englishStartBounce) [self getBounceTimes];
+    return [[[self currentStartBouncePointers]objectAtIndex:page] unsignedIntValue];
+}
 @end
