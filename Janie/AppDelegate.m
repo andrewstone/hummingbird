@@ -27,12 +27,16 @@
     // Override point for customization after application launch.
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
-    if (![ud boolForKey:@"firstTime"]) {
-        [ud setBool:YES forKey:@"firstTime"];
-        [ud setBool:YES forKey:@"AutoPlay"];
-        [ud setInteger:1 forKey:@"WhichLanguage"];
+    if (![ud boolForKey:@"irstTime"]) {
         
+        [ud setBool:YES forKey:@"irstTime"];
+        [ud setBool:NO forKey:@"SawHelp"];
+        [ud setBool:YES forKey:@"AutoPlay"];
+        [ud setInteger:1 forKey:@"ReadOrPlayMusic"];
+        [ud setInteger:1 forKey:@"WhichLanguage"];
+        [ud synchronize];
     }
+
    // [[UIApplication sharedApplication] setStatusBarHidden:YES];
     return YES;
 }

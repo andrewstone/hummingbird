@@ -85,6 +85,10 @@
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
     float size = isPad ? (isPortrait ? 18.0 : 16.0) : 14.0;
     
+    // if small phone, you need smaller font:
+    if ([[UIScreen mainScreen] bounds].size.height <= 568.0)
+        size -= 1.0;
+    
     // on iPad we tweak to fill:
     if (isPad || self.tweakFontSizeAmount < 0)
         size += self.tweakFontSizeAmount;

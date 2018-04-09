@@ -10236,7 +10236,7 @@ though we find it differently.</string>
 			<key>New item</key>
 			<string></string>
 			<key>tweakFontSizeAmount</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>tweakTextViewCenter</key>
 			<integer>0</integer>
 			<key>tweakTextViewHeight</key>
