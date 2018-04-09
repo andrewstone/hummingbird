@@ -73,7 +73,9 @@
 }
 
 - (UIImage *)pageImage {
+    if (_imageName)
     return [UIImage imageNamed:_imageName];
+    return nil;
 }
 
 #define dDeviceOrientation [[UIDevice currentDevice] orientation]
