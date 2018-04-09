@@ -4244,7 +4244,7 @@ she had some time to kill.</string>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>tweakTextViewCenter</key>
 			<integer>0</integer>
 		</dict>
@@ -8462,7 +8462,7 @@ Saying, “Goodbye!” to everyone.</string>
 			<key>playOnLoad</key>
 			<false/>
 			<key>tweakFontSizeAmount</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>tweakTextViewCenter</key>
 			<integer>0</integer>
 			<key>tweakTextViewHeight</key>

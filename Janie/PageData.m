@@ -130,6 +130,9 @@
 
 - (float)lineSpacing {
     BOOL isPad = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+    if ([[UIScreen mainScreen] bounds].size.height <= 568.0)
+        return -5.0;
+    
     return ( isPad ? -3.0 : -3.0);
 }
 
